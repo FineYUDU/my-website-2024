@@ -1,1 +1,186 @@
-/* You can add global styles to this file, and also import other style files */
+/* 
+    Only the global classes can have _
+    Example txt_primary
+*/
+@import './assets/styles/variables.css';
+/* * Default & Reset properties */
+body {
+    min-height: 100vh;
+    background-color: var(--color-bg-primary);
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+    font-weight: var(--font-medium);
+    font-size: var(--font-b1);
+    text-decoration: none;
+    border: none;
+    /* * Create transition bg-color when the theme change */
+    transition:var(--transition-bg-color);
+}
+a {
+    text-decoration: none;
+}
+p {
+    transition: all .5s ease-in-out;
+}
+button {
+    border: none;
+}
+/* * RADIUS */
+.radius_none {
+    border-radius: 0;
+}
+.radius_minimal {
+    border-radius: var(--radious-xs);
+}
+.radius_rounded {
+    border-radius: var(--radious-md);
+}
+.radius_full {
+    border-radius: var(--radious-3xl);
+}
+/* * SPACINg */
+
+
+
+
+/* ? HELPERS */
+/* * Screen width */
+.w-100 {
+    width: 100%;
+    background-color: var(--color-bg-secondary);
+}
+.cursor_pointer {
+    cursor: pointer;
+}
+.none {
+    display: none;
+}
+.d_flex {
+    display: flex;
+}
+.pointer_events_none {
+    pointer-events: none;
+}
+/* * Opacity Transition */
+.opacity_ {
+    opacity:0;
+    transition: opacity .5s ease-in-out;
+}
+/* ? FONTS */
+/* * Font sizes */
+/* BIG HEADLINES */
+.font_bh1 {
+    font-size: var(--font-hero);
+}
+.font_bh2 {
+    font-size: var(--font-h1);
+}
+.font_bh3 {
+    font-size: var(--font-h2);
+}
+.font_bh4 {
+    font-size: var(--font-h3);
+}
+/* BODY */
+.font_body1 {
+    font-size: var(--font-b1);
+}
+.font_body1 {
+    font-size: var(--font-b2);
+}
+/* CAPTIONS */
+.font_c1 {
+    font-size: var(--font-c1);
+}
+.font_c2 {
+    font-size: var(--font-c2);
+}
+.font_c3 {
+    font-size: var(--font-c3);
+}
+/* LABEL */
+.font_label {
+    font-size: var(--font-b1);
+}
+/* * Font Weight */
+.font_regular {
+    font-weight: var(--font-regular);
+}
+.font_medium {
+    font-weight: var(--font-medium);
+}
+.font_semibold {
+    font-weight: var(--font-semibold);
+}
+.font_bold {
+    font-weight: var(--font-bold);
+}
+/* * Font Colors */
+.color_primary {
+    color: var(--color-primary-txt);
+}
+.color_secondary {
+    color: var(--color-secondary-txt);
+}
+.color_label {
+    color: var(--color-label-txt);
+}
+.color_link {
+    color: var(--color-link-txt);
+}
+/* ? BACKGROUNDS */
+/* * Color Background */
+.bg_primary {
+    background-color: var(--color-primary);
+}
+.bg_primary_soft {
+    background-color: var(--color-primary-soft);
+}
+.bg_primary_high {
+    background-color: var(--color-primary-high);
+}
+/* TODO:Modify */
+/* !!! BUTTONS -----------------------------> */
+/* * BUTTON PRIMARY */
+.btn_primary {
+    padding: .6875rem var(--spacing-4);
+    background-color: var(--color-btn-primary-enabled);
+    border-radius: var(--radious-md);
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    color: var(--color-fg-primary-inverted);
+    font-size: var(--font-b1);
+    cursor: pointer;
+    justify-content: center;
+    font-weight: var(--font-regular);
+    max-height: 2.875rem;
+    border: .0625rem solid transparent;
+}
+/* BUTTON IMG */
+.btn_primary img {
+    width: var(--size-icon-xs);
+} 
+/* HOVER */
+.btn_primary:hover {
+    background-color: var(--color-btn-primary-hover);
+}
+/* ACTIVE */
+.btn_primary:active {
+    background-color: var(--color-btn-primary-active);
+}
+/* FOCUS VISIBLE */
+.btn_primary:focus-visible {
+    background-color: var(--color-btn-primary-enabled);
+    box-shadow: var(--box-shadow-btn-primary);
+    outline: none;
+}
+/* * BUTTON DISABLED PRIMARY */
+.btn_disabled_primary {
+    pointer-events: none;
+    background-color: var(--color-bg-disabled);
+    color: var(--color-fg-disabled);
+}

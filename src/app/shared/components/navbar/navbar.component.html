@@ -1,0 +1,18 @@
+<!-- ? MAIN CONTAINER -->
+<div class="main-cont">
+    <ul>
+        @for (nav of menuNav; track $index) {
+            <li>
+                <!-- LINK MENU -->
+                <a class="link-menu"
+                    [routerLink]="nav.router" 
+                    routerLinkActive="active">
+                    <!-- TXT -->
+                    {{nav.txt}}
+                </a>
+            </li>
+        }
+    </ul>
+
+    <p>navbar works!</p>
+</div>

@@ -1,0 +1,112 @@
+/*
+        Variables structure :
+            type                            : example --> color, size, font, spacing, radius; 
+            object?                         : example --> button, input, background, chart, sidebar, navbar, header (auth, dashboard) ..;
+            hierarchy?                      : example --> primary || secondary
+            property?                       : example --> txt, outline, border, fill, h1, h2, sm, md, lg, medium, regular ...; 
+            subclass?                       : example --> active, hover, focus, disabled ...; 
+
+            --(type)-(object)-(hierarchy)-(property)-(subclass);
+
+        Example:
+        basic:
+            --color-primary;
+            --(type)-(hierarchy);
+
+            --font-primary;
+            --(type)-(hierarchy);
+
+            --font-bh1;
+            --(type)-(property);
+
+        medium:
+            --color-btn-primary-txt;
+            --(type)-(object)-(hierarchy)-(property || subclass);
+
+        hard:
+            --color-btn-primary-fill;
+            --(type)-(object)-(hierarchy)-(property);
+
+            --color-btn-primary-txt-disabled;
+            --(type)-(object)-(hierarchy)-(property)-(subclass);
+ */
+ :root {
+    /* ? COLORS -------------------------------------------------------------------->*/ 
+    /* Brand */
+    --color-brand-50                                                    :#9999CE;
+    --color-brand-100                                                   :#8383B2;
+    --color-brand-200                                                   :#6E6E99;
+    --color-brand-300                                                   :#5B5B7F;
+    --color-brand-400                                                   :#4A4766;
+    --color-brand-500                                                   :#37354C;
+    --color-brand-600                                                   :#242433;
+    --color-brand-700                                                   :#121219;
+    --color-brand-800                                                   :#09090C;
+    /* Grey */
+    --color-gray-50                                                     :#F2F2F2;
+    --color-gray-100                                                    :#DDDDDD;
+    --color-gray-200                                                    :#C6C6C6;
+    --color-gray-300                                                    :#AFAFAF;
+    --color-gray-400                                                    :#7F7F7F;
+    --color-gray-500                                                    :#666666;
+    --color-gray-600                                                    :#4F4F4F;
+    --color-gray-700                                                    :#383838;
+    --color-gray-800                                                    :#212121;
+    /*? RADIUS -------------------------------------------------------------------->*/
+    --radius-xs                                                         :.25rem;
+    --radius-sm                                                         :.5rem;
+    --radius-md                                                         :1rem;
+    --radius-lg                                                         :1.5rem;
+    --radius-xl                                                         :2rem;
+    --radius-2xl                                                        :8rem;
+    --radius-3xs                                                        :22.5rem;
+    /*? SPACING -------------------------------------------------------------------->*/
+    --spacing-1                                                         :.25em;
+    --spacing-2                                                         :.5em;
+    --spacing-3                                                         :.75em;
+    --spacing-4                                                         :1em;
+    --spacing-5                                                         :1.5em;
+    --spacing-6                                                         :2em;
+    --spacing-7                                                         :2.5em;
+    --spacing-8                                                         :3em;
+    --spacing-9                                                         :3.5em;
+    --spacing-10                                                        :4em;
+    --spacing-11                                                        :4.5em;
+    --spacing-12                                                        :5em;
+    --spacing-13                                                        :5.5em;
+    --spacing-14                                                        :6em;
+    --spacing-15                                                        :6.5em;
+    /*? FONTS -------------------------------------------------------------------->*/
+    /* ! Font Family */
+    --primary-font                                                      :'Work Sans', sans-serif;
+    /* ! Posible Pixel Mode Font -----------> */
+    /* --primary-font                                                   :'Pixelify Sans', sans-serif; */
+    /* ! Posible Pixel Mode Font -----------> */
+    /* * Font Size */
+    --font-hero                                                         : 6em;
+    /* HEADLINES */
+    --font-h1                                                           : 4em;
+    --font-h2                                                           : 3.75em;
+    --font-h3                                                           : 3em;
+    --font-h4                                                           : 2.125em;
+    --font-h5                                                           : 1.5em;
+    --font-h6                                                           : 1.3125em;
+    /* SUB */
+    --font-sub1                                                         : 1em;
+    --font-sub2                                                         : .875em;
+    /* BODY */
+    --font-b1                                                           : 1em;
+    --font-b2                                                           : .875em;
+    /* CAPTIONS */
+    --font-c1                                                           : .75em;
+    --font-c2                                                           : .625em;
+    --font-c3                                                           : .5em;
+    /* Weight | Font  */
+    --font-regular                                                      : 400;
+    --font-medium                                                       : 500;
+    --font-semibold                                                     : 600;
+    --font-bold                                                         : 700;
+    /* ? TRANSITIONS & ANIMATIONS --------------------------------------------------> */
+    --transition-bg-color                                               : background-color .2s ease-in-out;
+    --transition-all                                                    : all .2s ease-in-out;
+  }
