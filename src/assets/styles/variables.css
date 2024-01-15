@@ -33,11 +33,14 @@
  :root {
     /* ? COLORS -------------------------------------------------------------------->*/ 
     /* Brand */
+    /* Soft Brand Colores  */
     --color-brand-50                                                    :#9999CE;
     --color-brand-100                                                   :#8383B2;
     --color-brand-200                                                   :#6E6E99;
     --color-brand-300                                                   :#5B5B7F;
+    /* Primary Brand Color  */
     --color-brand-400                                                   :#4A4766;
+    /* High Brand Colores  */
     --color-brand-500                                                   :#37354C;
     --color-brand-600                                                   :#242433;
     --color-brand-700                                                   :#121219;
