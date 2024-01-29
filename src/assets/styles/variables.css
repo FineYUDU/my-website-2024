@@ -1,115 +1,117 @@
-/*
-        Variables structure :
-            type                            : example --> color, size, font, spacing, radius; 
-            object?                         : example --> button, input, background, chart, sidebar, navbar, header (auth, dashboard) ..;
-            hierarchy?                      : example --> primary || secondary
-            property?                       : example --> txt, outline, border, fill, h1, h2, sm, md, lg, medium, regular ...; 
-            subclass?                       : example --> active, hover, focus, disabled ...; 
+:root {
+    /* ? PRIMITIVES -------------------------------------------------------------------->*/ 
+    /* ? Colors --------------> */
+    /* * Grey */
+    --color-grey-0                                                              :#F9F9F9;
+    --color-grey-50                                                             :#F2F2F2;
+    --color-grey-100                                                            :#DDDDDD;
+    --color-grey-200                                                            :#C6C6C6;
+    --color-grey-300                                                            :#AFAFAF;
+    --color-grey-400                                                            :#7F7F7F;
+    --color-grey-500                                                            :#4F4F4F;
+    --color-grey-600                                                            :#212121;
+    --color-grey-700                                                            :#151515;
+    /* * Brand */
+    --color-brand-50                                                            :#9999CE;
+    --color-brand-100                                                           :#8383B2;
+    --color-brand-200                                                           :#6E6E99;
+    --color-brand-300                                                           :#5B5B7F;
+    --color-brand-400                                                           :#4A4766;
+    --color-brand-500                                                           :#37354C;
+    /* * Danger */
+    --color-danger                                                              :#E63946;
+    /* * Success */
+    --color-success                                                             :#2CA04C;
+    /* ? Sizes --------------> */
+    /* * Radius */
+    --radius-xs                                                                 :.25rem;
+    --radius-sm                                                                 :.5rem;
+    --radius-md                                                                 :1rem;
+    --radius-lg                                                                 :1.5rem;
+    --radius-xl                                                                 :2rem;
+    --radius-2xl                                                                :8rem;
+    --radius-3xl                                                                :22.5rem;
+    /* * Spacing */
+    --spacing-1                                                                 :.25rem;
+    --spacing-2                                                                 :.5rem;
+    --spacing-3                                                                 :.75rem;
+    --spacing-4                                                                 :1rem;
+    --spacing-5                                                                 :1.5rem;
+    --spacing-6                                                                 :2rem;
+    --spacing-7                                                                 :2.5rem;
+    --spacing-8                                                                 :3rem;
+    --spacing-9                                                                 :3.5rem;
+    --spacing-10                                                                :4rem;
+    --spacing-11                                                                :4.5rem;
+    --spacing-12                                                                :5rem;
+    --spacing-13                                                                :5.5rem;
+    --spacing-14                                                                :6rem;
+    --spacing-15                                                                :6.5rem;
+    /* * Icons */
+    --icon-xs                                                                   :.75rem;
+    --icon-sm                                                                   :.875rem;
+    --icon-md                                                                   :1rem;
+    --icon-lg                                                                   :1.25rem;
+    --icon-xl                                                                   :1.375rem;
 
-            --(type)-(object)-(hierarchy)-(property)-(subclass);
+    /* ? TOKENS -------------------------------------------------------------------->*/ 
+    /* ? Colors --------------> */
+    /* * Primary */
+    --color-primary                                                             :var(--color-grey-600);
+    --color-primary-50                                                          :var(--color-grey-0);
+    --color-primary-100                                                         :var(--color-grey-400);
+    --color-primary-200                                                         :var(--color-grey-500);
+    --color-primary-300                                                         :var(--color-grey-700);
+    /* * Background */
+    --color-bg-primary                                                          :var(--color-grey-0);
+    --color-bg-secondary                                                        :var(--color-grey-50);
+    --color-bg-tertiary                                                         :var(--color-grey-100);
+    /* * Brand */
+    --color-brand                                                               :var(--color-brand-300);
+    --color-brand-soft                                                          :var(--color-brand-50);
+    --color-brand-high                                                          :var(--color-brand-500);
+    /* ? Size --------------> */
+    /* * Spacing */
+    --spacing-2xs                                                               :var(--spacing-1);
+    --spacing-xs                                                                :var(--spacing-2);
+    --spacing-sm                                                                :var(--spacing-4);
+    --spacing-md                                                                :var(--spacing-6);
+    --spacing-lg                                                                :var(--spacing-8);
+    --spacing-xl                                                                :var(--spacing-10);
+    --spacing-2xl                                                               :var(--spacing-15);
+    --gap-dashboard                                                             :var(--spacing-6);
+    /* * Radius */
+    --radius-minimal                                                            :var(--radius-xs);
+    --radius-rounded                                                            :var(--radius-md);
+    --radius-full                                                               :var(--radius-3xl);
 
-        Example:
-        basic:
-            --color-primary;
-            --(type)-(hierarchy);
+    /* ? FONTS -------------------------------------------------------------------->*/ 
+    /* * Font Family */
+    --primary-font                                                              :'Work Sans', sans-serif;
+    /* * Headlines */
+    --font-h1                                                                   :4em;
+    --font-h2                                                                   :3.75em;
+    --font-h3                                                                   :3em;
+    --font-h4                                                                   :2.125em;
+    --font-h5                                                                   :1.5em;
+    --font-h6                                                                   :1.3125em;
+    /* * Body */
+    --font-b1                                                                   :1em;
+    --font-b2                                                                   :.875em;
+    /* * Captions */
+    --font-c1                                                                   :.75em;
+    --font-c2                                                                   :.625em;
+    --font-c3                                                                   :.5em;
+    /* * Weight | Font  */
+    --font-regular                                                              :400;
+    --font-medium                                                               :500;
+    --font-semibold                                                             :600;
+    --font-bold                                                                 :700;
 
-            --font-primary;
-            --(type)-(hierarchy);
-
-            --font-bh1;
-            --(type)-(property);
-
-        medium:
-            --color-btn-primary-txt;
-            --(type)-(object)-(hierarchy)-(property || subclass);
-
-        hard:
-            --color-btn-primary-fill;
-            --(type)-(object)-(hierarchy)-(property);
-
-            --color-btn-primary-txt-disabled;
-            --(type)-(object)-(hierarchy)-(property)-(subclass);
- */
- :root {
-    /* ? COLORS -------------------------------------------------------------------->*/ 
-    /* Brand */
-    /* Soft Brand Colores  */
-    --color-brand-50                                                    :#9999CE;
-    --color-brand-100                                                   :#8383B2;
-    --color-brand-200                                                   :#6E6E99;
-    --color-brand-300                                                   :#5B5B7F;
-    /* Primary Brand Color  */
-    --color-brand-400                                                   :#4A4766;
-    /* High Brand Colores  */
-    --color-brand-500                                                   :#37354C;
-    --color-brand-600                                                   :#242433;
-    --color-brand-700                                                   :#121219;
-    --color-brand-800                                                   :#09090C;
-    /* Grey */
-    --color-gray-50                                                     :#F2F2F2;
-    --color-gray-100                                                    :#DDDDDD;
-    --color-gray-200                                                    :#C6C6C6;
-    --color-gray-300                                                    :#AFAFAF;
-    --color-gray-400                                                    :#7F7F7F;
-    --color-gray-500                                                    :#666666;
-    --color-gray-600                                                    :#4F4F4F;
-    --color-gray-700                                                    :#383838;
-    --color-gray-800                                                    :#212121;
-    /*? RADIUS -------------------------------------------------------------------->*/
-    --radius-xs                                                         :.25rem;
-    --radius-sm                                                         :.5rem;
-    --radius-md                                                         :1rem;
-    --radius-lg                                                         :1.5rem;
-    --radius-xl                                                         :2rem;
-    --radius-2xl                                                        :8rem;
-    --radius-3xs                                                        :22.5rem;
-    /*? SPACING -------------------------------------------------------------------->*/
-    --spacing-1                                                         :.25em;
-    --spacing-2                                                         :.5em;
-    --spacing-3                                                         :.75em;
-    --spacing-4                                                         :1em;
-    --spacing-5                                                         :1.5em;
-    --spacing-6                                                         :2em;
-    --spacing-7                                                         :2.5em;
-    --spacing-8                                                         :3em;
-    --spacing-9                                                         :3.5em;
-    --spacing-10                                                        :4em;
-    --spacing-11                                                        :4.5em;
-    --spacing-12                                                        :5em;
-    --spacing-13                                                        :5.5em;
-    --spacing-14                                                        :6em;
-    --spacing-15                                                        :6.5em;
-    /*? FONTS -------------------------------------------------------------------->*/
-    /* ! Font Family */
-    --primary-font                                                      :'Work Sans', sans-serif;
-    /* ! Posible Pixel Mode Font -----------> */
-    /* --primary-font                                                   :'Pixelify Sans', sans-serif; */
-    /* ! Posible Pixel Mode Font -----------> */
-    /* * Font Size */
-    --font-hero                                                         : 6em;
-    /* HEADLINES */
-    --font-h1                                                           : 4em;
-    --font-h2                                                           : 3.75em;
-    --font-h3                                                           : 3em;
-    --font-h4                                                           : 2.125em;
-    --font-h5                                                           : 1.5em;
-    --font-h6                                                           : 1.3125em;
-    /* SUB */
-    --font-sub1                                                         : 1em;
-    --font-sub2                                                         : .875em;
-    /* BODY */
-    --font-b1                                                           : 1em;
-    --font-b2                                                           : .875em;
-    /* CAPTIONS */
-    --font-c1                                                           : .75em;
-    --font-c2                                                           : .625em;
-    --font-c3                                                           : .5em;
-    /* Weight | Font  */
-    --font-regular                                                      : 400;
-    --font-medium                                                       : 500;
-    --font-semibold                                                     : 600;
-    --font-bold                                                         : 700;
-    /* ? TRANSITIONS & ANIMATIONS --------------------------------------------------> */
-    --transition-bg-color                                               : background-color .2s ease-in-out;
-    --transition-all                                                    : all .2s ease-in-out;
-  }
+    /* ? Helpers -------------------------------------------------------------------->*/ 
+    /* ? Size --------------> */
+    /* * Spacing */
+    --dashboard-width                                                           :82.45%;
+    /* ? Transitios --------------> */
+    --transition-bg-color                                                       :background-color .2s ease-in-out;
+}
