@@ -1,1 +1,18 @@
-<p>translate-switch works!</p>
+<!-- ? MAIN CONTAINER -->
+<div class="main-cont">
+    <section (click)="openDropdown()" class="cursor_pointer">
+        <!-- ICON -->
+        <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-translate.svg'" class="icon_md">
+        <!-- TXT -->
+        <p class="font_b1 color_primary font_medium"> {{'lang.selected' | translate:ts.GetLang }} </p>
+        <!-- ICON -->
+        <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-chevron.svg'" 
+            class="icon_sm" 
+            [ngClass]="{
+                'open': rotate, 
+                'close': !rotate 
+            }">
+    </section>
+
+</div>
+

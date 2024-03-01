@@ -28,6 +28,9 @@ p {
 button {
     border: none;
 }
+ul {
+    list-style-type: none;
+}
 ::marker {
     color: transparent;
 }

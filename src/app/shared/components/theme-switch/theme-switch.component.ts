@@ -2,6 +2,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ThemeService } from '../../../core/services/theme.service';
+import { LocalStorageService } from '../../../core/services/localstorage.service';
 
 @Component({
   selector: 'theme-switch',
@@ -15,6 +16,7 @@ import { ThemeService } from '../../../core/services/theme.service';
 export class ThemeSwitchComponent {
 
   public themeService = inject( ThemeService );
+  public ls = inject( LocalStorageService );
 
   // selected:boolean = false;
   // toggleTheme() {

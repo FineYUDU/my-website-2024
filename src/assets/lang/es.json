@@ -1,4 +1,8 @@
 {
+    "lang": {
+        "selected":"Español",
+        "not-selected":"Inglés"
+    },
     "menu": {
         "about":"acerca de",
         "contact":"contacto"

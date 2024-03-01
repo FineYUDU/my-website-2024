@@ -1,4 +1,8 @@
 {
+    "lang": {
+        "selected":"English",
+        "not-selected":"Spanish"
+    },
     "menu": {
         "about":"about",
         "contact":"contact"

@@ -14,16 +14,33 @@
     align-items: center;
     width: calc(var(--web-width) + var(--spacing-sm));
 }
-/* ? SECTION LOGO */
-/* LOGO CONTAINER */
-.logo-cont {
-    background-color: var(--color-bg-tertiary);
-    border-radius: var(--radius-full);
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: var(--spacing-xs);
+/* ? SECTION | LOGO | TRANSLATE & THEME */
+section:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
 }
+section:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+.avatar {
+    width: 2.6875rem;
+    height: 2.6875rem;
+}
+/* LOGO TXT */
+.logo-txt {
+    height: 1.5rem;
+}
+
 ul {
     display: flex;
     gap: var(--spacing-md);
+    align-items: center;
+}
+.block {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
 }
