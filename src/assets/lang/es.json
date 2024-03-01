@@ -1,3 +1,6 @@
 {
-    "test":"prueba"
+    "menu": {
+        "about":"acerca de",
+        "contact":"contacto"
+    }
 }

@@ -18,7 +18,7 @@ export class TranslateService {
         }
     }
     // * Get Lang
-    GetLang():string {
+    get GetLang():string {
         if(localStorage.getItem('lang') === 'es') {
           return 'es'
         } 

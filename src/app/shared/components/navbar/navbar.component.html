@@ -1,18 +1,39 @@
 <!-- ? MAIN CONTAINER -->
 <div class="main-cont">
-    <ul>
-        @for (nav of menuNav; track $index) {
-            <li>
-                <!-- LINK MENU -->
-                <a class="link-menu"
-                    [routerLink]="nav.router" 
-                    routerLinkActive="active">
-                    <!-- TXT -->
-                    {{nav.txt}}
-                </a>
-            </li>
-        }
-    </ul>
+    <!-- ? CONTAINER -->
+    <div class="cont">
+        <!-- ? SECTION LOGO -->
+        <section class="logo">
+            <!-- ? LOGO CONTAINER -->
+            <div class="logo-cont">
+                <!-- LOGO -->
+                <img class="cursor_pointer"
+                    routerLink="./" 
+                    [src]="'../../../../assets/theme/'+ls.GetMode+'/logo/logo-avatar-w.svg'">
+            </div>
+    
+        </section>
+    
+        <!-- ? MENU -->
+        <ul>
+            @for (nav of menuNav; track $index) {
+                <li>
+                    <!-- LINK MENU -->
+                    <a class="link-menu font_b1 color_primary"
+                        [routerLink]="nav.router" 
+                        routerLinkActive="active">
+                        <!-- TXT -->
+                        {{ nav.txt | translate:ts.GetLang }}
+                    </a>
+                </li>
+            }
+            <!-- TRANSLATE -->
+            <translate-switch></translate-switch>
+            <!-- THEME -->
+            <theme-switch></theme-switch>
+            
+        </ul>
 
-    <p>navbar works!</p>
+    </div>
+
 </div>
