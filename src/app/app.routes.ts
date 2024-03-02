@@ -11,6 +11,16 @@ export const routes: Routes = [
                 title:'Home',
                 loadComponent: () => import('./website/pages/home/home.component')
             },
+            {
+                path:'about',
+                title:'About',
+                loadComponent: () => import('./website/pages/about/about.component')
+            },
+            {
+                path:'contact',
+                title:'Contact',
+                loadComponent: () => import('./website/pages/contact/contact.component')
+            },
             { path:'', redirectTo:'home', pathMatch:'full' }
         ]
     },

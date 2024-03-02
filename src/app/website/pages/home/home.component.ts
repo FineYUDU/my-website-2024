@@ -3,7 +3,7 @@ import { TranslateService } from '../../../core/services/translate.service';
 import { TranslatePipe } from '../../../shared/pipes/translate.pipe';
 
 @Component({
-  selector: 'app-home',
+  selector: 'home',
   standalone: true,
   imports: [
     TranslatePipe
@@ -13,6 +13,5 @@ import { TranslatePipe } from '../../../shared/pipes/translate.pipe';
 })
 export default class HomeComponent {
 
-  constructor( public ts : TranslateService ) {}
 
 }

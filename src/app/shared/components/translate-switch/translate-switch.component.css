@@ -1,0 +1,17 @@
+/* ? MAIN CONTAINER */
+section {
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: center;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-full);
+}
+/* * ROTATE */
+.open {
+    transform: rotate(180deg);
+    transition:transform .3s ease-in-out;
+}
+.close {
+    transform: rotate(0deg);
+    transition:transform .3s ease-in-out;
+}
