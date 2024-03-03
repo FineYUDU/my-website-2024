@@ -22,10 +22,10 @@ export class TranslateSwitchComponent {
   public ts = inject( TranslateService );
   public ls = inject( LocalStorageService );
   // * Rotate
-  rotate:boolean = false;
+  dropdown:boolean = false;
   // * Open Modal
   openDropdown() {
-    this.rotate = !this.rotate;
+    this.dropdown = !this.dropdown;
   }
 
 }

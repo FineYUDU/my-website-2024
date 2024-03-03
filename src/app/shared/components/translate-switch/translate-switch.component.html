@@ -9,9 +9,24 @@
         <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-chevron.svg'" 
             class="icon_sm" 
             [ngClass]="{
-                'open': rotate, 
-                'close': !rotate 
+                'rotate-open': dropdown, 
+                'rotate-close': !dropdown 
             }">
+        <!-- ? DROPDOWN -->
+        <div class="dropdown"
+            [ngClass]="{
+                'dropdown-open': dropdown,
+                'dropdown-close': !dropdown,
+                }">
+                <ul>
+                    <li> 
+                        {{'Español' | translate:ts.GetLang }} 
+                    </li>
+                    <li> 
+                        {{'Ingles' | translate:ts.GetLang }} 
+                    </li>
+                </ul>
+        </div>
     </section>
 
 </div>

@@ -5,13 +5,42 @@ section {
     align-items: center;
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--radius-full);
+    position: relative;
 }
 /* * ROTATE */
-.open {
+.rotate-open {
     transform: rotate(180deg);
     transition:transform .3s ease-in-out;
 }
-.close {
+.rotate-close {
     transform: rotate(0deg);
     transition:transform .3s ease-in-out;
+}
+.dropdown {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background-color: var(--color-bg-secondary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-minimal);
+    border:.0625rem solid var(--color-tertiary);
+}
+.dropdown-open {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: clip-path .3s ease-in-out;
+}
+.dropdown-close {
+    clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
+    transition: clip-path .3s ease-in-out;
+}
+.dropdown ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+.dropdown ul li {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--color-bg-primary);
+    border-radius: var(--radius-minimal);
 }
