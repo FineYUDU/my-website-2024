@@ -36,6 +36,11 @@ export class NavbarComponent {
 
   menuNav:MenuNav[] =[
     {
+      txt:'menu.home',
+      icon:'home',
+      router:'home',
+    },
+    {
       txt:'menu.about',
       icon:'about',
       router:'about',

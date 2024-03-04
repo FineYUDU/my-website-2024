@@ -29,8 +29,15 @@ export class FooterComponent {
   public ts = inject( TranslateService );
   // * Inject LocalStorage Service
   public ls = inject( LocalStorageService );
+  // * Company name
+  company:string = 'Fine Dev';
 
   menuNav:MenuNav[] =[
+    {
+      txt:'menu.home',
+      icon:'home',
+      router:'home',
+    },
     {
       txt:'menu.about',
       icon:'about',

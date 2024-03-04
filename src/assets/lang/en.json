@@ -4,7 +4,11 @@
         "es":"Spanish",
         "en":"English"
     },
+    "version":{
+        "current":"Currently"
+    },
     "menu": {
+        "home":"home",
         "about":"about",
         "contact":"contact"
     }
