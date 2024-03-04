@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-version',
+  selector: 'version',
   standalone: true,
   imports: [],
-  templateUrl: './version.component.html',
-  styleUrl: './version.component.css'
+  template:`
+  <p class="font_b1 font_regular color_inverted">
+      {{version}}
+  </p>
+  `
 })
 export class VersionComponent {
-
+  version:string = 'v1.0.0'
 }

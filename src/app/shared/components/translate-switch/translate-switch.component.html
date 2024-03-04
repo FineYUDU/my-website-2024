@@ -3,29 +3,36 @@
     <section (click)="openDropdown()" class="cursor_pointer">
         <!-- ICON -->
         <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-translate.svg'" class="icon_md">
+
         <!-- TXT -->
         <p class="font_b1 color_primary font_medium"> {{'lang.selected' | translate:ts.GetLang }} </p>
+
         <!-- ICON -->
         <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-chevron.svg'" 
-            class="icon_sm" 
+            class="icon_xs" 
             [ngClass]="{
                 'rotate-open': dropdown, 
                 'rotate-close': !dropdown 
             }">
+
         <!-- ? DROPDOWN -->
         <div class="dropdown"
             [ngClass]="{
                 'dropdown-open': dropdown,
                 'dropdown-close': !dropdown,
-                }">
-                <ul>
-                    <li> 
-                        {{'Español' | translate:ts.GetLang }} 
-                    </li>
-                    <li> 
-                        {{'Ingles' | translate:ts.GetLang }} 
-                    </li>
-                </ul>
+            }">
+            <ul>
+                <li class=" font_b1 color_primary font_medium" 
+                    [ngClass]="{'selected': ts.GetLang === 'es'}"
+                    (click)="ts.toggleLang('es')">
+                    {{'lang.es' | translate:ts.GetLang }} 
+                </li>
+                <li class=" font_b1 color_primary font_medium" 
+                    [ngClass]="{'selected': ts.GetLang === 'en'}"
+                    (click)="ts.toggleLang('en')"> 
+                    {{'lang.en' | translate:ts.GetLang }} 
+                </li>
+            </ul>
         </div>
     </section>
 

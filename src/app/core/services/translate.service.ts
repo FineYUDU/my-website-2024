@@ -40,5 +40,14 @@ export class TranslateService {
         // * New Lang
         // ! console.log('new', this.lang);
     }
+
+    toggleLang(lang:string) {
+        if(lang === 'es') {
+            localStorage.setItem('lang', 'es')
+        }
+        if(lang === 'en') {
+            localStorage.setItem('lang', 'en')
+        }
+    }
     
 }

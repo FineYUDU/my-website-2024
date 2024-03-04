@@ -1,1 +1,57 @@
-<p>footer works!</p>
+<!-- ? MAIN CONTAINER -->
+<div class="main-cont">
+    <!-- ? LOGO CONT -->
+    <section>
+        <!-- LOGO AVATAR -->
+        <img class="cursor_pointer avatar"
+            routerLink="./" 
+            [src]="'../../../../assets/theme/'+ls.GetMode+'/logo/logo-avatar-footer.svg'">
+    </section>
+
+    <!-- ? NAV MENU -->
+    <section>
+        <!-- ? MENU -->
+        <ul>
+            @for (nav of menuNav; track $index) {
+                <li>
+                    <!-- LINK MENU -->
+                    <a  class="font_b1 color_inverted font_regular"
+                        [routerLink]="nav.router" 
+                        routerLinkActive="active">
+                        <!-- TXT -->
+                        {{ nav.txt | translate:ts.GetLang }}
+                    </a>
+                </li>
+            }
+        </ul>
+
+    </section>
+
+    <!-- ? SOCIAL MEDIA -->
+    <section>
+        <!-- ICON -->
+        <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-github.svg'" class="icon_lg">
+
+        <!-- ICON -->
+        <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-linkedin.svg'" class="icon_lg">
+
+    </section>
+
+    <!-- ? VERSION CONTAINER -->
+    <section>
+        <!-- TXT -->
+        <p class="font_b1 font_semibold color_inverted">
+            Fine Dev
+        </p>
+
+        <!-- TXT -->
+        <p class="font_b1 font_regular color_inverted">
+            Currently
+        </p>
+
+        <!-- VERSION -->
+        <version/>
+
+    </section>
+
+</div>

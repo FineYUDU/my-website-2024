@@ -1,7 +1,8 @@
 {
     "lang": {
         "selected":"English",
-        "not-selected":"Spanish"
+        "es":"Spanish",
+        "en":"English"
     },
     "menu": {
         "about":"about",

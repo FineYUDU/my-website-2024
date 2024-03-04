@@ -6,9 +6,9 @@ import { TranslateService } from '../../../core/services/translate.service';
 import { LocalStorageService } from '../../../core/services/localstorage.service';
 // * Pipe
 import { TranslatePipe } from '../../pipes/translate.pipe';
+// * Components
 import { ThemeSwitchComponent } from '../theme-switch/theme-switch.component';
 import { TranslateSwitchComponent } from '../translate-switch/translate-switch.component';
-// * Components
 
 export interface MenuNav {
   txt:string;

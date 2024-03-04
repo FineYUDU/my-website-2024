@@ -126,6 +126,12 @@ ul {
 .color_tertiary {
     color: var(--color-tertiary);
 }
+.color_quaternary {
+    color: var(--color-quaternary);
+}
+.color_inverted {
+    color: var(--color-inverted);
+}
 /* ? BACKGROUNDS */
 /* * Color Background */
 .bg_primary {
@@ -138,6 +144,10 @@ ul {
     color: var(--color-bg-tertiary);
 }
 /* * Icon Size */
+.icon_xs {
+    width: var(--icon-xs);
+    height: var(--icon-xs);
+}
 .icon_sm {
     width: var(--icon-sm);
     height: var(--icon-sm);
