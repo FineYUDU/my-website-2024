@@ -48,7 +48,6 @@ export class FooterComponent {
       icon:'contact',
       router:'contact',
     },
-
   ]
 
 }

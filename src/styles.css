@@ -18,6 +18,7 @@ body {
     border: none;
     /* * Create transition bg-color when the theme change */
     transition: background-color var(--transition-time);
+    transition: font-size var(--transition-time);
 }
 a {
     text-decoration: none;
@@ -131,6 +132,12 @@ ul {
 }
 .color_inverted {
     color: var(--color-inverted);
+}
+.color_brand_primary {
+    color: var(--color-brand-primary);
+}
+.color_brand_secondary {
+    color: var(--color-brand-secondary);
 }
 /* ? BACKGROUNDS */
 /* * Color Background */

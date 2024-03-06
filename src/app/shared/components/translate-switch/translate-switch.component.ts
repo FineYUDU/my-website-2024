@@ -20,9 +20,9 @@ import { EventEmitter } from 'stream';
 })
 export class TranslateSwitchComponent {
   // * Inject Dependencies
-  public el = inject( ElementRef );
   public ts = inject( TranslateService );
   public ls = inject( LocalStorageService );
+  public el = inject( ElementRef );
 
   @HostListener('document:click', ['$event'])
   onClick(event: MouseEvent) {
