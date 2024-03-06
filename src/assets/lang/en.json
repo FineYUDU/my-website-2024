@@ -2,7 +2,9 @@
     "lang": {
         "selected":"English",
         "es":"Spanish",
-        "en":"English"
+        "en":"English",
+        "native":"Native",
+        "level":"Level B2"
     },
     "version":{
         "current":"Currently"
@@ -11,5 +13,16 @@
         "home":"home",
         "about":"about",
         "contact":"contact"
+    },
+    "home":{
+        "section-1":{
+            "hi":"Hi there",
+            "i":"I'm",
+            "ocupation":"Web Developer"
+        },
+        "section-2":{
+            "title":"Experience",
+            "li-1":"Development and design of boards with "
+        }
     }
 }

@@ -1,39 +1,99 @@
 <!-- ? MAIN CONTAINER -->
 <div class="main-cont">
-    <section>
-        <!-- TITLE CONTAINER -->
-        <div class="title-cont">
-            <p class="font_h5 font_medium color_tertiary">Hi there</p>
-            <!-- TITLE -->
-            <p class="font_h3 font_bold color_tertiary">I'm 
-                <span class="font_bold color_brand_secondary">
-                    Erick Eduardo
-                </span>
-            </p>
-            <!-- TXT -->
-            <p class="font_h4 font_medium color_tertiary">Web Developer</p>
-    
-        </div>
-        <!-- ? CHIPS CONTAINER -->
-        <chip [chips]="chips" />
-    </section>
-    <section>
-        <p class="color_primary font_h5 font_medium" >Experience</p>
-        <ul>
-            <!-- # 1 -->
-            <li class="font_b1 color_primary font_medium">
-                
-                <div class="circle"></div>
-                <p>
-                    Desarrollo y diseño de dashboard con 
-                    <strong class="font_b1 color_brand_primary font_bold"> 
-                        Angular 
-                    </strong>
+    <!-- TITLE -->
+    <div class="title-cont">
+        <p class="font_h6 color_primary font_semibold">Welcome back everyone</p>
+        <p class="font_b1 color_quaternary font_regular"> last upgrade {{'03/06/2024'}}</p>
+    </div>
+
+    <!-- ? GRID SECTION -->
+    <div class="grid-section">
+        <!-- ? SECTION | HI THERE -->
+        <section>
+            <!-- TITLE CONTAINER -->
+            <div class="title-cont">
+                <p class="font_h5 font_regular color_tertiary">{{ 'home.section-1.hi' | translate:ts.GetLang }}</p>
+                <!-- TITLE -->
+                <p class="font_h4 font_bold color_tertiary">
+                    {{ 'home.section-1.i' | translate:ts.GetLang }} 
+                    <span class="font_bold color_brand_secondary">
+                        Erick Eduardo
+                    </span>
                 </p>
-                
-            </li>
+                <!-- TXT -->
+                <p class="font_h4 font_regular color_tertiary">
+                    {{ 'home.section-1.ocupation' | translate:ts.GetLang }}
+                </p>
+        
+            </div>
+            <!-- ? CHIPS CONTAINER -->
+            <chip [chips]="chips" />
+        </section>
+        <!-- ? SECTION | SOCIAL MEDIA -->
+        <section class="social-media-section">
+            <!-- Github -->
+            <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-github.svg'" alt="Github logo">
+            <!-- Linkedin -->
+            <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-linkedin.svg'" alt="Linkedin logo">
 
-        </ul>
+        </section>
+    
+        <!-- ? SECTION | EXPERIENCE -->
+        <section class="experience-section">
+            <p class="color_primary font_b1 font_semibold">
+                {{ 'home.section-2.title' | translate:ts.GetLang }}
+            </p>
+            <ul>
+                <!-- # 1 -->
+                <li>
+                    
+                    <div class="circle"></div>
+                    <p class="font_b2 color_primary font_regular">
+                        {{ 'home.section-2.li-1' | translate:ts.GetLang }} 
+                        <strong class="font_b1 color_brand_primary font_bold"> 
+                            Angular 
+                        </strong>
+                    </p>
+                    
+                </li>
+    
+            </ul>
+    
+        </section>
+    
+        <!-- ? SECTION | LANG -->
+        <section class="lang-section" >
+            <!-- LANG 1 -->
+            <div class="lang">
+                <!-- ? TEXT CONTAINER -->
+                <div class="txt-cont">
+                    <!-- TITLE -->
+                    <p class="font_b1 font_bold color_primary">{{ 'lang.es' | translate:ts.GetLang }}</p>
+                    <!-- TXT -->
+                    <p class="font_b2 font_regular color_quaternary">{{ 'lang.native' | translate:ts.GetLang }}</p>
+                </div>
+                <!-- BUTTON -->
+                <button class="btn_primary" (click)="ts.toggleLang('es')">{{'Select lang' | translate:ts.GetLang }}</button>
+    
+            </div>
+    
+            <!-- LANG 1 -->
+            <div class="lang">
+                <!-- ? TEXT CONTAINER -->
+                <div class="txt-cont">
+                    <!-- TITLE -->
+                    <p class="font_b1 font_bold color_primary">{{ 'lang.en' | translate:ts.GetLang }}</p>
+                    <!-- TXT -->
+                    <p class="font_b2 font_regular color_quaternary">{{ 'lang.level' | translate:ts.GetLang }}</p>
+    
+                </div>
+                <!-- BUTTON -->
+                <button class="btn_primary" (click)="ts.toggleLang('en')">{{'Select lang' | translate:ts.GetLang }}</button>
+    
+            </div>
+    
+        </section>
 
-    </section>
+    </div>
+
 </div>

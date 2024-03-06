@@ -2,7 +2,9 @@
     "lang": {
         "selected":"Español",
         "es":"Español",
-        "en":"Inglés"
+        "en":"Inglés",
+        "native":"Nativo",
+        "level":"Nivel B2"
     },
     "version":{
         "current":"Actualmente"
@@ -11,5 +13,16 @@
         "home":"inicio",
         "about":"acerca de",
         "contact":"contacto"
+    },
+    "home":{
+        "section-1":{
+            "hi": "Hola",
+            "i": "Soy",
+            "ocupation":"Desarrollador Web"
+        },
+        "section-2":{
+            "title": "Experiencia",
+            "li-1":"Desarrollo y diseño de dashboards con "
+        }
     }
 }

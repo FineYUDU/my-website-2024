@@ -130,7 +130,7 @@
     --color-primary                                                             :var(--grey-50);
     --color-secondary                                                           :var(--grey-400);
     --color-tertiary                                                            :var(--grey-700);
-    --color-quaternary                                                          :var(--grey-0);
+    --color-quaternary                                                          :var(--grey-300);
     --color-inverted                                                            :var(--grey-600);
     /* * Background */
     --color-bg-primary                                                          :var(--grey-700);

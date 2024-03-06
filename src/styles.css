@@ -19,6 +19,7 @@ body {
     /* * Create transition bg-color when the theme change */
     transition: background-color var(--transition-time);
     transition: font-size var(--transition-time);
+    line-height: 110%;
 }
 a {
     text-decoration: none;
@@ -167,15 +168,23 @@ ul {
     width: var(--icon-lg);
     height: var(--icon-lg);
 }
-/* TODO:Modify */
-/* !!! BUTTONS -----------------------------> */
 /* * BUTTON PRIMARY */
-/*! .btn_primary {} */
-/* BUTTON IMG */
-/*! .btn_primary:hover {} */
-/* ACTIVE */
-/*! .btn_primary:active {} */
-/* FOCUS VISIBLE */
-/*! .btn_primary:focus-visible {} */
-/* * BUTTON DISABLED PRIMARY */
-/*! .btn_disabled_primary {} */
+/* BTN PRIMARY */
+.btn_primary {
+    cursor: pointer;
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-inverted);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-minimal);
+    font-size: var(--font-b2);
+    font-weight: 500;
+    white-space: nowrap;
+}
+/* ! HOVER */
+.btn_primary:hover {
+    background-color: var(--color-bg-quaternary);
+}
+/* ! ACTIVE */
+.btn_primary:active {
+    background-color: var(--color-bg-tertiary);
+}

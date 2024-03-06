@@ -1,7 +1,7 @@
 /* ? MAIN CONTAINER */
 .main-cont {
     display: flex;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs);
 }
 span {
     border: .1125rem solid var(--color-bg-quaternary);

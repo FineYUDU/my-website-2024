@@ -9,6 +9,13 @@ main {
 nav, footer, section {
     width: 100%;
 }
+section {
+    display: flex;
+    flex-direction: column;
+}
+section p {
+    padding-bottom: var(--spacing-blocks);
+}
 footer {
     margin-top: auto;
 }
