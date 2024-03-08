@@ -168,23 +168,55 @@ ul {
     width: var(--icon-lg);
     height: var(--icon-lg);
 }
+/* ? BUTTONS */
 /* * BUTTON PRIMARY */
-/* BTN PRIMARY */
 .btn_primary {
     cursor: pointer;
-    background-color: var(--color-bg-tertiary);
-    color: var(--color-inverted);
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: var(--radius-minimal);
+    background-color: var(--color-btn-bg-primary);
+    color: var(--color-btn-color-primary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-full);
     font-size: var(--font-b2);
-    font-weight: 500;
-    white-space: nowrap;
+    font-weight: 400;
+    white-space: nowrap;    
 }
 /* ! HOVER */
 .btn_primary:hover {
-    background-color: var(--color-bg-quaternary);
+    background-color: var(--color-btn-bg-primary-hover);
 }
 /* ! ACTIVE */
 .btn_primary:active {
-    background-color: var(--color-bg-tertiary);
+    background-color: var(--color-btn-bg-primary-active);
+}
+
+/* * BTN BRAND PRIMARY */
+.btn_brand_primary {
+    cursor: pointer;
+    background-color: var(--color-brand-btn-bg-primary);
+    color: var(--color-brand-btn-color-primary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-full);
+    font-size: var(--font-b2);
+    font-weight: 400;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+/* ! HOVER */
+.btn_brand_primary:hover {
+    background-color: var(--color-brand-btn-bg-primary-hover);
+}
+/* ! ACTIVE */
+.btn_brand_primary:active {
+    background-color: var(--color-brand-btn-bg-primary-active);
+}
+/* * Responsive SM */
+@media screen and (max-width:480px) {
+    .font_h4 {
+        font-size: var(--font-h5);
+    }
+    .font_b1 {
+        font-size: var(--font-b2);
+    }
 }

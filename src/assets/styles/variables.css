@@ -62,21 +62,39 @@
 
     /* ? TOKENS -------------------------------------------------------------------->*/ 
     /* ? Colors --------------> */
+    /* * Button Primary */
+    --color-btn-bg-primary                                                      :var(--brand-400);
+    --color-btn-color-primary                                                   :var(--brand-400);
+    --color-btn-border-primary                                                  :var(--brand-400);
+    /* ! Hover */
+    --color-btn-bg-primary-hover                                                :var(--brand-400);
+    /* ! Active */
+    --color-btn-bg-primary-active                                               :var(--brand-400);
+    /* * Button Brand Primary */
+    --color-brand-btn-bg-primary                                                :var(--brand-400);
+    --color-brand-btn-color-primary                                             :var(--grey-50);
+    --color-brand-btn-border-primary                                            :var(--brand-400);
+    /* ! Hover */
+    --color-brand-btn-bg-primary-hover                                          :var(--brand-300);
+    /* ! Active */
+    --color-brand-btn-bg-primary-active                                         :var(--brand-500);
     /* * Primary */
     --color-primary                                                             :var(--grey-600);
     --color-secondary                                                           :var(--grey-200);
     --color-tertiary                                                            :var(--grey-50);
     --color-quaternary                                                          :var(--grey-500);
     --color-inverted                                                            :var(--grey-0);
+    --color-inverted-50                                                         :var(--grey-50);
+    --color-inverted-100                                                        :var(--grey-100);
     /* * Background */
     --color-bg-primary                                                          :var(--grey-50);
     --color-bg-secondary                                                        :var(--grey-0);
     --color-bg-tertiary                                                         :var(--grey-600);
     --color-bg-quaternary                                                       :var(--grey-500);
     /* * Brand */
-    --color-brand-primary                                                       :var(--brand-300);
-    --color-brand-secondary                                                     :var(--brand-50);
-    --color-brand-tertiary                                                      :var(--brand-500);
+    --color-brand-primary                                                       :var(--brand-200);
+    --color-brand-secondary                                                     :var(--brand-100);
+    --color-brand-tertiary                                                      :var(--brand-600);
     /* ? Size --------------> */
     /* * Spacing */
     --spacing-2xs                                                               :var(--spacing-1);
@@ -86,7 +104,7 @@
     --spacing-lg                                                                :var(--spacing-8);
     --spacing-xl                                                                :var(--spacing-10);
     --spacing-2xl                                                               :var(--spacing-15);
-    --spacing-blocks                                                            :var(--spacing-4);
+    --spacing-blocks                                                            :var(--spacing-5);
     /* * Radius */
     --radius-minimal                                                            :var(--radius-sm);
     --radius-rounded                                                            :var(--radius-md);
@@ -132,14 +150,16 @@
     --color-tertiary                                                            :var(--grey-700);
     --color-quaternary                                                          :var(--grey-300);
     --color-inverted                                                            :var(--grey-600);
+    --color-inverted-50                                                         :var(--grey-50);
+    --color-inverted-100                                                        :var(--grey-100);
     /* * Background */
     --color-bg-primary                                                          :var(--grey-600);
     --color-bg-secondary                                                        :var(--grey-700);
     --color-bg-tertiary                                                         :var(--grey-50);
     /* * Brand */
-    --color-brand-primary                                                       :var(--brand-300);
-    --color-brand-secondary                                                     :var(--brand-200);
-    --color-brand-tertiary                                                      :var(--brand-500);
+    --color-brand-primary                                                       :var(--brand-400);
+    --color-brand-secondary                                                     :var(--brand-300);
+    --color-brand-tertiary                                                      :var(--brand-600);
     /* ? Size --------------> */
     /* * Spacing */
     --spacing-2xs                                                               :var(--spacing-1);

@@ -6,6 +6,9 @@
         "native":"Native",
         "level":"Level B2"
     },
+    "button":{
+        "cv":"Download CV"
+    },
     "version":{
         "current":"Currently"
     },
@@ -15,10 +18,13 @@
         "contact":"contact"
     },
     "home":{
+        "title":"Good to see you!",
+        "subtitle":"Dev with",
         "section-1":{
-            "hi":"Hi there",
+            "hi":"Hi there!",
             "i":"I'm",
-            "ocupation":"Web Developer"
+            "ocupation":"Web Developer / UX UI Designer",
+            "upgrade":"Last upgrade"
         },
         "section-2":{
             "title":"Experience",

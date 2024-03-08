@@ -7,6 +7,7 @@ import { TranslateService } from '../../../core/services/translate.service';
 import { TranslatePipe } from '../../../shared/pipes/translate.pipe';
 // * Components
 import { ChipComponent } from '../../../shared/components/chip/chip.component';
+import { PieGridComponent } from '../../../shared/components/pie-grid/pie-grid.component';
 
 export interface ChipMenu {
   txt:string;
@@ -18,14 +19,15 @@ export interface ChipMenu {
   imports: [
     TranslatePipe,
     ChipComponent,
+    PieGridComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export default class HomeComponent {
   // * Inject 
-  public ts = inject( TranslateService );
-  public ls = inject( LocalStorageService );
+  public translateService = inject( TranslateService );
+  public localStorageService = inject( LocalStorageService );
 
   chips:ChipMenu[] =[
     {

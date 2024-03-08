@@ -24,13 +24,14 @@ section:nth-of-type(2) {
     align-items: center;
     gap: var(--spacing-xl);
 }
-.avatar {
+.logo-cont .avatar {
     width: 2.6875rem;
     height: 2.6875rem;
 }
 /* LOGO TXT */
-.logo-txt {
+.logo-cont .logo-txt {
     height: 1.5rem;
+    width: 4.875rem;
 }
 /* ? MENU  */
 ul {
@@ -46,4 +47,8 @@ ul {
 /* * Active */
 .active {
     font-weight: 600;
+}
+/* * Responsive SM */
+@media screen and (max-width:480px) {
+   
 }

@@ -2,8 +2,8 @@
 <div class="main-cont">
     <!-- TITLE -->
     <div class="title-cont">
-        <p class="font_h6 color_primary font_semibold">Welcome back everyone</p>
-        <p class="font_b1 color_quaternary font_regular"> last upgrade {{'03/06/2024'}}</p>
+        <p class="font_h6 color_primary font_semibold"> {{ 'home.title' | translate:translateService.GetLang }} </p>
+        <p class="font_b1 color_quaternary font_regular"> {{ 'home.subtitle' | translate:translateService.GetLang }} Angular v17.0.8 </p>
     </div>
 
     <!-- ? GRID SECTION -->
@@ -12,22 +12,35 @@
         <section>
             <!-- TITLE CONTAINER -->
             <div class="title-cont">
-                <p class="font_h5 font_regular color_tertiary">{{ 'home.section-1.hi' | translate:ts.GetLang }}</p>
+                <p class="font_h5 font_regular color_tertiary">{{ 'home.section-1.hi' | translate:translateService.GetLang }}</p>
                 <!-- TITLE -->
                 <p class="font_h4 font_bold color_tertiary">
-                    {{ 'home.section-1.i' | translate:ts.GetLang }} 
-                    <span class="font_bold color_brand_secondary">
+                    {{ 'home.section-1.i' | translate:translateService.GetLang }} 
+                    <span class="font_bold color_brand_primary">
                         Erick Eduardo
                     </span>
                 </p>
                 <!-- TXT -->
-                <p class="font_h4 font_regular color_tertiary">
-                    {{ 'home.section-1.ocupation' | translate:ts.GetLang }}
+                <p class="font_b1 font_regular color_tertiary">
+                    {{ 'home.section-1.ocupation' | translate:translateService.GetLang }}
                 </p>
         
             </div>
-            <!-- ? CHIPS CONTAINER -->
-            <chip [chips]="chips" />
+            <!-- ? BUTTON CONTAINER -->
+            <div class="btn_cont">
+                <!-- TEXT CONTAINER -->
+                <div class="txt-cont">
+                    <p class="color_secondary font_c1 font_regular"> {{ 'home.section-1.upgrade' | translate:translateService.GetLang }} {{'03/08/2024'}} </p>
+                </div>
+                <button type="button" class="btn_brand_primary">
+                    {{ 'button.cv' | translate:translateService.GetLang }}
+                    <!-- ICON -->
+                    <img class="icon_sm" src="../../../../assets/theme/light/icon/icon-file-download_icon-.svg" alt="Download file">
+
+                </button>
+
+            </div>
+
         </section>
         
         <!-- ? SECTION | SOCIAL MEDIA -->
@@ -36,19 +49,19 @@
             <!-- Linkedin -->
             <a href="https://www.linkedin.com/in/erick-alcocer-06ba2b149/" target="_blank">
                 <!-- ICON -->
-                <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-linkedin.svg'" alt="Linkedin logo">
+                <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-linkedin.svg'" alt="Linkedin logo">
             </a>
             
             <!-- GitHub -->
             <a href="https://github.com/FineYUDU" target="_blank">
                 <!-- ICON -->
-                <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-github.svg'" alt="Github logo">
+                <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-github.svg'" alt="Github logo">
             </a>
             
             <!-- X -->
             <a href="https://twitter.com/FineYUDU" target="_blank">
                 <!-- ICON -->
-                <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-x.svg'" alt="x logo">
+                <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-x.svg'" alt="x logo">
             </a>
 
         </section>
@@ -56,7 +69,7 @@
         <!-- ? SECTION | EXPERIENCE -->
         <section class="experience-section">
             <p class="color_primary font_b1 font_semibold">
-                {{ 'home.section-2.title' | translate:ts.GetLang }}
+                {{ 'home.section-2.title' | translate:translateService.GetLang }}
             </p>
             <ul>
                 <!-- # 1 -->
@@ -64,7 +77,7 @@
                     
                     <div class="circle"></div>
                     <p class="font_b2 color_primary font_regular">
-                        {{ 'home.section-2.li-1' | translate:ts.GetLang }} 
+                        {{ 'home.section-2.li-1' | translate:translateService.GetLang }} 
                         <strong class="font_b1 color_brand_primary font_bold"> 
                             Angular 
                         </strong>
@@ -78,32 +91,45 @@
     
         <!-- ? SECTION | LANG -->
         <section class="lang-section" >
-            <!-- LANG 1 -->
+            <!-- ? LANG | ES -->
             <div class="lang">
-                <!-- ? TEXT CONTAINER -->
-                <div class="txt-cont">
-                    <!-- TITLE -->
-                    <p class="font_b1 font_bold color_primary">{{ 'lang.es' | translate:ts.GetLang }}</p>
-                    <!-- TXT -->
-                    <p class="font_b2 font_regular color_quaternary">{{ 'lang.native' | translate:ts.GetLang }}</p>
+                <!-- ? BLOCK LANG -->
+                <div class="block-lang">
+                    <!-- ? IMG | ES -->
+                    <div class="img-cont cursor_pointer" (click)="translateService.toggleLang('es')">
+                        <img src="../../../../assets/theme/light/img/img-es.svg" alt="spanish cloud">
+                    </div>
+                    
+                    <!-- ? TEXT CONTAINER -->
+                    <div class="txt-cont">
+                        <!-- TITLE -->
+                        <p class="font_b1 font_bold color_primary">{{ 'lang.es' | translate:translateService.GetLang }}</p>
+                        <!-- TXT -->
+                        <p class="font_b2 font_regular color_quaternary">{{ 'lang.native' | translate:translateService.GetLang }}</p>
+                    </div>
+
                 </div>
-                <!-- BUTTON -->
-                <button class="btn_primary" (click)="ts.toggleLang('es')">{{'Select lang' | translate:ts.GetLang }}</button>
+                <pie-grid [pieGrid]="'es'" [percent]="90"/>
     
             </div>
     
             <!-- LANG 1 -->
             <div class="lang">
-                <!-- ? TEXT CONTAINER -->
-                <div class="txt-cont">
-                    <!-- TITLE -->
-                    <p class="font_b1 font_bold color_primary">{{ 'lang.en' | translate:ts.GetLang }}</p>
-                    <!-- TXT -->
-                    <p class="font_b2 font_regular color_quaternary">{{ 'lang.level' | translate:ts.GetLang }}</p>
-    
+                <div class="block-lang">
+                    <div class="img-cont cursor_pointer" (click)="translateService.toggleLang('en')">
+                        <img src="../../../../assets/theme/light/img/img-en.svg" alt="english cloud">
+                    </div>
+                    <!-- ? TEXT CONTAINER -->
+                    <div class="txt-cont">
+                        <!-- TITLE -->
+                        <p class="font_b1 font_bold color_primary">{{ 'lang.en' | translate:translateService.GetLang }}</p>
+                        <!-- TXT -->
+                        <p class="font_b2 font_regular color_quaternary">{{ 'lang.level' | translate:translateService.GetLang }}</p>
+        
+                    </div>
+
                 </div>
-                <!-- BUTTON -->
-                <button class="btn_primary" (click)="ts.toggleLang('en')">{{'Select lang' | translate:ts.GetLang }}</button>
+                <pie-grid [pieGrid]="'en'" [percent]="60"/>
     
             </div>
     

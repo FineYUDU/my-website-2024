@@ -1,0 +1,64 @@
+/* PIE CONTAINER */
+.pie-cont {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+}
+p {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+/* SPANISH */
+.es .pie {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    border: .24rem solid var(--color-primary);
+    border-radius: 50%;
+    border-top-color: transparent;
+    transform: rotate(45deg);
+}
+.es .pie-2 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    border: .24rem solid var(--color-primary);
+    border-radius: 50%;
+    border-top-color: transparent;
+    transform: rotate(20deg);
+}
+/* ENGLISH */
+.en .pie {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    border: .24rem solid var(--color-primary);
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    transform: rotate(45deg);
+}
+.en .pie-2 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    border: .24rem solid var(--color-primary);
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    transform: rotate(-25deg);
+}
