@@ -2,7 +2,7 @@
 <div class="main-cont">
     <section (click)="openDropdown()" class="cursor_pointer">
         <!-- ICON -->
-        <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-translate.svg'" class="icon_md">
+        <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-translate.svg'" alt="Icon translate" class="icon_md">
 
         <!-- TXT -->
         <p class="font_b1 color_primary font_medium"> {{'lang.selected' | translate:ts.GetLang }} </p>
@@ -10,6 +10,7 @@
         <!-- ICON -->
         <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-chevron.svg'" 
             class="icon_xs" 
+            alt="Icon chevron"
             [ngClass]="{
                 'rotate-open': dropdown, 
                 'rotate-close': !dropdown 

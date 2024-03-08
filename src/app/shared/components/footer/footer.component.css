@@ -4,14 +4,16 @@
     flex-direction: column;
     background-color: var(--color-bg-tertiary);
     padding: var(--spacing-sm) 0;
-    margin: var(--spacing-sm) var(--spacing-sm);
     border-radius: var(--radius-minimal);
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
 }
 section {
     display: flex;
     justify-content: center;
     gap: var(--spacing-2xs);
+}
+.social-media-cont {
+    gap: var(--spacing-sm);
 }
 .avatar {
     width: 3.75rem;

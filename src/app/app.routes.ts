@@ -3,7 +3,7 @@ import { Page404Component } from './shared/pages/page404/page404.component';
 
 export const routes: Routes = [
     {
-        path:'yudu-dev',
+        path:'fine-dev',
         loadComponent: () => import('./website/website.component'),
         children: [
             {
@@ -25,6 +25,6 @@ export const routes: Routes = [
         ]
     },
     { path:'404', component: Page404Component },
-    { path:'', redirectTo:'/yudu-dev', pathMatch:'full' },
+    { path:'', redirectTo:'/fine-dev', pathMatch:'full' },
     { path:'**', redirectTo:'/404', pathMatch:'full' }
 ];

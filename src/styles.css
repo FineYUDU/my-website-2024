@@ -19,7 +19,7 @@ body {
     /* * Create transition bg-color when the theme change */
     transition: background-color var(--transition-time);
     transition: font-size var(--transition-time);
-    line-height: 110%;
+    line-height: 150%;
 }
 a {
     text-decoration: none;
