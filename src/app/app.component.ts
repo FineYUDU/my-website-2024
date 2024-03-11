@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+// * Angular
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TranslateService } from './core/services/translate.service';
+// * Services
 import { ThemeService } from './core/services/theme.service';
+import { TranslateService } from './core/services/translate.service';
 
 @Component({
   selector: 'app-root',
