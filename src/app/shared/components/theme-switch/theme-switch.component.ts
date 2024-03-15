@@ -1,8 +1,9 @@
 // * Angular
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { ThemeService } from '../../../core/services/theme.service';
+// * Services
 import { LocalStorageService } from '../../../core/services/localstorage.service';
+import { ThemeService } from '../../../core/services/theme.service';
 
 @Component({
   selector: 'theme-switch',
@@ -14,14 +15,7 @@ import { LocalStorageService } from '../../../core/services/localstorage.service
   styleUrl: './theme-switch.component.css'
 })
 export class ThemeSwitchComponent {
-
+  // * @Injections
   public themeService = inject( ThemeService );
   public ls = inject( LocalStorageService );
-
-  // selected:boolean = false;
-  // toggleTheme() {
-  //   console.log(this.selected)
-  //   this.selected = !this.selected;
-  // }
-
 }

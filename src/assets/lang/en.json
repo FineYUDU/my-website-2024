@@ -15,20 +15,31 @@
     "menu": {
         "home":"home",
         "about":"about",
-        "contact":"contact"
+        "contact":"contact",
+        "settings":"settings",
+        "translate":"language",
+        "nav":"navigation"
     },
     "home":{
-        "title":"Good to see you!",
+        "title":"Welcome!",
         "subtitle":"Dev with",
         "section-1":{
-            "hi":"Hi there!",
-            "i":"I'm",
             "ocupation":"Web Developer / UX UI Designer",
             "upgrade":"Last upgrade"
         },
         "section-2":{
-            "title":"Experience",
-            "li-1":"Development and design of boards with "
+            "title": "Experience",
+            "li-1":"Frontend developer with ",
+            "li-2": "Experience in development and design",
+            "li-3":"Creation of",
+            "li-3-2": "using",
+            "li-4":"UI Design",
+            "li-4-2":"and prototyped with",
+            "li-5":"Experience with UI libraries like ",
+            "li-6": "Consuming",
+            "li-7":"Experience in agile methodologies such as ",
+            "li-8":"knowledge ",
+            "li-8-2":" and "
         }
     }
 }

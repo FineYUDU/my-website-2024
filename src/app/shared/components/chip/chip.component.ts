@@ -1,5 +1,7 @@
 // * Angular
 import { Component, Input } from '@angular/core';
+
+// * Interfaces
 export interface ChipMenu {
   txt:string;
 }
@@ -12,6 +14,7 @@ export interface ChipMenu {
   <!-- ? MAIN CONTAINER -->
   <div class="main-cont">
       @for ( chip of chips ;track $index;) {
+        <!-- TXT -->
       <span class="font_medium font_c2 color_tertiary" >
           {{ chip.txt }}
       </span>  
@@ -24,6 +27,7 @@ export interface ChipMenu {
       display: flex;
       gap: var(--spacing-xs);
   }
+  /* TXT */
   span {
       border: .1125rem solid var(--color-bg-quaternary);
       padding: var(--spacing-xs) var(--spacing-sm);
@@ -37,4 +41,5 @@ export interface ChipMenu {
 })
 export class ChipComponent {
   @Input() chips:ChipMenu[]=[];
+
 }

@@ -1,0 +1,34 @@
+/* ? MAIN CONTAINER */
+.main-cont {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+.hr {
+    height: .0625rem;
+    border-radius: var(--radius-minimal);
+    width: 100%;
+    background-color: var(--color-secondary);
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: circle;
+    gap: var(--spacing-xs);
+}
+/* TEXT LIST */
+.txt-li {
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: center;
+}
+li .circle {
+    width: .3125rem;
+    height: .3125rem;
+    border-radius: var(--radius-full);
+    background-color: var(--color-bg-tertiary);
+}
+/* FOOTER LI */
+li .footer-li {
+    padding-left: calc(var(--spacing-xs) + .3125rem);
+}

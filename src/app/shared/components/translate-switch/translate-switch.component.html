@@ -1,37 +1,37 @@
 <!-- ? MAIN CONTAINER -->
 <div class="main-cont">
-    <section (click)="openDropdown()" class="cursor_pointer">
+    <section (click)="toggleDropdown()" class="cursor_pointer">
         <!-- ICON -->
-        <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-translate.svg'" alt="Icon translate" class="icon_md">
+        <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-translate.svg'" alt="Icon translate" class="icon_md">
 
         <!-- TXT -->
-        <p class="font_b1 color_primary font_medium"> {{'lang.selected' | translate:ts.GetLang }} </p>
+        <p class="font_b1 color_primary font_medium"> {{'lang.selected' | translate:translateService.GetLang }} </p>
 
         <!-- ICON -->
-        <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-chevron.svg'" 
+        <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-chevron.svg'" 
             class="icon_xs" 
             alt="Icon chevron"
             [ngClass]="{
-                'rotate-open': dropdown, 
-                'rotate-close': !dropdown 
+                'rotate-open': isDropdownOpen, 
+                'rotate-close': !isDropdownOpen 
             }">
 
         <!-- ? DROPDOWN -->
         <div class="dropdown"
             [ngClass]="{
-                'dropdown-open': dropdown,
-                'dropdown-close': !dropdown,
+                'dropdown-open': isDropdownOpen,
+                'dropdown-close': !isDropdownOpen,
             }">
             <ul>
                 <li class=" font_b1 color_primary font_medium" 
-                    [ngClass]="{'selected': ts.GetLang === 'es'}"
-                    (click)="ts.toggleLang('es')">
-                    {{'lang.es' | translate:ts.GetLang }} 
+                    [ngClass]="{'selected': translateService.GetLang === 'es'}"
+                    (click)="translateService.toggleLang('es')">
+                    {{'lang.es' | translate:translateService.GetLang }} 
                 </li>
                 <li class=" font_b1 color_primary font_medium" 
-                    [ngClass]="{'selected': ts.GetLang === 'en'}"
-                    (click)="ts.toggleLang('en')"> 
-                    {{'lang.en' | translate:ts.GetLang }} 
+                    [ngClass]="{'selected': translateService.GetLang === 'en'}"
+                    (click)="translateService.toggleLang('en')"> 
+                    {{'lang.en' | translate:translateService.GetLang }} 
                 </li>
                 
             </ul>

@@ -1,3 +1,4 @@
+// * Angular
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -9,5 +10,5 @@ import { Component, Input } from '@angular/core';
 })
 export class PieGridComponent {
   @Input() pieGrid!:string;
-  @Input() percent:number = 0;
+  @Input() percent!:number;
 }

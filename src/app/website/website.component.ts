@@ -1,7 +1,9 @@
+// * Angular
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NavbarComponent } from '../shared/components/navbar/navbar.component';
+// * Components
 import { FooterComponent } from '../shared/components/footer/footer.component';
+import { NavbarComponent } from '../shared/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-website',
@@ -14,6 +16,4 @@ import { FooterComponent } from '../shared/components/footer/footer.component';
   templateUrl: './website.component.html',
   styleUrl: './website.component.css'
 })
-export default class WebsiteComponent {
-
-}
+export default class WebsiteComponent {}

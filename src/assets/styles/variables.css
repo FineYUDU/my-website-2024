@@ -2,7 +2,7 @@
     /* ? PRIMITIVES -------------------------------------------------------------------->*/ 
     /* ? Colors --------------> */
     /* * Grey */
-    --grey-0                                                                    :#f8f9fa;
+    /* --grey-0                                                                    :#f8f9fa;
     --grey-50                                                                   :#e9ecef;
     --grey-100                                                                  :#dee2e6;
     --grey-200                                                                  :#ced4da;
@@ -11,6 +11,7 @@
     --grey-500                                                                  :#495057;
     --grey-600                                                                  :#343a40;
     --grey-700                                                                  :#212529;
+    --grey-700                                                                  :#212529; */
     --grey-0                                                                    :#F9F9F9;
     --grey-50                                                                   :#F2F2F2;
     --grey-100                                                                  :#DDDDDD;
@@ -62,22 +63,6 @@
 
     /* ? TOKENS -------------------------------------------------------------------->*/ 
     /* ? Colors --------------> */
-    /* * Button Primary */
-    --color-btn-bg-primary                                                      :var(--brand-400);
-    --color-btn-color-primary                                                   :var(--brand-400);
-    --color-btn-border-primary                                                  :var(--brand-400);
-    /* ! Hover */
-    --color-btn-bg-primary-hover                                                :var(--brand-400);
-    /* ! Active */
-    --color-btn-bg-primary-active                                               :var(--brand-400);
-    /* * Button Brand Primary */
-    --color-brand-btn-bg-primary                                                :var(--brand-400);
-    --color-brand-btn-color-primary                                             :var(--grey-50);
-    --color-brand-btn-border-primary                                            :var(--brand-400);
-    /* ! Hover */
-    --color-brand-btn-bg-primary-hover                                          :var(--brand-300);
-    /* ! Active */
-    --color-brand-btn-bg-primary-active                                         :var(--brand-500);
     /* * Primary */
     --color-primary                                                             :var(--grey-600);
     --color-secondary                                                           :var(--grey-200);
@@ -86,15 +71,42 @@
     --color-inverted                                                            :var(--grey-0);
     --color-inverted-50                                                         :var(--grey-50);
     --color-inverted-100                                                        :var(--grey-100);
+    
     /* * Background */
     --color-bg-primary                                                          :var(--grey-50);
     --color-bg-secondary                                                        :var(--grey-0);
     --color-bg-tertiary                                                         :var(--grey-600);
     --color-bg-quaternary                                                       :var(--grey-500);
+
     /* * Brand */
     --color-brand-primary                                                       :var(--brand-200);
     --color-brand-secondary                                                     :var(--brand-100);
-    --color-brand-tertiary                                                      :var(--brand-600);
+    --color-brand-tertiary                                                      :var(--brand-400);
+
+    /* * Button Primary */
+    --color-btn-bg-primary                                                      :var(--brand-400);
+    --color-btn-color-primary                                                   :var(--brand-400);
+    --color-btn-border-primary                                                  :var(--brand-400);
+    /* ! Hover */
+    --color-btn-bg-primary-hover                                                :var(--brand-400);
+    /* ! Active */
+    --color-btn-bg-primary-active                                               :var(--brand-400);
+
+    /* * Button Brand Primary */
+    --color-brand-btn-bg-primary                                                :var(--brand-400);
+    --color-brand-btn-color-primary                                             :var(--grey-50);
+    --color-brand-btn-border-primary                                            :var(--brand-400);
+    /* ! Hover */
+    --color-brand-btn-bg-primary-hover                                          :var(--brand-300);
+    /* ! Active */
+    --color-brand-btn-bg-primary-active                                         :var(--brand-500);
+
+    /* * Helpers */
+    --color-main-card                                                           :var(--grey-600);
+    --color-lang-selected-txt                                                   :var(--grey-50);
+    --color-border-left                                                         :var(--grey-0);
+    --color-border-left-selected                                                :var(--grey-100);
+
     /* ? Size --------------> */
     /* * Spacing */
     --spacing-2xs                                                               :var(--spacing-1);
@@ -105,10 +117,12 @@
     --spacing-xl                                                                :var(--spacing-10);
     --spacing-2xl                                                               :var(--spacing-15);
     --spacing-blocks                                                            :var(--spacing-5);
+    
     /* * Radius */
     --radius-minimal                                                            :var(--radius-sm);
     --radius-rounded                                                            :var(--radius-md);
     --radius-full                                                               :var(--radius-3xl);
+
     /* * Icon */
     --icon-xs                                                                   :var(--icon-1);
     --icon-sm                                                                   :var(--icon-2);
@@ -118,6 +132,7 @@
     /* ? FONTS -------------------------------------------------------------------->*/ 
     /* * Font Family */
     --primary-font                                                              :'Work Sans', sans-serif;
+
     /* * Headlines */
     --font-h1                                                                   :4em;
     --font-h2                                                                   :3.75em;
@@ -125,9 +140,11 @@
     --font-h4                                                                   :2.125em;
     --font-h5                                                                   :1.5em;
     --font-h6                                                                   :1.3125em;
+
     /* * Body */
     --font-b1                                                                   :1em;
     --font-b2                                                                   :.875em;
+
     /* * Captions */
     --font-c1                                                                   :.75em;
     --font-c2                                                                   :.625em;
@@ -147,19 +164,44 @@
     /* * Primary */
     --color-primary                                                             :var(--grey-50);
     --color-secondary                                                           :var(--grey-400);
-    --color-tertiary                                                            :var(--grey-700);
+    --color-tertiary                                                            :var(--grey-50);
     --color-quaternary                                                          :var(--grey-300);
     --color-inverted                                                            :var(--grey-600);
     --color-inverted-50                                                         :var(--grey-50);
     --color-inverted-100                                                        :var(--grey-100);
+
     /* * Background */
     --color-bg-primary                                                          :var(--grey-600);
     --color-bg-secondary                                                        :var(--grey-700);
     --color-bg-tertiary                                                         :var(--grey-50);
+
     /* * Brand */
     --color-brand-primary                                                       :var(--brand-400);
     --color-brand-secondary                                                     :var(--brand-300);
     --color-brand-tertiary                                                      :var(--brand-600);
+
+    /* * Button Primary */
+    --color-btn-bg-primary                                                      :var(--brand-400);
+    --color-btn-color-primary                                                   :var(--brand-400);
+    --color-btn-border-primary                                                  :var(--brand-400);
+    /* ! Hover */
+    --color-btn-bg-primary-hover                                                :var(--brand-400);
+    /* ! Active */
+    --color-btn-bg-primary-active                                               :var(--brand-400);
+
+    /* * Button Brand Primary */
+    --color-brand-btn-bg-primary                                                :var(--brand-400);
+    --color-brand-btn-color-primary                                             :var(--grey-50);
+    --color-brand-btn-border-primary                                            :var(--brand-400);
+    /* ! Hover */
+    --color-brand-btn-bg-primary-hover                                          :var(--brand-300);
+    /* ! Active */
+    --color-brand-btn-bg-primary-active                                         :var(--brand-500);
+
+    /* * Helpers */
+    --color-main-card                                                           :var(--grey-700);
+    --color-lang-selected-txt                                                   :var(--grey-600);
+
     /* ? Size --------------> */
     /* * Spacing */
     --spacing-2xs                                                               :var(--spacing-1);
@@ -170,18 +212,22 @@
     --spacing-xl                                                                :var(--spacing-10);
     --spacing-2xl                                                               :var(--spacing-15);
     --gap-dashboard                                                             :var(--spacing-6);
+
     /* * Radius */
     --radius-minimal                                                            :var(--radius-sm);
     --radius-rounded                                                            :var(--radius-md);
     --radius-full                                                               :var(--radius-3xl);
+
     /* * Icon */
     --icon-xs                                                                   :var(--icon-1);
     --icon-sm                                                                   :var(--icon-2);
     --icon-md                                                                   :var(--icon-4);
     --icon-lg                                                                   :var(--icon-5);
+
     /* ? FONTS -------------------------------------------------------------------->*/ 
     /* * Font Family */
     --primary-font                                                              :'Work Sans', sans-serif;
+
     /* * Headlines */
     --font-h1                                                                   :4em;
     --font-h2                                                                   :3.75em;
@@ -189,9 +235,11 @@
     --font-h4                                                                   :2.125em;
     --font-h5                                                                   :1.5em;
     --font-h6                                                                   :1.3125em;
+
     /* * Body */
     --font-b1                                                                   :1em;
     --font-b2                                                                   :.875em;
+
     /* * Captions */
     --font-c1                                                                   :.75em;
     --font-c2                                                                   :.625em;
@@ -201,6 +249,8 @@
     /* ? Size --------------> */
     /* * Spacing */
     --web-width                                                                 :82.45%;
+
     /* ? Transitios --------------> */
     --transition-time                                                           :.2s ease-in-out;
+
 }

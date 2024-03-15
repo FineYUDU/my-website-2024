@@ -2,44 +2,21 @@
 <div class="main-cont">
     <!-- TITLE -->
     <div class="title-cont">
-        <p class="font_h6 color_primary font_semibold"> {{ 'home.title' | translate:translateService.GetLang }} </p>
-        <p class="font_b1 color_quaternary font_regular"> {{ 'home.subtitle' | translate:translateService.GetLang }} Angular v17.0.8 </p>
+        <p class="font_h5 color_primary font_bold">
+            {{ 'home.title' | translate:translateService.GetLang }}
+        </p>
+        
+        <p class="font_b1 color_quaternary font_regular">
+            {{ 'home.subtitle' | translate:translateService.GetLang }} Angular v17.0.8
+        </p>
+
     </div>
 
     <!-- ? GRID SECTION -->
     <div class="grid-section">
-        <!-- ? SECTION | HI THERE -->
+        <!-- ? SECTION | USER -->
         <section>
-            <!-- TITLE CONTAINER -->
-            <div class="title-cont">
-                <p class="font_h5 font_regular color_tertiary">{{ 'home.section-1.hi' | translate:translateService.GetLang }}</p>
-                <!-- TITLE -->
-                <p class="font_h4 font_bold color_tertiary">
-                    {{ 'home.section-1.i' | translate:translateService.GetLang }} 
-                    <span class="font_bold color_brand_primary">
-                        Erick Eduardo
-                    </span>
-                </p>
-                <!-- TXT -->
-                <p class="font_b1 font_regular color_tertiary">
-                    {{ 'home.section-1.ocupation' | translate:translateService.GetLang }}
-                </p>
-        
-            </div>
-            <!-- ? BUTTON CONTAINER -->
-            <div class="btn_cont">
-                <!-- TEXT CONTAINER -->
-                <div class="txt-cont">
-                    <p class="color_secondary font_c1 font_regular"> {{ 'home.section-1.upgrade' | translate:translateService.GetLang }} {{'03/08/2024'}} </p>
-                </div>
-                <button type="button" class="btn_brand_primary">
-                    {{ 'button.cv' | translate:translateService.GetLang }}
-                    <!-- ICON -->
-                    <img class="icon_sm" src="../../../../assets/theme/light/icon/icon-file-download_icon-.svg" alt="Download file">
-
-                </button>
-
-            </div>
+            <user-card/>
 
         </section>
         
@@ -68,25 +45,7 @@
     
         <!-- ? SECTION | EXPERIENCE -->
         <section class="experience-section">
-            <p class="color_primary font_b1 font_semibold">
-                {{ 'home.section-2.title' | translate:translateService.GetLang }}
-            </p>
-            <ul>
-                <!-- # 1 -->
-                <li>
-                    
-                    <div class="circle"></div>
-                    <p class="font_b2 color_primary font_regular">
-                        {{ 'home.section-2.li-1' | translate:translateService.GetLang }} 
-                        <strong class="font_b1 color_brand_primary font_bold"> 
-                            Angular 
-                        </strong>
-                    </p>
-                    
-                </li>
-    
-            </ul>
-    
+            <experience/>
         </section>
     
         <!-- ? SECTION | LANG -->
@@ -97,7 +56,7 @@
                 <div class="block-lang">
                     <!-- ? IMG | ES -->
                     <div class="img-cont cursor_pointer" (click)="translateService.toggleLang('es')">
-                        <img src="../../../../assets/theme/light/img/img-es.svg" alt="spanish cloud">
+                        <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/img-es.svg'" alt="spanish cloud">
                     </div>
                     
                     <!-- ? TEXT CONTAINER -->
@@ -117,7 +76,7 @@
             <div class="lang">
                 <div class="block-lang">
                     <div class="img-cont cursor_pointer" (click)="translateService.toggleLang('en')">
-                        <img src="../../../../assets/theme/light/img/img-en.svg" alt="english cloud">
+                        <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/img-en.svg'" alt="english cloud">
                     </div>
                     <!-- ? TEXT CONTAINER -->
                     <div class="txt-cont">
@@ -136,5 +95,35 @@
         </section>
 
     </div>
+    
+    <!-- TITLE -->
+    <div class="title-cont">
+        <p class="font_h5 color_primary font_bold"> 
+            {{ 'Stack' | translate:translateService.GetLang }} 
+        </p>
+
+    </div>
+
+    <!-- ? SECTION | SCROLL -->
+    <section class="scroll-section">
+
+        <!-- ? STACK | CONTAINER -->
+        <div class="logos">
+            <div class="logos-slide">
+                @for (item of scrollImages; track $index) {
+                    <img alt="logo Angular" class="stack-item" [src]="'../../../../assets/theme/light/logo/stack/logo-'+item.img+'.svg'">
+                }
+            </div>
+
+            <div class="logos-slide">
+                @for (item of scrollImages; track $index) {
+                    <img alt="logo Angular" class="stack-item" [src]="'../../../../assets/theme/light/logo/stack/logo-'+item.img+'.svg'">
+                }
+            </div>
+
+        </div>
+
+    </section>
+
 
 </div>

@@ -7,6 +7,8 @@ import { TranslateService } from '../../../core/services/translate.service';
 import { VersionComponent } from '../version/version.component';
 import { TranslatePipe } from '../../pipes/translate.pipe';
 import { RouterModule } from '@angular/router';
+
+// * Interfaces
 export interface MenuNav {
   txt:string;
   router:string;
@@ -25,12 +27,11 @@ export interface MenuNav {
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-  // * Inject Translate Service
-  public ts = inject( TranslateService );
-  // * Inject LocalStorage Service
-  public ls = inject( LocalStorageService );
-  // * Company name
-  company:string = 'Fine Dev';
+  // * @Injections
+  public translateService = inject( TranslateService );
+  public localStorageService = inject( LocalStorageService );
+  // * @Params
+  companyName:string = 'Fine Dev';
 
   menuNav:MenuNav[] =[
     {

@@ -6,7 +6,7 @@
         <img class="cursor_pointer avatar"
             alt="Logo Avatar FineDev"
             routerLink="./" 
-            [src]="'../../../../assets/theme/'+ls.GetMode+'/logo/logo-avatar-footer.svg'">
+            [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-avatar-footer.svg'">
     </section>
 
     <!-- ? NAV MENU -->
@@ -16,11 +16,11 @@
             @for (nav of menuNav; track $index) {
                 <li>
                     <!-- LINK MENU -->
-                    <a  class="font_b1 color_inverted font_regular"
+                    <a  class="font_b1 color_tertiary font_regular"
                         [routerLink]="nav.router" 
                         routerLinkActive="active">
                         <!-- TXT -->
-                        {{ nav.txt | translate:ts.GetLang }}
+                        {{ nav.txt | translate:translateService.GetLang }}
                     </a>
                 </li>
             }
@@ -34,19 +34,19 @@
         <!-- Linkedin -->
         <a href="https://www.linkedin.com/in/erick-alcocer-06ba2b149/" target="_blank">
             <!-- ICON -->
-            <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-linkedin.svg'" class="icon_lg" alt="Linkedin logo">
+            <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-linkedin.svg'" class="icon_lg" alt="Linkedin logo">
         </a>
         
         <!-- GitHub -->
         <a href="https://github.com/FineYUDU" target="_blank">
             <!-- ICON -->
-            <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-github.svg'" class="icon_lg" alt="Github logo">
+            <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-github.svg'" class="icon_lg" alt="Github logo">
         </a>
         
         <!-- X -->
         <a href="https://twitter.com/FineYUDU" target="_blank">
             <!-- ICON -->
-            <img [src]="'../../../../assets/theme/'+ls.GetMode+'/icon/icon-x.svg'" class="icon_lg" alt="x logo">
+            <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-x.svg'" class="icon_lg" alt="x logo">
         </a>
 
     </section>
@@ -54,13 +54,13 @@
     <!-- ? VERSION CONTAINER -->
     <section>
         <!-- TXT -->
-        <p class="font_b1 font_semibold color_inverted">
-            {{company}}
+        <p class="font_b1 font_semibold color_tertiary">
+            {{ companyName }}
         </p>
 
         <!-- TXT -->
-        <p class="font_b1 font_regular color_inverted">
-            {{ 'version.current' | translate:ts.GetLang }}
+        <p class="font_b1 font_regular color_tertiary">
+            {{ 'version.current' | translate:translateService.GetLang }}
         </p>
 
         <!-- VERSION -->

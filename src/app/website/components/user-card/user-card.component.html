@@ -1,0 +1,51 @@
+<!-- ? MAIN CONTAINER -->
+<div class="main-cont">
+    <!-- ? PROFILE CONTAINER -->
+    <section class="profile-cont">
+        <!-- COVER -->
+
+    </section>
+    
+    <!-- ? PROFILE IMG -->
+    <div class="profile-img">
+        <!-- AVATAR -->
+        <img class="avatar" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/profile.jpg'" alt="avatar logo">
+        
+    </div>
+    
+    <!-- STATUS -->
+    <div class="status"></div>
+
+    <section>
+        <!-- TITLE CONTAINER -->
+        <div class="title-cont">
+            <!-- TITLE -->
+            <p class="font_h4 font_bold color_brand_primary">
+                Erick Alcocer
+            </p>
+            <!-- TXT -->
+            <p class="font_b1 font_medium color_tertiary">
+                {{ 'home.section-1.ocupation' | translate:translateService.GetLang }}
+            </p>
+        
+        </div>
+        <!-- ? BUTTON CONTAINER -->
+        <div class="btn-cont">
+            <!-- TEXT CONTAINER -->
+            <div class="txt-cont">
+                <p class="color_secondary font_c1 font_regular"> {{ 'home.section-1.upgrade' | translate:translateService.GetLang }} {{'03/08/2024'}} </p>
+            </div>
+    
+            <!-- BUTTON -->
+            <button type="button" class="btn_brand_primary">
+                {{ 'button.cv' | translate:translateService.GetLang }}
+                <!-- ICON -->
+                <img class="icon_sm" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-file-download.svg'" alt="Download file">
+        
+            </button>
+        
+        </div>
+
+    </section>
+
+</div>

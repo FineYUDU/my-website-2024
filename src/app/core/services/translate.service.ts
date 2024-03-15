@@ -1,52 +1,38 @@
 // * Angular
-import { ApplicationRef, Injectable } from '@angular/core';
+import { ApplicationRef, Injectable, inject } from '@angular/core';
 
 @Injectable({providedIn: 'root'})
 
 export class TranslateService {
+    // * @Injections
+    private appRef = inject( ApplicationRef );
+    // * @Params
     lang:string;
     
-    constructor( private appRef: ApplicationRef ) { 
-        // * Initialize lang from localStorage or use 'es' as the default
+    constructor() { 
         this.lang =  localStorage.getItem('lang') || 'es';    
-        
         const lang = localStorage.getItem('lang');
 
         if(!lang) {
-            // * Set the default lang as 'es' if it doesn't exist in localStorage
             localStorage.setItem('lang','es');
         }
     }
-    // * Get Lang
-    get GetLang():string {
-        if(localStorage.getItem('lang') === 'es') {
-          return 'es'
-        } 
-        else {
-          return 'en'
-        }
-    }
 
-    // ? Change Lang
+    get GetLang(): string { return localStorage.getItem('lang') === 'es' ? 'es' : 'en' }
+      
+
     changeLang() {
-        // * Get current Lang
         const currentLang = localStorage.getItem('lang');
-        // * Change lang
         let lang = currentLang === 'es' ? 'en' : 'es';
     
-        // * Update lang in localStorage and service
         localStorage.setItem('lang', lang);
         this.lang = lang;
-        // * New Lang
-        // ! console.log('new', this.lang);
     }
 
-    toggleLang(lang:string) {
-        if(lang === 'es') {
-            localStorage.setItem('lang', 'es')
-        }
-        if(lang === 'en') {
-            localStorage.setItem('lang', 'en')
+
+    toggleLang(lang: string) {
+        if (lang === 'es' || lang === 'en') {
+          localStorage.setItem('lang', lang);
         }
     }
     

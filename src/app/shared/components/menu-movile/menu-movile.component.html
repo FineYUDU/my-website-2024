@@ -1,0 +1,124 @@
+<!-- MENU CONTAINER -->
+<div class="main-cont" [ngClass]="{
+    'collapse': !isOpenMenu
+    }">
+    <!-- ? HEADER -->
+    <div class="header">
+        <!-- LOGO -->
+        <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-txt.svg'" 
+            alt="logo menu movile">
+        <!-- CROSS -->
+        <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-cross.svg'" 
+            (click)="closeMenu()" 
+            class="icon_md"
+            alt="logo menu movile">
+        
+    </div>
+    <!-- ? MENU NAVIGATION-->
+    <ul class="menu-list">
+        <!-- GROUP NAME -->
+        <p class="font_b1 color_secondary font_medium">{{ 'menu.nav' | translate:translateService.GetLang | titlecase  }}</p>
+
+        @for (nav of menuNav; track $index) {
+            <li>
+                <!-- LINK MENU -->
+                @if(nav.close) {
+                    <a  class="font_b1 color_primary"
+                        [routerLink]="nav.router" 
+                        (click)="closeMenu()"
+                        routerLinkActive="active">
+                        <div class="icon-txt">
+                            <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-'+nav.icon+'.svg'" 
+                                class="icon_md"
+                                alt="icon {{nav.icon}}">
+                            <!-- TXT -->
+                            <p class="font_regular">
+                                {{ nav.txt | translate:translateService.GetLang }}
+                            </p>
+
+                        </div>
+                    </a>
+                }
+                @else {
+                    <a  class="font_b1 color_primary font_regular"
+                        [routerLink]="nav.router">
+                        <!-- ICON CHEVRON -->
+                        <div class="icon-txt">
+                            <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-'+nav.icon+'.svg'" 
+                                class="icon_md"
+                                alt="icon {{nav.icon}}">
+                                <!-- TXT -->
+                                {{ nav.txt | translate:translateService.GetLang }}
+                        </div>
+                        <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-chevron.svg'" 
+                            class="icon_xs"
+                            alt="icon {{nav.icon}}">
+                    </a>
+                }
+            </li>
+        }
+    </ul>
+    <!-- ? MENU SETTINGS -->
+    <ul class="menu-list">
+        <!-- GROUP NAME -->
+        <p class="font_b1 color_secondary font_medium">{{ 'menu.settings' | translate:translateService.GetLang | titlecase  }}</p>
+
+        <!-- LIST -->
+        <li class="li-dropdown">
+            <a  class="font_b1 color_primary font_regular" (click)="openLangDropdown()">
+                <!-- ICON CHEVRON -->
+                <div class="icon-txt">
+                    <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-translate.svg'" 
+                        class="icon_md"
+                        alt="icon translate">
+                        <!-- TXT -->
+                        <p class="font_regular" [ngClass]="{'font_semibold': isDropdownLangOpen}">
+                            {{ 'menu.translate' | translate:translateService.GetLang }}
+                        </p>
+                </div>
+                <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-chevron.svg'" 
+                    class="icon_xs chevron"
+                    [ngClass]="{'rotation': isDropdownLangOpen}"
+                    alt="icon chevron">
+            </a>
+            <!-- ? DROPDOWN CONTAINER -->
+            <div class="dropdown-cont"
+                [ngClass]="{'open-dropdown': isDropdownLangOpen }" >
+                <ul class="dropdown">
+                    <li class="font_b2 color_primary font_regular" 
+                        (click)="changeLang('es')"> 
+                        <!-- LINE -->
+                        <div class="line" [ngClass]="{'line-selected': GetLang === 'es'}">
+                        </div>
+                        <!-- LANG -->
+                        <div class="lang" [class]="{ 'lang-selected' : GetLang === 'es' }">
+                            <!-- MARKER -->
+                            <div class="marker"></div>
+                            <!-- TXT -->
+                            <p class="font_regular">
+                                Español 
+                            </p>
+                        </div>
+                    </li>
+                    <li class="font_b2 color_primary font_regular" 
+                        (click)="changeLang('en')"> 
+                        <!-- LINE -->
+                        <div class="line" [ngClass]="{'line-selected': GetLang === 'en'}">
+                        </div>
+                        <!-- LANG -->
+                        <div class="lang" [class]="{ 'lang-selected' : GetLang === 'en' }">
+                            <!-- MARKER -->
+                            <div class="marker"></div>
+                            <!-- TXT -->
+                            <p class="font_regular">
+                                Ingés 
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </li>
+    </ul>
+    
+</div>

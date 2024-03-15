@@ -15,20 +15,31 @@
     "menu": {
         "home":"inicio",
         "about":"acerca de",
-        "contact":"contacto"
+        "contact":"contacto",
+        "settings":"ajustes",
+        "translate":"lenguaje",
+        "nav":"navegación"
     },
     "home":{
-        "title":"¡Qué bueno verte!",
+        "title":"¡Bienvenido!",
         "subtitle":"Desarrolado con",
         "section-1":{
-            "hi": "¡Hola!",
-            "i": "Soy",
             "ocupation":"Desarrollador Web / UX UI Designer",
             "upgrade":"Última actualización"
         },
         "section-2":{
             "title": "Experiencia",
-            "li-1":"Desarrollo y diseño de dashboards con "
+            "li-1":"Frontend developer con ",
+            "li-2":"Experiencia en desarrollo y diseño de ",
+            "li-3":"Creación de",
+            "li-3-2":" usando ",
+            "li-4":"Diseño UI",
+            "li-4-2":"Y prototipado con",
+            "li-5":"Experiencia con librerías UI como ",
+            "li-6":"Consumo de ",
+            "li-7":"Experiencia en metodologías ágiles como ",
+            "li-8":"Conocimientos",
+            "li-8-2":" y "
         }
     }
 }

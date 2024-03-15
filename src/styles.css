@@ -3,6 +3,10 @@
     Example txt_primary
 */
 @import './assets/styles/variables.css';
+/* ! Reset and Set Global properties */
+body::-webkit-scrollbar {
+    width: 0;
+}
 /* * Default & Reset properties */
 body {
     /* min-height: 100vh; */
@@ -23,9 +27,6 @@ body {
 }
 a {
     text-decoration: none;
-}
-p {
-    transition: all .5s ease-in-out;
 }
 button {
     border: none;
@@ -218,5 +219,8 @@ ul {
     }
     .font_b1 {
         font-size: var(--font-b2);
+    }
+    .font_b2 {
+        font-size: var(--font-c1);
     }
 }

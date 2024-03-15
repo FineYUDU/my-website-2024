@@ -8,17 +8,17 @@
             <img class="cursor_pointer avatar"
                 routerLink="./" 
                 alt="Logo Avatar FineDev"
-                [src]="'../../../../assets/theme/'+ls.GetMode+'/logo/logo-avatar.svg'">
+                [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-avatar.svg'">
             <!-- LOGO TXT -->
             <img class="cursor_pointer logo-txt"
                 routerLink="./" 
                 alt="Logo FineDev"
-                [src]="'../../../../assets/theme/'+ls.GetMode+'/logo/logo-txt.svg'">
+                [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-txt.svg'">
     
         </section>
     
-        <!-- ? SECTION | TRANSLATE & THEME -->
-        <section>
+        <!-- ? SECTION | MENU -->
+        <section class="menu-cont">
             <!-- ? BLOCK | MENU -->
             <div class="block">
                 <!-- ? MENU -->
@@ -30,7 +30,7 @@
                                 [routerLink]="nav.router" 
                                 routerLinkActive="active">
                                 <!-- TXT -->
-                                {{ nav.txt | translate:ts.GetLang }}
+                                {{ nav.txt | translate:translateService.GetLang }}
                             </a>
                         </li>
                     }
@@ -48,11 +48,17 @@
 
         </section>
 
-        <section>
-            <!-- MENU MOVILE CONTAINER -->
+        <!-- ? SECTION | MENU MOVILE -->
+        <section class="menu-movile">
             <div class="menu-movile-cont">
-                <img class="icon_lg" src="../../../../assets/theme/light/icon/icon-menu.svg" alt="icon menu">
+                <img (click)="closeMenu()" class="icon_lg" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-menu.svg'" alt="icon menu">
             </div>
+
+            <menu-movile 
+            (closeMenuEvent)="closeMenu()"
+            [isOpenMenu]="isOpenMenu"
+            [menuNav]="menuNav"
+            />
 
         </section>
 
