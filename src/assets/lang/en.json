@@ -18,7 +18,10 @@
         "contact":"contact",
         "settings":"settings",
         "translate":"language",
-        "nav":"navigation"
+        "nav":"navigation",
+        "appearance":"appearance",
+        "light":"light",
+        "dark":"dark"
     },
     "home":{
         "title":"Welcome!",

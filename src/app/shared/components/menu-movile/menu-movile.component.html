@@ -10,7 +10,7 @@
         <!-- CROSS -->
         <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-cross.svg'" 
             (click)="closeMenu()" 
-            class="icon_md"
+            class="icon_sm"
             alt="logo menu movile">
         
     </div>
@@ -31,10 +31,10 @@
                             <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-'+nav.icon+'.svg'" 
                                 class="icon_md"
                                 alt="icon {{nav.icon}}">
-                            <!-- TXT -->
-                            <p class="font_regular">
-                                {{ nav.txt | translate:translateService.GetLang }}
-                            </p>
+                                <!-- TXT -->
+                                <p class="font_regular" routerLinkActive="font_semibold">
+                                    {{ nav.txt | translate:translateService.GetLang }}
+                                </p>
 
                         </div>
                     </a>
@@ -48,7 +48,10 @@
                                 class="icon_md"
                                 alt="icon {{nav.icon}}">
                                 <!-- TXT -->
-                                {{ nav.txt | translate:translateService.GetLang }}
+                                <p class="font_regular" routerLinkActive="font_semibold">
+                                    {{ nav.txt | translate:translateService.GetLang }}
+                                </p>
+
                         </div>
                         <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-chevron.svg'" 
                             class="icon_xs"
@@ -63,7 +66,7 @@
         <!-- GROUP NAME -->
         <p class="font_b1 color_secondary font_medium">{{ 'menu.settings' | translate:translateService.GetLang | titlecase  }}</p>
 
-        <!-- LIST -->
+        <!-- ? TRANSLATE LIST -->
         <li class="li-dropdown">
             <a  class="font_b1 color_primary font_regular" (click)="openLangDropdown()">
                 <!-- ICON CHEVRON -->
@@ -96,7 +99,7 @@
                             <div class="marker"></div>
                             <!-- TXT -->
                             <p class="font_regular">
-                                Español 
+                                {{ 'lang.es' | translate:translateService.GetLang }}
                             </p>
                         </div>
                     </li>
@@ -111,7 +114,67 @@
                             <div class="marker"></div>
                             <!-- TXT -->
                             <p class="font_regular">
-                                Ingés 
+                                {{ 'lang.en' | translate:translateService.GetLang }}
+
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </li>
+
+        <!-- ? THEME LIST -->
+        <li class="li-dropdown">
+            <a  class="font_b1 color_primary font_regular" (click)="openThemeDropdown()">
+                <!-- ICON CHEVRON -->
+                <div class="icon-txt">
+                    <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-appearance.svg'" 
+                        class="icon_md"
+                        alt="icon translate">
+                        <!-- TXT -->
+                        <p class="font_regular" [ngClass]="{'font_semibold': isDropdownThemeOpen}">
+                            {{ 'menu.appearance' | translate:translateService.GetLang }}
+                        </p>
+                </div>
+                <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-chevron.svg'" 
+                    class="icon_xs chevron"
+                    [ngClass]="{'rotation': isDropdownThemeOpen}"
+                    alt="icon chevron">
+            </a>
+
+
+            <!-- ? DROPDOWN CONTAINER -->
+            <div class="dropdown-cont"
+                [ngClass]="{'open-dropdown': isDropdownThemeOpen }" >
+                <ul class="dropdown">
+                    <li class="font_b2 color_primary font_regular" 
+                        (click)="themeService.changeMode('light')"> 
+                        <!-- LINE -->
+                        <div class="line" [ngClass]="{'line-selected': localStorageService.GetMode === 'light'}">
+                        </div>
+                        <!-- LANG -->
+                        <div class="lang" [class]="{ 'lang-selected' : localStorageService.GetMode === 'light' }">
+                            <!-- MARKER -->
+                            <div class="marker"></div>
+                            <!-- TXT -->
+                            <p class="font_regular">
+                                {{ 'menu.light' | translate:translateService.GetLang }}
+                            </p>
+                        </div>
+                    </li>
+                    <li class="font_b2 color_primary font_regular" 
+                        (click)="themeService.changeMode('dark')"> 
+                        <!-- LINE -->
+                        <div class="line" [ngClass]="{'line-selected': localStorageService.GetMode === 'dark'}">
+                        </div>
+                        <!-- LANG -->
+                        <div class="lang" [class]="{ 'lang-selected' : localStorageService.GetMode === 'dark' }">
+                            <!-- MARKER -->
+                            <div class="marker"></div>
+                            <!-- TXT -->
+                            <p class="font_regular">
+                                {{ 'menu.dark' | translate:translateService.GetLang }}
                             </p>
                         </div>
                     </li>

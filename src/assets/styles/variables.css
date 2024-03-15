@@ -104,8 +104,6 @@
     /* * Helpers */
     --color-main-card                                                           :var(--grey-600);
     --color-lang-selected-txt                                                   :var(--grey-50);
-    --color-border-left                                                         :var(--grey-0);
-    --color-border-left-selected                                                :var(--grey-100);
 
     /* ? Size --------------> */
     /* * Spacing */
@@ -202,6 +200,11 @@
     --color-main-card                                                           :var(--grey-700);
     --color-lang-selected-txt                                                   :var(--grey-600);
 
+    /* * Movile menu */
+    --color-group-name                                                          :var(--grey-0);
+    --color-item                                                                :var(--grey-0);
+    --color-bg-movile-menu                                                      :var(--grey-0);
+    --color-line                                                                :var(--grey-0);
     /* ? Size --------------> */
     /* * Spacing */
     --spacing-2xs                                                               :var(--spacing-1);

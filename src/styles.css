@@ -141,6 +141,16 @@ ul {
 .color_brand_secondary {
     color: var(--color-brand-secondary);
 }
+.color_group_name {
+    color: var(--color-group-name-txt);
+}
+/* ! MENU MOVILE */
+.color_group_name {
+    color: var(--color-group-name-txt);
+}
+.color_item {
+    color: var(--color-item);
+}
 /* ? BACKGROUNDS */
 /* * Color Background */
 .bg_primary {

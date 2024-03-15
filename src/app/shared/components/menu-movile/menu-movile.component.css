@@ -6,7 +6,7 @@
     bottom: 0;
     z-index: 2;
     padding:var(--spacing-md);
-    width: 18.75rem;
+    width: 19.375rem;
     transition: right .4s ease-in-out;
     right: 0;
     display: flex;
@@ -73,7 +73,7 @@
     top: 0;
     bottom: 0;
     left: 0;
-    background-color: var(--color-bg-primary);
+    background-color: var(--color-line);
     opacity: .2;
 }
 .line-selected {
@@ -90,8 +90,8 @@
 .marker {
     background-color: var(--color-primary);
     border-radius: var(--radius-full);
-    width: .3125rem;
-    height: .3125rem;
+    width: .25rem;
+    height: .25rem;
 }
 
 /* ! ROTATION CHEVRON */
