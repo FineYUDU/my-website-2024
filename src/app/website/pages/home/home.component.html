@@ -54,34 +54,29 @@
             <div class="lang">
                 <!-- PERCENT -->
                 <pie-grid [pieGrid]="'es'" [percent]="90"/>
-                <!-- ? BLOCK LANG -->
-                <div class="block-lang">
-                    
-                    <!-- ? TEXT CONTAINER -->
-                    <div class="txt-cont">
-                        <!-- TITLE -->
-                        <p class="font_b1 font_bold color_primary">{{ 'lang.es' | translate:translateService.GetLang }}</p>
-                        <!-- TXT -->
-                        <p class="font_b2 font_regular color_quaternary">{{ 'lang.native' | translate:translateService.GetLang }}</p>
-                    </div>
+                
+                <!-- ? TEXT CONTAINER -->
+                <div class="txt-cont">
+                    <!-- TITLE -->
+                    <p class="font_b1 font_bold color_primary">{{ 'lang.es' | translate:translateService.GetLang }}</p>
+                    <!-- TXT -->
+                    <p class="font_b2 font_regular color_quaternary">{{ 'lang.native' | translate:translateService.GetLang }}</p>
 
                 </div>
-    
+
             </div>
     
-            <!-- LANG 1 -->
+            <!-- ? LANG | EN -->
             <div class="lang">
-                <div class="block-lang">
-                    <!-- PERCENT -->
-                    <pie-grid [pieGrid]="'en'" [percent]="60"/>
-                    <!-- ? TEXT CONTAINER -->
-                    <div class="txt-cont">
-                        <!-- TITLE -->
-                        <p class="font_b1 font_bold color_primary">{{ 'lang.en' | translate:translateService.GetLang }}</p>
-                        <!-- TXT -->
-                        <p class="font_b2 font_regular color_quaternary">{{ 'lang.level' | translate:translateService.GetLang }}</p>
-        
-                    </div>
+                <!-- PERCENT -->
+                <pie-grid [pieGrid]="'en'" [percent]="60"/>
+
+                <!-- ? TEXT CONTAINER -->
+                <div class="txt-cont">
+                    <!-- TITLE -->
+                    <p class="font_b1 font_bold color_primary">{{ 'lang.en' | translate:translateService.GetLang }}</p>
+                    <!-- TXT -->
+                    <p class="font_b2 font_regular color_quaternary">{{ 'lang.level' | translate:translateService.GetLang }}</p>
 
                 </div>
     
@@ -100,10 +95,17 @@
     </div>
 
     <!-- ? SECTION | SCROLL -->
-    <section class="scroll-section">
+    <section class="stack-section">
 
         <!-- ? STACK | CONTAINER -->
-        <div class="logos">
+        <div class="stack">
+            <ul>
+                @for ( item of stacks; track $index) {
+                    <li>
+                        <img class="img-stack" [src]="'../../../../assets/theme/light/logo/stack/logo-'+item.img+'.svg'" [alt]="'logo'+item.img">
+                    </li>
+                }
+            </ul>
         </div>
 
     </section>

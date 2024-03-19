@@ -49,7 +49,7 @@ export default class HomeComponent {
     },
   ];
 
-  scrollImages:ImgScroll[] = [
+  stacks:ImgScroll[] = [
     {
       img:'angular'
     },
@@ -76,6 +76,9 @@ export default class HomeComponent {
     },
     {
       img:'bootstrap'
+    },
+    {
+      img:'git'
     },
   ];
 
