@@ -52,12 +52,10 @@
         <section class="lang-section" >
             <!-- ? LANG | ES -->
             <div class="lang">
+                <!-- PERCENT -->
+                <pie-grid [pieGrid]="'es'" [percent]="90"/>
                 <!-- ? BLOCK LANG -->
                 <div class="block-lang">
-                    <!-- ? IMG | ES -->
-                    <div class="img-cont cursor_pointer" (click)="translateService.toggleLang('es')">
-                        <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/img-es.svg'" alt="spanish cloud">
-                    </div>
                     
                     <!-- ? TEXT CONTAINER -->
                     <div class="txt-cont">
@@ -68,16 +66,14 @@
                     </div>
 
                 </div>
-                <pie-grid [pieGrid]="'es'" [percent]="90"/>
     
             </div>
     
             <!-- LANG 1 -->
             <div class="lang">
                 <div class="block-lang">
-                    <div class="img-cont cursor_pointer" (click)="translateService.toggleLang('en')">
-                        <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/img-en.svg'" alt="english cloud">
-                    </div>
+                    <!-- PERCENT -->
+                    <pie-grid [pieGrid]="'en'" [percent]="60"/>
                     <!-- ? TEXT CONTAINER -->
                     <div class="txt-cont">
                         <!-- TITLE -->
@@ -88,7 +84,6 @@
                     </div>
 
                 </div>
-                <pie-grid [pieGrid]="'en'" [percent]="60"/>
     
             </div>
     
@@ -109,18 +104,6 @@
 
         <!-- ? STACK | CONTAINER -->
         <div class="logos">
-            <div class="logos-slide">
-                @for (item of scrollImages; track $index) {
-                    <img alt="logo Angular" class="stack-item" [src]="'../../../../assets/theme/light/logo/stack/logo-'+item.img+'.svg'">
-                }
-            </div>
-
-            <div class="logos-slide">
-                @for (item of scrollImages; track $index) {
-                    <img alt="logo Angular" class="stack-item" [src]="'../../../../assets/theme/light/logo/stack/logo-'+item.img+'.svg'">
-                }
-            </div>
-
         </div>
 
     </section>

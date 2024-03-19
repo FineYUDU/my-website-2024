@@ -105,6 +105,14 @@
     --color-main-card                                                           :var(--grey-600);
     --color-lang-selected-txt                                                   :var(--grey-50);
 
+    /* * Movile menu */
+    --color-bg-movile-menu                                                      :var(--grey-0);
+    --color-group-name-txt                                                      :var(--grey-600);
+    --color-item                                                                :var(--grey-500);
+    --color-item-active                                                         :var(--grey-50);
+    --color-item-active-txt                                                     :var(--brand-200);
+    --color-line-hierarchy                                                      :var(--grey-600);
+
     /* ? Size --------------> */
     /* * Spacing */
     --spacing-2xs                                                               :var(--spacing-1);
@@ -152,6 +160,8 @@
     /* ? Size --------------> */
     /* * Spacing */
     --web-width                                                                 :82.45%;
+    --sidebar-width                                                             :16.75rem;
+    
     /* ? Transitios --------------> */
     --transition-time                                                           :.2s ease-in-out;
 }
@@ -201,10 +211,13 @@
     --color-lang-selected-txt                                                   :var(--grey-600);
 
     /* * Movile menu */
-    --color-group-name                                                          :var(--grey-0);
-    --color-item                                                                :var(--grey-0);
-    --color-bg-movile-menu                                                      :var(--grey-0);
-    --color-line                                                                :var(--grey-0);
+    --color-bg-movile-menu                                                      :var(--grey-700);
+    --color-group-name-txt                                                      :var(--grey-100);
+    --color-item                                                                :var(--grey-200);
+    --color-item-active                                                         :var(--grey-600);
+    --color-item-active-txt                                                     :var(--brand-100);
+    --color-line-hierarchy                                                      :var(--grey-0);
+
     /* ? Size --------------> */
     /* * Spacing */
     --spacing-2xs                                                               :var(--spacing-1);
@@ -252,8 +265,8 @@
     /* ? Size --------------> */
     /* * Spacing */
     --web-width                                                                 :82.45%;
+    --sidebar-width                                                             :16.75rem;
 
     /* ? Transitios --------------> */
     --transition-time                                                           :.2s ease-in-out;
-
 }

@@ -1,67 +1,29 @@
 <!-- ? MAIN CONTAINER -->
 <div class="main-cont">
-    <!-- ? CONTAINER -->
-    <div class="cont">
-        <!-- ? SECTION | LOGO -->
-        <section class="logo-cont">
-            <!-- LOGO AVATAR -->
-            <img class="cursor_pointer avatar"
-                routerLink="./" 
-                alt="Logo Avatar FineDev"
-                [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-avatar.svg'">
-            <!-- LOGO TXT -->
-            <img class="cursor_pointer logo-txt"
-                routerLink="./" 
-                alt="Logo FineDev"
-                [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-txt.svg'">
-    
-        </section>
-    
-        <!-- ? SECTION | MENU -->
-        <section class="menu-cont">
-            <!-- ? BLOCK | MENU -->
-            <div class="block">
-                <!-- ? MENU -->
-                <ul>
-                    @for (nav of menuNav; track $index) {
-                        <li>
-                            <!-- LINK MENU -->
-                            <a  class="font_b1 color_primary font_regular"
-                                [routerLink]="nav.router" 
-                                routerLinkActive="active">
-                                <!-- TXT -->
-                                {{ nav.txt | translate:translateService.GetLang }}
-                            </a>
-                        </li>
-                    }
-                </ul>
+    <!-- ? SECTION | MENU -->
+    <section class="menu-cont">
+        <!-- ? BLOCK | MENU -->
+        <div class="block">
+            <!-- THEME -->
+            <theme-switch></theme-switch>
+            <!-- TRANSLATE -->
+            <translate-switch></translate-switch>
 
-            </div>
-            <!-- ? BLOCK | MENU -->
-            <div class="block">
-                <!-- THEME -->
-                <theme-switch></theme-switch>
-                <!-- TRANSLATE -->
-                <translate-switch></translate-switch>
+        </div>
 
-            </div>
+    </section>
 
-        </section>
+    <!-- ? SECTION | MENU MOVILE -->
+    <section class="menu-movile">
+        <div class="menu-movile-cont">
+            <img (click)="closeMenu()" class="icon_lg" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-menu.svg'" alt="icon menu">
+        </div>
 
-        <!-- ? SECTION | MENU MOVILE -->
-        <section class="menu-movile">
-            <div class="menu-movile-cont">
-                <img (click)="closeMenu()" class="icon_lg" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-menu.svg'" alt="icon menu">
-            </div>
+        <menu-movile 
+        (closeMenuEvent)="closeMenu()"
+        [isOpenMenu]="isOpenMenu"
+        [menuNav]="menuNav"
+        />
 
-            <menu-movile 
-            (closeMenuEvent)="closeMenu()"
-            [isOpenMenu]="isOpenMenu"
-            [menuNav]="menuNav"
-            />
-
-        </section>
-
-    </div>
-
+    </section>
 </div>

@@ -22,8 +22,10 @@ body {
     border: none;
     /* * Create transition bg-color when the theme change */
     transition: background-color var(--transition-time);
-    transition: font-size var(--transition-time);
     line-height: 150%;
+}
+p, a, li {
+    transition: font-size var(--transition-time);
 }
 a {
     text-decoration: none;
@@ -140,9 +142,6 @@ ul {
 }
 .color_brand_secondary {
     color: var(--color-brand-secondary);
-}
-.color_group_name {
-    color: var(--color-group-name-txt);
 }
 /* ! MENU MOVILE */
 .color_group_name {

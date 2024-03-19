@@ -23,8 +23,8 @@
     position: absolute;
     border: .39rem solid var(--color-main-card);
     border-radius: var(--radius-full);
-    width: 9.375rem;
-    height: 9.375rem;
+    width: 7.375rem;
+    height: 7.375rem;
     overflow: hidden;
 }
 /* AVATAR */
@@ -32,7 +32,7 @@
     width: -webkit-fill-available;
 }
 .status {
-    top: 8.25rem;
+    top: 6.9rem;
     right: 2.3rem;
     position: absolute;
     border-radius: var(--radius-full);

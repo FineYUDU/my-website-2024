@@ -5,7 +5,7 @@
         <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-translate.svg'" alt="Icon translate" class="icon_md">
 
         <!-- TXT -->
-        <p class="font_b1 color_primary font_medium"> {{'lang.selected' | translate:translateService.GetLang }} </p>
+        <p class="font_b1 color_item font_medium"> {{'lang.selected' | translate:translateService.GetLang }} </p>
 
         <!-- ICON -->
         <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-chevron.svg'" 
@@ -23,12 +23,12 @@
                 'dropdown-close': !isDropdownOpen,
             }">
             <ul>
-                <li class=" font_b1 color_primary font_medium" 
+                <li class=" font_b1 color_item font_medium" 
                     [ngClass]="{'selected': translateService.GetLang === 'es'}"
                     (click)="translateService.toggleLang('es')">
                     {{'lang.es' | translate:translateService.GetLang }} 
                 </li>
-                <li class=" font_b1 color_primary font_medium" 
+                <li class=" font_b1 color_item font_medium" 
                     [ngClass]="{'selected': translateService.GetLang === 'en'}"
                     (click)="translateService.toggleLang('en')"> 
                     {{'lang.en' | translate:translateService.GetLang }} 

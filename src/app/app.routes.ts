@@ -1,4 +1,6 @@
-import { Routes } from '@angular/router';
+// * Angular
+import { Routes, ExtraOptions, RouterModule } from '@angular/router';
+// * Components
 import { Page404Component } from './shared/pages/page404/page404.component';
 
 export const routes: Routes = [
@@ -28,3 +30,7 @@ export const routes: Routes = [
     { path:'', redirectTo:'/fine-dev', pathMatch:'full' },
     { path:'**', redirectTo:'/404', pathMatch:'full' }
 ];
+const routerOptions : ExtraOptions = {
+    scrollPositionRestoration:'enabled',
+    anchorScrolling:'enabled',
+}

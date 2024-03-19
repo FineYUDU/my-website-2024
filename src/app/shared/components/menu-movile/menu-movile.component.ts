@@ -32,7 +32,7 @@ export class MenuMovileComponent {
   public themeService = inject( ThemeService );
   // * @Params
   isDropdownLangOpen:boolean = false;
-  isDropdownThemeOpen:boolean = true;
+  isDropdownThemeOpen:boolean = false;
   get GetLang() {
     return localStorage.getItem('lang') || '';
   } 

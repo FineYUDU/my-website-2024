@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 // * Components
 import { FooterComponent } from '../shared/components/footer/footer.component';
-import { NavbarComponent } from '../shared/components/navbar/navbar.component';
+import { MenuNav, NavbarComponent } from '../shared/components/navbar/navbar.component';
+import { SidebarComponent } from '../shared/components/sidebar/sidebar.component';
 
 @Component({
   selector: 'app-website',
@@ -11,9 +12,32 @@ import { NavbarComponent } from '../shared/components/navbar/navbar.component';
   imports: [
     RouterModule,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    SidebarComponent
   ],
   templateUrl: './website.component.html',
   styleUrl: './website.component.css'
 })
-export default class WebsiteComponent {}
+export default class WebsiteComponent {
+  menuNav:MenuNav[] =[
+    {
+      txt:'menu.home',
+      icon:'home',
+      router:'home',
+      close:true,
+    },
+    {
+      txt:'menu.about',
+      icon:'about',
+      router:'about',
+      close:true,
+    },
+    {
+      txt:'menu.contact',
+      icon:'contact',
+      router:'contact',
+      close:true,
+    },
+  ];
+
+}

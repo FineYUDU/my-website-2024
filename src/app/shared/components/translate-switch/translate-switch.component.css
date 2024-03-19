@@ -27,7 +27,7 @@ section {
     background-color: var(--color-bg-secondary);
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--radius-minimal);
-    border:.0625rem solid var(--color-tertiary);
+    border:.0625rem solid var(--color-secondary);
 }
 /* * DROPDOWN OPEN */
 .dropdown-open {

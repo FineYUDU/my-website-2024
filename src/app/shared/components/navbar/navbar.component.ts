@@ -1,6 +1,6 @@
 // * Angular
-import { Component, inject } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, Input, inject } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 // * Services
 import { TranslateService } from '../../../core/services/translate.service';
 import { LocalStorageService } from '../../../core/services/localstorage.service';
@@ -33,33 +33,24 @@ export interface MenuNav {
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  @Input() menuNav:MenuNav[] = [];
+
   // * @Injections
   public translateService = inject( TranslateService );
   public localStorageService = inject( LocalStorageService );
+  public router = inject( Router );
   // * @Params
-  isOpenMenu:boolean = true;
+  isOpenMenu:boolean = false;
   
-  menuNav:MenuNav[] =[
-    {
-      txt:'menu.home',
-      icon:'home',
-      router:'home',
-      close:true,
-    },
-    {
-      txt:'menu.about',
-      icon:'about',
-      router:'about',
-      close:true,
-    },
-    {
-      txt:'menu.contact',
-      icon:'contact',
-      router:'contact',
-      close:true,
-    },
-  ];
-
+  goToPart(fragment:any) {
+    this.router.navigateByUrl('fine-dev/' + fragment).then(() => {
+      const element = document.getElementById(fragment);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
+  
   closeMenu() {
     this.isOpenMenu = !this.isOpenMenu;
     console.log('Parent', this.isOpenMenu);

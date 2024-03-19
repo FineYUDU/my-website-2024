@@ -17,14 +17,15 @@
     <!-- ? MENU NAVIGATION-->
     <ul class="menu-list">
         <!-- GROUP NAME -->
-        <p class="font_b1 color_secondary font_medium">{{ 'menu.nav' | translate:translateService.GetLang | titlecase  }}</p>
+        <p class="font_b1 color_group_name font_medium">{{ 'menu.nav' | translate:translateService.GetLang | titlecase  }}</p>
 
         @for (nav of menuNav; track $index) {
             <li>
                 <!-- LINK MENU -->
                 @if(nav.close) {
-                    <a  class="font_b1 color_primary"
+                    <a  class="font_b1 color_item"
                         [routerLink]="nav.router" 
+                        [href]="nav.router"
                         (click)="closeMenu()"
                         routerLinkActive="active">
                         <div class="icon-txt">
@@ -40,7 +41,8 @@
                     </a>
                 }
                 @else {
-                    <a  class="font_b1 color_primary font_regular"
+                    <a  class="font_b1 color_item"
+                        [href]="nav.router"
                         [routerLink]="nav.router">
                         <!-- ICON CHEVRON -->
                         <div class="icon-txt">
@@ -64,11 +66,12 @@
     <!-- ? MENU SETTINGS -->
     <ul class="menu-list">
         <!-- GROUP NAME -->
-        <p class="font_b1 color_secondary font_medium">{{ 'menu.settings' | translate:translateService.GetLang | titlecase  }}</p>
+        <p class="font_b1 color_group_name font_medium">{{ 'menu.settings' | translate:translateService.GetLang | titlecase  }}</p>
 
         <!-- ? TRANSLATE LIST -->
         <li class="li-dropdown">
-            <a  class="font_b1 color_primary font_regular" (click)="openLangDropdown()">
+            <a  class="font_b1 color_item" 
+                (click)="openLangDropdown()">
                 <!-- ICON CHEVRON -->
                 <div class="icon-txt">
                     <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-translate.svg'" 
@@ -88,7 +91,7 @@
             <div class="dropdown-cont"
                 [ngClass]="{'open-dropdown': isDropdownLangOpen }" >
                 <ul class="dropdown">
-                    <li class="font_b2 color_primary font_regular" 
+                    <li class="font_b2 color_item" 
                         (click)="changeLang('es')"> 
                         <!-- LINE -->
                         <div class="line" [ngClass]="{'line-selected': GetLang === 'es'}">
@@ -103,7 +106,7 @@
                             </p>
                         </div>
                     </li>
-                    <li class="font_b2 color_primary font_regular" 
+                    <li class="font_b2 color_item" 
                         (click)="changeLang('en')"> 
                         <!-- LINE -->
                         <div class="line" [ngClass]="{'line-selected': GetLang === 'en'}">
@@ -126,7 +129,8 @@
 
         <!-- ? THEME LIST -->
         <li class="li-dropdown">
-            <a  class="font_b1 color_primary font_regular" (click)="openThemeDropdown()">
+            <a  class="font_b1 color_item" 
+                (click)="openThemeDropdown()">
                 <!-- ICON CHEVRON -->
                 <div class="icon-txt">
                     <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-appearance.svg'" 
@@ -148,10 +152,11 @@
             <div class="dropdown-cont"
                 [ngClass]="{'open-dropdown': isDropdownThemeOpen }" >
                 <ul class="dropdown">
-                    <li class="font_b2 color_primary font_regular" 
+                    <li class="font_b2 color_item" 
                         (click)="themeService.changeMode('light')"> 
                         <!-- LINE -->
-                        <div class="line" [ngClass]="{'line-selected': localStorageService.GetMode === 'light'}">
+                        <div class="line" 
+                            [ngClass]="{'line-selected': localStorageService.GetMode === 'light'}">
                         </div>
                         <!-- LANG -->
                         <div class="lang" [class]="{ 'lang-selected' : localStorageService.GetMode === 'light' }">
@@ -163,10 +168,11 @@
                             </p>
                         </div>
                     </li>
-                    <li class="font_b2 color_primary font_regular" 
+                    <li class="font_b2 color_item" 
                         (click)="themeService.changeMode('dark')"> 
                         <!-- LINE -->
-                        <div class="line" [ngClass]="{'line-selected': localStorageService.GetMode === 'dark'}">
+                        <div class="line" 
+                            [ngClass]="{'line-selected': localStorageService.GetMode === 'dark'}">
                         </div>
                         <!-- LANG -->
                         <div class="lang" [class]="{ 'lang-selected' : localStorageService.GetMode === 'dark' }">
