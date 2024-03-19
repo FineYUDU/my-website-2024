@@ -1,15 +1,12 @@
 <main>
     <!-- ? SIDEBAR CONTAINER -->
     <nav class="sidebar-cont">   
-        <sidebar [menuNav]="menuNav"/>
+        <!-- <sidebar [menuNav]="menuNav"/> -->
+        <navbar-menu [menuNav]="menuNav"/>
     </nav>
     
     <!-- ? ROUTER OUTLET CONTAINER -->
     <section class="ro-cont">
-        <!-- Navbar Header -->
-        <div class="navbar-menu">
-            <navbar-menu [menuNav]="menuNav"/>
-        </div>
         <!-- Router Outlet -->
         <router-outlet/>
         
