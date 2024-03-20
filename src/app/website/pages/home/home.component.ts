@@ -54,13 +54,7 @@ export default class HomeComponent {
       img:'angular'
     },
     {
-      img:'figma'
-    },
-    {
       img:'NET'
-    },
-    {
-      img:'git'
     },
     {
       img:'bootstrap'
@@ -79,6 +73,23 @@ export default class HomeComponent {
     },
     {
       img:'ts'
+    },
+  ];
+  tools:ImgScroll[] = [
+    {
+      img:'vscode'
+    },
+    {
+      img:'vs'
+    },
+    {
+      img:'figma'
+    },
+    {
+      img:'git'
+    },
+    {
+      img:'postman'
     },
   ];
 

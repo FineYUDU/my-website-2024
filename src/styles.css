@@ -134,9 +134,6 @@ ul {
 .color_quaternary {
     color: var(--color-quaternary);
 }
-.color_inverted {
-    color: var(--color-inverted);
-}
 .color_brand_primary {
     color: var(--color-brand-primary);
 }

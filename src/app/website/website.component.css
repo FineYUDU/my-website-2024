@@ -19,12 +19,17 @@ section p {
 /* ? ROUTER OUTLET CONTAINER */
 .ro-cont {
     width: var(--web-width);
+    max-width: var(--web-max-width);
 }
 
 /* * Responsive SM */
 @media screen and (max-width:480px) {
     main {
         height:100%;
+    }
+    /* ? ROUTER OUTLET CONTAINER */
+    .ro-cont {
+        width:100%;
     }
 }
 /* * Responsive MD */

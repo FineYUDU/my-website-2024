@@ -100,15 +100,47 @@
 
     </div>
 
-    <!-- ? SECTION | SCROLL -->
-    <div class="stack-section">
+    <!-- ? STACK | SECTION -->
+    <div class="item-section">
 
-        <!-- ? STACK | CONTAINER -->
-        <div class="stack">
+        <!-- ? ITEMS | CONTAINER -->
+        <div class="items">
             <ul>
                 @for ( item of stacks; track $index) {
                     <li>
-                        <img class="img-stack" [src]="'../../../../assets/theme/light/logo/stack/logo-'+item.img+'.svg'" [alt]="'logo'+item.img">
+                        <!-- LOGO -->
+                        <img class="img-item" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/stacks/logo-'+item.img+'.svg'" [alt]="'logo'+item.img">
+                        <!-- ! HOVER LOGO -->
+                        <img class="img-item-hover" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/stacks/hover/logo-'+item.img+'.svg'" [alt]="'logo'+item.img">
+                        <!-- TXT -->
+                        <p class="font_b1 font_medium color_item"> {{item.img}} </p>
+                    </li>
+                }
+            </ul>
+        </div>
+
+    </div>
+    
+    <!-- TITLE -->
+    <div class="title-cont">
+        <p class="font_h5 color_primary font_bold"> 
+            {{ 'home.title-3' | translate:translateService.GetLang }} 
+        </p>
+
+    </div>
+
+    <!-- ? TOOLS | SECTION -->
+    <div class="item-section">
+        <!-- ? ITEMS | CONTAINER -->
+        <div class="items">
+            <ul>
+                @for ( item of tools; track $index) {
+                    <li>
+                        <!-- LOGO -->
+                        <img class="img-item" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/tools/logo-'+item.img+'.svg'" [alt]="'logo'+item.img">
+                        <!-- ! HOVER LOGO -->
+                        <img class="img-item-hover" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/tools/hover/logo-'+item.img+'.svg'" [alt]="'logo'+item.img">
+                        <!-- TXT-->
                         <p class="font_b1 font_medium color_item"> {{item.img}} </p>
                     </li>
                 }

@@ -2,18 +2,8 @@
     /* ? PRIMITIVES -------------------------------------------------------------------->*/ 
     /* ? Colors --------------> */
     /* * Grey */
-    /* --grey-0                                                                    :#f8f9fa;
-    --grey-50                                                                   :#e9ecef;
-    --grey-100                                                                  :#dee2e6;
-    --grey-200                                                                  :#ced4da;
-    --grey-300                                                                  :#adb5bd;
-    --grey-400                                                                  :#6c757d;
-    --grey-500                                                                  :#495057;
-    --grey-600                                                                  :#343a40;
-    --grey-700                                                                  :#212529;
-    --grey-700                                                                  :#212529; */
     --grey-0                                                                    :#F9F9F9;
-    --grey-50                                                                   :#F2F2F2;
+    --grey-50                                                                   :#eeeeee;
     --grey-100                                                                  :#DDDDDD;
     --grey-200                                                                  :#C6C6C6;
     --grey-300                                                                  :#AFAFAF;
@@ -68,9 +58,6 @@
     --color-secondary                                                           :var(--grey-200);
     --color-tertiary                                                            :var(--grey-50);
     --color-quaternary                                                          :var(--grey-500);
-    --color-inverted                                                            :var(--grey-0);
-    --color-inverted-50                                                         :var(--grey-50);
-    --color-inverted-100                                                        :var(--grey-100);
     
     /* * Background */
     --color-bg-primary                                                          :var(--grey-50);
@@ -160,6 +147,7 @@
     /* ? Size --------------> */
     /* * Spacing */
     --web-width                                                                 :82.45%;
+    --web-max-width                                                             :73.125rem;
     --sidebar-width                                                             :16.75rem;
     
     /* ? Transitios --------------> */
@@ -174,9 +162,6 @@
     --color-secondary                                                           :var(--grey-400);
     --color-tertiary                                                            :var(--grey-50);
     --color-quaternary                                                          :var(--grey-300);
-    --color-inverted                                                            :var(--grey-600);
-    --color-inverted-50                                                         :var(--grey-50);
-    --color-inverted-100                                                        :var(--grey-100);
 
     /* * Background */
     --color-bg-primary                                                          :var(--grey-600);
