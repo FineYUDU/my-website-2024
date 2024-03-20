@@ -16,9 +16,6 @@ section {
 section p {
     padding-bottom: var(--spacing-blocks);
 }
-footer {
-    margin-top: auto;
-}
 /* ? ROUTER OUTLET CONTAINER */
 .ro-cont {
     width: var(--web-width);

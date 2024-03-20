@@ -15,32 +15,9 @@
     <!-- ? GRID SECTION -->
     <div class="grid-section">
         <!-- ? SECTION | USER -->
-        <section>
+        <section class="user-cont">
             <user-card/>
-
-        </section>
-        
-        <!-- ? SECTION | SOCIAL MEDIA -->
-        <section class="social-media-section">
             
-            <!-- Linkedin -->
-            <a href="https://www.linkedin.com/in/erick-alcocer-06ba2b149/" target="_blank">
-                <!-- ICON -->
-                <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-linkedin.svg'" alt="Linkedin logo">
-            </a>
-            
-            <!-- GitHub -->
-            <a href="https://github.com/FineYUDU" target="_blank">
-                <!-- ICON -->
-                <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-github.svg'" alt="Github logo">
-            </a>
-            
-            <!-- X -->
-            <a href="https://twitter.com/FineYUDU" target="_blank">
-                <!-- ICON -->
-                <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-x.svg'" alt="x logo">
-            </a>
-
         </section>
     
         <!-- ? SECTION | EXPERIENCE -->
@@ -89,13 +66,42 @@
     <!-- TITLE -->
     <div class="title-cont">
         <p class="font_h5 color_primary font_bold"> 
+            {{ 'home.title-2' | translate:translateService.GetLang }} 
+        </p>
+
+    </div>
+
+    <section class="education-cont">
+        <div class="txt-cont block-education">
+            <p class="font_b1 color_item font_semibold" >Autónomo - Desarrollador Web</p>
+            <p class="font_b2 color_item font_regular" >Febrero 2020 - Actualidad</p>
+            <p class="font_b2 color_item font_regular" >Udemy, Crehana, Domestica, Platzi</p>
+        </div>
+        <div class="txt-cont block-education">
+            <p class="font_b1 color_item font_semibold" >Técnico en Desarrollo Web</p>
+            <p class="font_b2 color_item font_regular" >Enero 2019 - Febrero 2020</p>
+            <p class="font_b2 color_item font_regular" >FIME UANL</p>
+        </div>
+        <div class="txt-cont block-education">
+            <p class="font_b1 color_item font_semibold" >Ing Computación Administrativa</p>
+            <p class="font_b2 color_item font_regular" >Febrero 2020 - Actualidad</p>
+            <p class="font_b2 color_item font_regular" >TecMillenio </p>
+        </div>
+        
+    </section>
+
+
+    
+    <!-- TITLE -->
+    <div class="title-cont">
+        <p class="font_h5 color_primary font_bold"> 
             {{ 'Stack' | translate:translateService.GetLang }} 
         </p>
 
     </div>
 
     <!-- ? SECTION | SCROLL -->
-    <section class="stack-section">
+    <div class="stack-section">
 
         <!-- ? STACK | CONTAINER -->
         <div class="stack">
@@ -103,12 +109,13 @@
                 @for ( item of stacks; track $index) {
                     <li>
                         <img class="img-stack" [src]="'../../../../assets/theme/light/logo/stack/logo-'+item.img+'.svg'" [alt]="'logo'+item.img">
+                        <p class="font_b1 font_medium color_item"> {{item.img}} </p>
                     </li>
                 }
             </ul>
         </div>
 
-    </section>
+    </div>
 
 
 </div>

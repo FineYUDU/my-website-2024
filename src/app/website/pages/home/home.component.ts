@@ -60,6 +60,15 @@ export default class HomeComponent {
       img:'NET'
     },
     {
+      img:'git'
+    },
+    {
+      img:'bootstrap'
+    },
+    {
+      img:'CSharp'
+    },
+    {
       img:'html'
     },
     {
@@ -70,15 +79,6 @@ export default class HomeComponent {
     },
     {
       img:'ts'
-    },
-    {
-      img:'CSharp'
-    },
-    {
-      img:'bootstrap'
-    },
-    {
-      img:'git'
     },
   ];
 
