@@ -3,7 +3,7 @@ main {
     flex-direction: column;
     gap: var(--spacing-blocks);
     align-items: center;
-    height: calc(100vh - (var(--spacing-sm)*2));
+    /* height: calc(100vh - (var(--spacing-sm)*2)); */
     padding: var(--spacing-sm);
 }
 nav, footer, section {

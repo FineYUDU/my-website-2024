@@ -7,9 +7,10 @@ import { TranslateService } from '../../../core/services/translate.service';
 import { TranslatePipe } from '../../../shared/pipes/translate.pipe';
 // * Components
 import { ChipComponent } from '../../../shared/components/chip/chip.component';
-import { ExperienceComponent } from '../../components/experience/experience.component';
+import { Education, EducationComponent } from '../../components/home-components/education/education.component';
+import { ExperienceComponent } from '../../components/home-components/experience/experience.component';
 import { PieGridComponent } from '../../../shared/components/pie-grid/pie-grid.component';
-import { UserCardComponent } from '../../components/user-card/user-card.component';
+import { UserCardComponent } from '../../components/home-components/user-card/user-card.component';
 
 export interface ChipMenu {
   txt:string;
@@ -22,10 +23,11 @@ export interface ImgScroll {
   selector: 'home',
   standalone: true,
   imports: [
-    TranslatePipe,
     ChipComponent,
-    PieGridComponent,
+    EducationComponent,
     ExperienceComponent,
+    PieGridComponent,
+    TranslatePipe,
     UserCardComponent,
   ],
   templateUrl: './home.component.html',
@@ -36,6 +38,24 @@ export default class HomeComponent {
   public translateService = inject( TranslateService );
   public localStorageService = inject( LocalStorageService );
   public elementRef = inject( ElementRef );
+
+  education:Education[] = [
+    {
+      title:'home.education.block-1.title',
+      date:'home.education.block-1.date',
+      txt:'home.education.block-1.txt',
+    },
+    {
+      title:'home.education.block-2.title',
+      date:'home.education.block-2.date',
+      txt:'home.education.block-2.txt',
+    },
+    {
+      title:'home.education.block-3.title',
+      date:'home.education.block-3.date',
+      txt:'home.education.block-3.txt',
+    },
+  ]
 
   chips:ChipMenu[] =[
     {
@@ -90,6 +110,15 @@ export default class HomeComponent {
     },
     {
       img:'postman'
+    },
+    {
+      img:'jira'
+    },
+    {
+      img:'slack'
+    },
+    {
+      img:'sql-server'
     },
   ];
 

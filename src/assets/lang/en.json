@@ -7,7 +7,8 @@
         "level":"Level B2"
     },
     "button":{
-        "cv":"Download CV"
+        "cv":"Download CV",
+        "contact":"Contact me"
     },
     "version":{
         "current":"Currently"
@@ -26,6 +27,23 @@
     "home":{
         "title":"Welcome!",
         "subtitle":"Dev with",
+        "education":{
+            "block-1":{
+                "title":"Autodidact - Web Developer",
+                "date":"November  2018 - Current",
+                "txt":"Udemy, Crehana, Domestica, Platzi"
+            },
+            "block-2":{
+                "title":"Web Development Technician",
+                "date":"January 2019 - February 2020",
+                "txt":"FIME UANL"
+            },
+            "block-3":{
+                "title":"Administrative Computing Engineering",
+                "date":"April 2020 - Current",
+                "txt":"TecMillenio"
+            }
+        },
         "section-1":{
             "ocupation":"Web Developer / UX UI Designer",
             "upgrade":"Last upgrade"

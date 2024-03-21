@@ -84,9 +84,19 @@
     --color-brand-btn-color-primary                                             :var(--grey-50);
     --color-brand-btn-border-primary                                            :var(--brand-400);
     /* ! Hover */
+    --color-brand-btn-border-primary-hover                                      :var(--brand-300);
     --color-brand-btn-bg-primary-hover                                          :var(--brand-300);
     /* ! Active */
     --color-brand-btn-bg-primary-active                                         :var(--brand-500);
+
+    /* * Button Brand Secondary */
+    --color-brand-btn-bg-secondary                                              :transparent;
+    --color-brand-btn-color-secondary                                           :var(--grey-50);
+    --color-brand-btn-border-secondary                                          :var(--brand-400);
+    /* ! Hover */
+    --color-brand-btn-bg-secondary-hover                                        :var(--brand-200);
+    /* ! Active */
+    --color-brand-btn-bg-secondary-active                                       :var(--grey-600);
 
     /* * Helpers */
     --color-main-card                                                           :var(--grey-600);
@@ -185,11 +195,21 @@
     /* * Button Brand Primary */
     --color-brand-btn-bg-primary                                                :var(--brand-400);
     --color-brand-btn-color-primary                                             :var(--grey-50);
-    --color-brand-btn-border-primary                                            :var(--brand-400);
+    --color-brand-btn-border-primary                                            :transparent;
     /* ! Hover */
+    --color-brand-btn-border-primary-hover                                      :var(--brand-300);
     --color-brand-btn-bg-primary-hover                                          :var(--brand-300);
     /* ! Active */
     --color-brand-btn-bg-primary-active                                         :var(--brand-500);
+
+    /* * Button Brand Secondary */
+    --color-brand-btn-bg-secondary                                              :transparent;
+    --color-brand-btn-color-secondary                                           :var(--grey-50);
+    --color-brand-btn-border-secondary                                          :var(--brand-400);
+    /* ! Hover */
+    --color-brand-btn-bg-secondary-hover                                        :var(--brand-200);
+    /* ! Active */
+    --color-brand-btn-bg-secondary-active                                       :var(--grey-600);
 
     /* * Helpers */
     --color-main-card                                                           :var(--grey-700);

@@ -1,10 +1,10 @@
 // * Angular
 import { Component, inject } from '@angular/core';
 // * Services
-import { TranslateService } from '../../../core/services/translate.service';
+import { TranslateService } from '../../../../core/services/translate.service';
 // * Pipes
-import { TranslatePipe } from '../../../shared/pipes/translate.pipe';
-import { LocalStorageService } from '../../../core/services/localstorage.service';
+import { TranslatePipe } from '../../../../shared/pipes/translate.pipe';
+import { LocalStorageService } from '../../../../core/services/localstorage.service';
 
 @Component({
   selector: 'user-card',

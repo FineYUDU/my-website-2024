@@ -53,8 +53,8 @@ section:nth-of-type(2) {
     justify-content: space-between;
     padding: var(--spacing-sm) var(--spacing-md);
 }
-/* ? BUTTON CONTAINER */
-.btn-cont {
+/* ? FOOTER */
+.footer {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -64,9 +64,14 @@ section:nth-of-type(2) {
     flex-direction: column;
     gap: var(--spacing-sm);
 }
+/* ? BUTTONS CONTAINER */
+.btns-cont {
+    display: flex;
+    gap: var(--spacing-sm);
+}
 /* * Responsive SM */
 @media screen and (max-width:480px) {
-    .btn-cont {
+    .footer {
         flex-direction: column;
         gap: var(--spacing-sm);
         align-items: flex-start;
@@ -83,5 +88,10 @@ section:nth-of-type(2) {
         width: .7rem;
         height: .7rem;
         border: .2rem solid var(--color-main-card);
+    }
+    /* ? BUTTONS CONTAINER */
+    .btns-cont {
+        flex-direction: column;
+        width: 100%;
     }
 }

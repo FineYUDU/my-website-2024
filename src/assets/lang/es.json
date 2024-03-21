@@ -7,7 +7,8 @@
         "level":"Nivel B2"
     },
     "button":{
-        "cv":"Descargar CV"
+        "cv":"Descargar CV",
+        "contact":"Contáctame"
     },
     "version":{
         "current":"Actualmente"
@@ -26,6 +27,23 @@
     "home":{
         "title":"¡Bienvenido!",
         "subtitle":"Desarrollado con",
+        "education":{
+            "block-1":{
+                "title":"Autodidacta - Desarrollador Web",
+                "date":"Noviembre 2018 - Actualidad",
+                "txt":"Udemy, Crehana, Domestica, Platzi"
+            },
+            "block-2":{
+                "title":"Técnico en Desarrollo Web",
+                "date":"Enero 2019 - Febrero 2020",
+                "txt":"FIME UANL"
+            },
+            "block-3":{
+                "title":"Ing Computación Administrativa",
+                "date":"Abril 2020 - Actualidad",
+                "txt":"TecMillenio"
+            }
+        },
         "section-1":{
             "ocupation":"Desarrollador Web / UX UI Designer",
             "upgrade":"Última actualización"

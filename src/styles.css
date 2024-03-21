@@ -198,25 +198,73 @@ ul {
 
 /* * BTN BRAND PRIMARY */
 .btn_brand_primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     background-color: var(--color-brand-btn-bg-primary);
     color: var(--color-brand-btn-color-primary);
     padding: var(--spacing-xs) var(--spacing-sm);
+    border:.125rem solid var(--color-brand-btn-border-primary);
     border-radius: var(--radius-full);
     font-size: var(--font-b2);
     font-weight: 400;
     white-space: nowrap;
-    display: flex;
-    align-items: center;
     gap: var(--spacing-xs);
 }
 /* ! HOVER */
 .btn_brand_primary:hover {
     background-color: var(--color-brand-btn-bg-primary-hover);
+    border:.125rem solid var(--color-brand-btn-border-primary-hover);
 }
 /* ! ACTIVE */
 .btn_brand_primary:active {
     background-color: var(--color-brand-btn-bg-primary-active);
+}
+
+/* * BUTTON SECONDARY */
+.btn_secondary {
+    cursor: pointer;
+    background-color: var(--color-btn-bg-primary);
+    color: var(--color-btn-color-primary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-full);
+    font-size: var(--font-b2);
+    font-weight: 400;
+    white-space: nowrap;    
+}
+/* ! HOVER */
+.btn_secondary:hover {
+    background-color: var(--color-btn-bg-primary-hover);
+}
+/* ! ACTIVE */
+.btn_secondary:active {
+    background-color: var(--color-btn-bg-primary-active);
+}
+
+/* * BTN BRAND PRIMARY */
+.btn_brand_secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: var(--color-brand-btn-bg-secondary);
+    color: var(--color-brand-btn-color-secondary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border:.125rem solid var(--color-brand-btn-border-secondary);
+    border-radius: var(--radius-full);
+    font-size: var(--font-b2);
+    font-weight: 400;
+    white-space: nowrap;
+    gap: var(--spacing-xs);
+}
+/* ! HOVER */
+.btn_brand_secondary:hover {
+    background-color: var(--color-brand-btn-bg-secondary-hover);
+}
+/* ! ACTIVE */
+.btn_brand_secondary:active {
+    background-color: var(--color-brand-btn-bg-secondary-active);
 }
 /* * Responsive SM */
 @media screen and (max-width:480px) {

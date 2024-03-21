@@ -1,0 +1,22 @@
+<section class="education-cont">
+    @for (item of educationBlock; track $index) {
+        <div class="txt-cont block-education">
+            <!-- title -->
+            <p class="font_b1 color_item font_semibold" >
+                {{ item.title | translate:translateService.GetLang }}
+            </p>
+            
+            <!-- DATE -->
+            <p class="font_b2 color_quaternary font_regular" >
+                {{ item.date | translate:translateService.GetLang }}
+            </p>
+
+            <!-- TXT -->
+            <p class="font_b2 color_brand_secondary font_medium">
+                {{ item.txt | translate:translateService.GetLang }}
+                
+            </p>
+            
+        </div>
+    }
+</section>
