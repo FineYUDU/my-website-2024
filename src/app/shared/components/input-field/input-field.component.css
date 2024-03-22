@@ -1,0 +1,77 @@
+
+/* ? FIELD */
+.field_ {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    position: relative;
+}
+/* ? INPUT */
+.input_ {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+/* LEGEND */
+legend {
+    cursor: pointer;
+}
+/* ICON */
+ .input_ img {
+    position: absolute;
+    display: flex;
+    left: var(--spacing-sm);
+    top: 70%;
+    transform: translate(-10%, -50%);
+    cursor: pointer;
+    width: 1.0625rem;
+    height:  1.0625rem;
+} 
+
+/* ? INPUT PRIMARY ------------------------------------------------> */
+.primary_input {
+    border:.0625rem solid var(--color-input-border-enabled);
+    background-color: var(--color-input-bg-enabled);
+    color: var(--color-input-txt-enabled);
+    padding: var(--spacing-xs) var(--spacing-sm) var(--spacing-xs) calc(var(--spacing-sm) * 3);
+    border-radius: var(--radius-minimal);
+    font-size: var(--font-b2);
+    transition:background-color .2s ease-in-out;
+}
+/* ! FOCUS VISIBLE */
+.primary_input:focus-visible {
+    border:.0625rem solid var(--color-input-border-enabled-hover);
+    outline:.0625rem solid transparent;
+    box-shadow: .1875rem .1875rem .1875rem rgba(0, 0, 0, 0.1);
+}
+/* ! PLACEHOLDER */
+.primary_input::placeholder {
+    font-size: var(--font-b2);
+    color:var(--color-input-txt-placeholder-enabled);
+}
+/* ! HOVER */
+.primary_input:hover {
+    border:.0625rem solid var(--color-input-border-enabled-hover);
+}
+
+/* ! ERROR ------------------------------------------------> */
+.input_error {
+    border:.0625rem solid var(--color-input-border-error);
+}
+/* ! FOCUS VISIBLE */
+.input_error:focus-visible {
+    border:.0625rem solid var(--color-input-border-error);
+    box-shadow: .1875rem .1875rem .1875rem rgba(0, 0, 0, 0.1);
+}
+/* ! HOVER */
+.input_error:hover {
+    border:.0625rem solid var(--color-input-border-error);
+    box-shadow: .1875rem .1875rem .1875rem rgba(0, 0, 0, 0.1);
+}
+/* ! ERROR MSN ------------------------------> */
+.input_error_msn {
+    position: absolute;
+    bottom: calc(-.875rem - var(--spacing-sm));
+    color: var(--color-input-txt-error);
+}

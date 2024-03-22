@@ -1,0 +1,19 @@
+/* ? MAIN CONTACT */
+.main-cont {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+/* * Responsive SM */
+@media screen and (max-width:480px) {
+    /* ? MAIN CONTACT */
+    .main-cont {
+        display: flex;
+        flex-direction: column;
+    }  
+}

@@ -15,8 +15,9 @@ import { UserCardComponent } from '../../components/home-components/user-card/us
 export interface ChipMenu {
   txt:string;
 }
-export interface ImgScroll {
+export interface Logos {
   img:string;
+  txt:string;
 }
 
 @Component({
@@ -69,56 +70,88 @@ export default class HomeComponent {
     },
   ];
 
-  stacks:ImgScroll[] = [
+  stacks:Logos[] = [
     {
-      img:'angular'
+      img:'angular',
+      txt:'angular',
     },
     {
-      img:'NET'
+      img:'NET',
+      txt:'NET',
     },
     {
-      img:'bootstrap'
+      img:'bootstrap',
+      txt:'bootstrap',
     },
     {
-      img:'CSharp'
+      img:'prime-ng',
+      txt:'primeng',
     },
     {
-      img:'html'
+      img:'angular-material',
+      txt:'angular material',
     },
     {
-      img:'css'
+      img:'CSharp',
+      txt:'C#'
     },
     {
-      img:'js'
+      img:'html',
+      txt:'html',
     },
     {
-      img:'ts'
+      img:'css',
+      txt:'css',
+    },
+    {
+      img:'js',
+      txt:'javascript',
+    },
+    {
+      img:'ts',
+      txt:'typescript',
+    },
+    {
+      img:'sql',
+      txt:'sql',
+    },
+    {
+      img:'dart',
+      txt:'dart',
     },
   ];
-  tools:ImgScroll[] = [
+  tools:Logos[] = [
     {
-      img:'vscode'
+      img:'vscode',
+      txt:'vscode',
     },
     {
-      img:'vs'
+      img:'vs',
+      txt:'visual studio',
     },
     {
-      img:'figma'
+      img:'figma',
+      txt:'figma',
     },
     {
-      img:'git'
+      img:'git',
+      txt:'git',
     },
     {
-      img:'postman'
+      img:'postman',
+      txt:'postman',
     },
     {
-      img:'jira'
+      img:'jira',
+      txt:'jira',
     },
     {
-      img:'slack'
+      img:'slack',
+      txt:'slack',
     },
     {
-      img:'sql-server'
+      img:'sql-server',
+      txt:'sql server',
     },
   ];
 

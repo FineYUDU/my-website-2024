@@ -1,1 +1,23 @@
-<p>contact works!</p>
+<!-- ? MAIN CONTAINER -->
+<div class="main-cont">
+    <section>
+    </section>
+    <section>
+        <form action="">
+            <input-field
+            [legendName]="'input.full-name' | translate:translateService.GetLang"
+            [showIcon]="true"
+            [icon]="'icon-full-name'"
+            />
+            <input-field
+            [legendName]="'input.email' | translate:translateService.GetLang"
+            [showIcon]="true"
+            [icon]="'icon-email'"
+            />
+            <button class="btn_primary">
+                {{ 'button.send' | translate:translateService.GetLang }}
+            </button>
+        </form>
+
+    </section>
+</div>

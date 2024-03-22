@@ -1,0 +1,33 @@
+  <!-- ? FIELD -->
+  <div class="field_">
+    <!-- ? INPUT -->
+    <label class="input_"> 
+        <!-- LEGEND -->
+        @if( legendName ) {
+            <legend class="font_label font_medium color_quaternary"> 
+                {{  legendName  }} 
+            </legend>
+        }
+        <!-- ? INPUT PRIMARY -->
+        <input  [type]="inputType" 
+                (change)="changeText($event)"
+                [maxLength]="maxLength"
+                [minLength]="minLength"
+                [disabled]="isDisabled"
+                [value]="fieldValue"
+                class="primary_input"
+                [ngClass]="{ 'input_error' : isSubmitted }">
+        @if(showIcon) {
+            <!-- ICON -->
+            <img [src]="'../../../../assets/theme/'+ localStorageService.GetMode +'/icon/'+icon+'.svg'" alt="">
+        }
+
+    </label>
+    <!-- ! ERROR MSN -->
+    @if ( isSubmitted ) {
+        <span  class="font_c1 font_regular input_error_msn"> 
+            {{errorMessage}} 
+        </span>
+    }
+    
+</div>

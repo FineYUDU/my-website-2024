@@ -2,7 +2,6 @@
     Only the global classes can have _
     Example txt_primary
 */
-@import './assets/styles/variables.css';
 /* ! Reset and Set Global properties */
 body::-webkit-scrollbar {
     width: 0;
@@ -106,7 +105,7 @@ ul {
 }
 /* LABEL */
 .font_label {
-    font-size: var(--font-b1);
+    font-size: var(--font-b2);
 }
 /* * Font Weight */
 .font_regular {

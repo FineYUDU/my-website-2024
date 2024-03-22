@@ -4,7 +4,7 @@ section {
     display: flex;
     gap: var(--spacing-xs);
     align-items: center;
-    padding: var(--spacing-xs) var(--spacing-sm);
+    padding: var(--spacing-xs) 0 var(--spacing-xs) var(--spacing-md);
     border-radius: var(--radius-full);
 }
 /* ICON */
@@ -28,6 +28,7 @@ section {
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--radius-minimal);
     border:.0625rem solid var(--color-secondary);
+    z-index: 99;
 }
 /* * DROPDOWN OPEN */
 .dropdown-open {

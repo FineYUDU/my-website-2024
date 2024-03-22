@@ -12,13 +12,17 @@
     --grey-600                                                                  :#212121;
     --grey-700                                                                  :#151515;
     /* * Brand */
-    
     --brand-50                                                                  :#52B69A;
     --brand-100                                                                 :#34A0A4;
     --brand-200                                                                 :#168AAD;
     --brand-300                                                                 :#1A759F;
     --brand-400                                                                 :#1E6091;
     --brand-500                                                                 :#184E77;
+    /* * Danger */ 
+    --danger-100                                                                :#B42318;
+    --danger-200                                                                :#912018;
+    --danger-300                                                                :#7A1A1A;
+    --danger-400                                                                :#55160C;
     /* ? Sizes --------------> */
     /* * Radius */
     --radius-xs                                                                 :.25rem;
@@ -71,13 +75,13 @@
     --color-brand-tertiary                                                      :var(--brand-400);
 
     /* * Button Primary */
-    --color-btn-bg-primary                                                      :var(--brand-400);
-    --color-btn-color-primary                                                   :var(--brand-400);
-    --color-btn-border-primary                                                  :var(--brand-400);
+    --color-btn-bg-primary                                                      :var(--grey-600);
+    --color-btn-color-primary                                                   :var(--grey-50);
+    --color-btn-border-primary                                                  :var(--grey-600);
     /* ! Hover */
-    --color-btn-bg-primary-hover                                                :var(--brand-400);
+    --color-btn-bg-primary-hover                                                :var(--grey-500);
     /* ! Active */
-    --color-btn-bg-primary-active                                               :var(--brand-400);
+    --color-btn-bg-primary-active                                               :var(--grey-700);
 
     /* * Button Brand Primary */
     --color-brand-btn-bg-primary                                                :var(--brand-400);
@@ -97,6 +101,17 @@
     --color-brand-btn-bg-secondary-hover                                        :var(--brand-200);
     /* ! Active */
     --color-brand-btn-bg-secondary-active                                       :var(--grey-600);
+    
+    /* * Input Primary */
+    --color-input-bg-enabled                                                    :var(--grey-50);
+    --color-input-border-enabled                                                :var(--grey-200);
+    --color-input-txt-enabled                                                   :var(--grey-600);
+    --color-input-txt-placeholder-enabled                                       :var(--grey-200);
+    /* ! Hover */
+    --color-input-border-enabled-hover                                          :var(--grey-400);
+    /* ! Error */
+    --color-input-txt-error                                                     :var(--danger-100);
+    --color-input-border-error                                                  :var(--danger-200);
 
     /* * Helpers */
     --color-main-card                                                           :var(--grey-600);
@@ -177,6 +192,7 @@
     --color-bg-primary                                                          :var(--grey-600);
     --color-bg-secondary                                                        :var(--grey-700);
     --color-bg-tertiary                                                         :var(--grey-50);
+    --color-bg-quaternary                                                       :var(--grey-500);
 
     /* * Brand */
     --color-brand-primary                                                       :var(--brand-400);
@@ -184,13 +200,13 @@
     --color-brand-tertiary                                                      :var(--brand-600);
 
     /* * Button Primary */
-    --color-btn-bg-primary                                                      :var(--brand-400);
-    --color-btn-color-primary                                                   :var(--brand-400);
-    --color-btn-border-primary                                                  :var(--brand-400);
+    --color-btn-bg-primary                                                      :var(--grey-700);
+    --color-btn-color-primary                                                   :var(--grey-50);
+    --color-btn-border-primary                                                  :var(--grey-600);
     /* ! Hover */
-    --color-btn-bg-primary-hover                                                :var(--brand-400);
+    --color-btn-bg-primary-hover                                                :var(--grey-500);
     /* ! Active */
-    --color-btn-bg-primary-active                                               :var(--brand-400);
+    --color-btn-bg-primary-active                                               :var(--grey-700);
 
     /* * Button Brand Primary */
     --color-brand-btn-bg-primary                                                :var(--brand-400);
@@ -211,6 +227,17 @@
     /* ! Active */
     --color-brand-btn-bg-secondary-active                                       :var(--grey-600);
 
+    /* * Input Primary */
+    --color-input-bg-enabled                                                    :var(--grey-600);
+    --color-input-border-enabled                                                :var(--grey-400);
+    --color-input-txt-enabled                                                   :var(--grey-200);
+    --color-input-txt-placeholder-enabled                                       :var(--grey-400);
+    /* ! Hover */
+    --color-input-border-enabled-hover                                          :var(--grey-400);
+    /* ! Error */
+    --color-input-txt-error                                                     :var(--danger-100);
+    --color-input-border-error                                                  :var(--danger-200);
+    
     /* * Helpers */
     --color-main-card                                                           :var(--grey-700);
     --color-lang-selected-txt                                                   :var(--grey-600);
@@ -232,7 +259,7 @@
     --spacing-lg                                                                :var(--spacing-8);
     --spacing-xl                                                                :var(--spacing-10);
     --spacing-2xl                                                               :var(--spacing-15);
-    --gap-dashboard                                                             :var(--spacing-6);
+    --spacing-blocks                                                            :var(--spacing-5);
 
     /* * Radius */
     --radius-minimal                                                            :var(--radius-sm);
@@ -270,6 +297,7 @@
     /* ? Size --------------> */
     /* * Spacing */
     --web-width                                                                 :82.45%;
+    --web-max-width                                                             :73.125rem;
     --sidebar-width                                                             :16.75rem;
 
     /* ? Transitios --------------> */
