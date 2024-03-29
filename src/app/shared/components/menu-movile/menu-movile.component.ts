@@ -1,11 +1,11 @@
 // * Angular
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 // * Pipes
 import { TranslatePipe } from '../../pipes/translate.pipe';
 // * Components
 import { TranslateService } from '../../../core/services/translate.service';
-import { CommonModule } from '@angular/common';
 import { LocalStorageService } from '../../../core/services/localstorage.service';
 import { MenuNav } from '../navbar/navbar.component';
 import { ThemeService } from '../../../core/services/theme.service';
@@ -14,9 +14,10 @@ import { ThemeService } from '../../../core/services/theme.service';
   selector: 'menu-movile',
   standalone: true,
   imports: [
+    CommonModule,
+    NgOptimizedImage,
     RouterModule,
     TranslatePipe,
-    CommonModule,
   ],
   templateUrl: './menu-movile.component.html',
   styleUrl: './menu-movile.component.css'

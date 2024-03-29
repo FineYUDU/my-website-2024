@@ -5,25 +5,27 @@
     <!-- ? HEADER -->
     <div class="header">
         <!-- LOGO -->
-        <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-txt.svg'" 
+        <img [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-txt.svg'"
+            width="43" height="43" 
             alt="logo menu movile">
         <!-- CROSS -->
-        <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-cross.svg'" 
+        <img [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-cross.svg'" 
             (click)="closeMenu()" 
             class="icon_sm"
+            width="78" height="43" 
             alt="logo menu movile">
         
     </div>
     <!-- ? MENU NAVIGATION-->
     <ul class="menu-list">
         <!-- GROUP NAME -->
-        <p class="font_b1 color_group_name font_medium">{{ 'menu.nav' | translate:translateService.GetLang | titlecase  }}</p>
+        <p class="font__size--b1 font__color--group-name font__weight--medium">{{ 'menu.nav' | translate:translateService.GetLang | titlecase  }}</p>
 
         @for (nav of menuNav; track $index) {
             <li>
                 <!-- LINK MENU -->
                 @if(nav.close) {
-                    <a  class="font_b1 color_item"
+                    <a  class="font__size--b1 font__color--item"
                         [routerLink]="nav.router" 
                         [href]="nav.router"
                         (click)="closeMenu()"
@@ -33,7 +35,7 @@
                                 class="icon_md"
                                 alt="icon {{nav.icon}}">
                                 <!-- TXT -->
-                                <p class="font_regular" routerLinkActive="font_semibold">
+                                <p class="font__weight--regular" routerLinkActive="font__weight--semibold">
                                     {{ nav.txt | translate:translateService.GetLang }}
                                 </p>
 
@@ -41,7 +43,7 @@
                     </a>
                 }
                 @else {
-                    <a  class="font_b1 color_item"
+                    <a  class="font__size--b1 font__color--item"
                         [href]="nav.router"
                         [routerLink]="nav.router">
                         <!-- ICON CHEVRON -->
@@ -50,7 +52,7 @@
                                 class="icon_md"
                                 alt="icon {{nav.icon}}">
                                 <!-- TXT -->
-                                <p class="font_regular" routerLinkActive="font_semibold">
+                                <p class="font__weight--regular" routerLinkActive="font__weight--semibold">
                                     {{ nav.txt | translate:translateService.GetLang }}
                                 </p>
 
@@ -66,11 +68,11 @@
     <!-- ? MENU SETTINGS -->
     <ul class="menu-list">
         <!-- GROUP NAME -->
-        <p class="font_b1 color_group_name font_medium">{{ 'menu.settings' | translate:translateService.GetLang | titlecase  }}</p>
+        <p class="font__size--b1 font__color--group-name font__weight--medium">{{ 'menu.settings' | translate:translateService.GetLang | titlecase  }}</p>
 
         <!-- ? TRANSLATE LIST -->
         <li class="li-dropdown">
-            <a  class="font_b1 color_item" 
+            <a  class="font__size--b1 font__color--item" 
                 (click)="openLangDropdown()">
                 <!-- ICON CHEVRON -->
                 <div class="icon-txt">
@@ -78,7 +80,7 @@
                         class="icon_md"
                         alt="icon translate">
                         <!-- TXT -->
-                        <p class="font_regular" [ngClass]="{'font_semibold': isDropdownLangOpen}">
+                        <p class="font__weight--regular" [ngClass]="{'font__weight--semibold': isDropdownLangOpen}">
                             {{ 'menu.translate' | translate:translateService.GetLang }}
                         </p>
                 </div>
@@ -91,7 +93,7 @@
             <div class="dropdown-cont"
                 [ngClass]="{'open-dropdown': isDropdownLangOpen }" >
                 <ul class="dropdown">
-                    <li class="font_b2 color_item" 
+                    <li class="font__size--b2 font__color--item" 
                         (click)="changeLang('es')"> 
                         <!-- LINE -->
                         <div class="line" [ngClass]="{'line-selected': GetLang === 'es'}">
@@ -101,12 +103,12 @@
                             <!-- MARKER -->
                             <div class="marker"></div>
                             <!-- TXT -->
-                            <p class="font_regular">
+                            <p class="font__weight--regular">
                                 {{ 'lang.es' | translate:translateService.GetLang }}
                             </p>
                         </div>
                     </li>
-                    <li class="font_b2 color_item" 
+                    <li class="font__size--b2 font__color--item" 
                         (click)="changeLang('en')"> 
                         <!-- LINE -->
                         <div class="line" [ngClass]="{'line-selected': GetLang === 'en'}">
@@ -116,7 +118,7 @@
                             <!-- MARKER -->
                             <div class="marker"></div>
                             <!-- TXT -->
-                            <p class="font_regular">
+                            <p class="font__weight--regular">
                                 {{ 'lang.en' | translate:translateService.GetLang }}
 
                             </p>
@@ -129,7 +131,7 @@
 
         <!-- ? THEME LIST -->
         <li class="li-dropdown">
-            <a  class="font_b1 color_item" 
+            <a  class="font__size--b1 font__color--item" 
                 (click)="openThemeDropdown()">
                 <!-- ICON CHEVRON -->
                 <div class="icon-txt">
@@ -137,7 +139,7 @@
                         class="icon_md"
                         alt="icon translate">
                         <!-- TXT -->
-                        <p class="font_regular" [ngClass]="{'font_semibold': isDropdownThemeOpen}">
+                        <p class="font__weight--regular" [ngClass]="{'font__weight--semibold': isDropdownThemeOpen}">
                             {{ 'menu.appearance' | translate:translateService.GetLang }}
                         </p>
                 </div>
@@ -152,7 +154,7 @@
             <div class="dropdown-cont"
                 [ngClass]="{'open-dropdown': isDropdownThemeOpen }" >
                 <ul class="dropdown">
-                    <li class="font_b2 color_item" 
+                    <li class="font__size--b2 font__color--item" 
                         (click)="themeService.changeMode('light')"> 
                         <!-- LINE -->
                         <div class="line" 
@@ -163,12 +165,12 @@
                             <!-- MARKER -->
                             <div class="marker"></div>
                             <!-- TXT -->
-                            <p class="font_regular">
+                            <p class="font__weight--regular">
                                 {{ 'menu.light' | translate:translateService.GetLang }}
                             </p>
                         </div>
                     </li>
-                    <li class="font_b2 color_item" 
+                    <li class="font__size--b2 font__color--item" 
                         (click)="themeService.changeMode('dark')"> 
                         <!-- LINE -->
                         <div class="line" 
@@ -179,7 +181,7 @@
                             <!-- MARKER -->
                             <div class="marker"></div>
                             <!-- TXT -->
-                            <p class="font_regular">
+                            <p class="font__weight--regular">
                                 {{ 'menu.dark' | translate:translateService.GetLang }}
                             </p>
                         </div>

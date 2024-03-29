@@ -4,7 +4,7 @@
     <label class="input_"> 
         <!-- LEGEND -->
         @if( legendName ) {
-            <legend class="font_label font_medium color_quaternary"> 
+            <legend class="font__size--label font__weight--medium font__color--quaternary"> 
                 {{  legendName  }} 
             </legend>
         }
@@ -25,7 +25,7 @@
     </label>
     <!-- ! ERROR MSN -->
     @if ( isSubmitted ) {
-        <span  class="font_c1 font_regular input_error_msn"> 
+        <span  class="font__size--c1 font__weight--regular input_error_msn"> 
             {{errorMessage}} 
         </span>
     }

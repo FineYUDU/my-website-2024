@@ -15,7 +15,7 @@ export interface ChipMenu {
   <div class="main-cont">
       @for ( chip of chips ;track $index;) {
         <!-- TXT -->
-      <span class="font_medium font_c2 color_tertiary" >
+      <span class="font__weight--medium font__size--c2 font__color--tertiary" >
           {{ chip.txt }}
       </span>  
       }

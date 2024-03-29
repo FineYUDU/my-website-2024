@@ -1,5 +1,6 @@
 // * Angular
 import { Component, inject } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 // * Services
 import { TranslateService } from '../../../../core/services/translate.service';
 // * Pipes
@@ -10,7 +11,8 @@ import { LocalStorageService } from '../../../../core/services/localstorage.serv
   selector: 'user-card',
   standalone: true,
   imports: [
-    TranslatePipe
+    TranslatePipe,
+    NgOptimizedImage
   ],
   templateUrl: './user-card.component.html',
   styleUrl: './user-card.component.css'

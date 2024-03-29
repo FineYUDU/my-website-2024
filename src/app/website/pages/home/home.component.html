@@ -2,11 +2,11 @@
 <div class="main-cont">
     <!-- TITLE -->
     <div class="title-cont">
-        <p class="font_h5 color_primary font_bold">
+        <p class="font__size--h5 font__color--primary font__weight--bold">
             {{ 'home.title' | translate:translateService.GetLang }}
         </p>
         
-        <p class="font_b1 color_quaternary font_regular">
+        <p class="font__size--b1 font__color--quaternary font__weight--regular">
             {{ 'home.subtitle' | translate:translateService.GetLang }} Angular v17.0.8
         </p>
 
@@ -35,9 +35,9 @@
                 <!-- ? TEXT CONTAINER -->
                 <div class="txt-cont">
                     <!-- TITLE -->
-                    <p class="font_b1 font_bold color_primary">{{ 'lang.es' | translate:translateService.GetLang }}</p>
+                    <p class="font__size--b1 font__weight--bold font__color--primary">{{ 'lang.es' | translate:translateService.GetLang }}</p>
                     <!-- TXT -->
-                    <p class="font_b2 font_regular color_quaternary">{{ 'lang.native' | translate:translateService.GetLang }}</p>
+                    <p class="font__size--b2 font__weight--regular font__color--quaternary">{{ 'lang.native' | translate:translateService.GetLang }}</p>
 
                 </div>
 
@@ -51,9 +51,9 @@
                 <!-- ? TEXT CONTAINER -->
                 <div class="txt-cont">
                     <!-- TITLE -->
-                    <p class="font_b1 font_bold color_primary">{{ 'lang.en' | translate:translateService.GetLang }}</p>
+                    <p class="font__size--b1 font__weight--bold font__color--primary">{{ 'lang.en' | translate:translateService.GetLang }}</p>
                     <!-- TXT -->
-                    <p class="font_b2 font_regular color_quaternary">{{ 'lang.level' | translate:translateService.GetLang }}</p>
+                    <p class="font__size--b2 font__weight--regular font__color--quaternary">{{ 'lang.level' | translate:translateService.GetLang }}</p>
 
                 </div>
     
@@ -65,7 +65,7 @@
     
     <!-- TITLE -->
     <div class="title-cont">
-        <p class="font_h5 color_primary font_bold"> 
+        <p class="font__size--h5 font__color--primary font__weight--bold"> 
             {{ 'home.title-2' | translate:translateService.GetLang }} 
         </p>
 
@@ -76,7 +76,7 @@
     
     <!-- TITLE -->
     <div class="title-cont">
-        <p class="font_h5 color_primary font_bold"> 
+        <p class="font__size--h5 font__color--primary font__weight--bold"> 
             {{ 'Stack' | translate:translateService.GetLang }} 
         </p>
 
@@ -91,11 +91,11 @@
                 @for ( item of stacks; track $index) {
                     <li>
                         <!-- LOGO -->
-                        <img class="img-item" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/stacks/logo-'+item.img+'.svg'" [alt]="'logo'+item.img">
+                        <img class="img-item" [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/stacks/logo-'+item.img+'.svg'" [alt]="'logo'+item.img" width="48" height="48">
                         <!-- ! HOVER LOGO -->
-                        <img class="img-item-hover" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/stacks/hover/logo-'+item.img+'.svg'" [alt]="'logo'+item.img">
+                        <img class="img-item-hover" [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/stacks/hover/logo-'+item.img+'.svg'" [alt]="'logo'+item.img" width="48" height="48">
                         <!-- TXT -->
-                        <p class="font_b1 font_medium color_item"> {{item.txt}} </p>
+                        <p class="font__size--b1 font__weight--medium font__color--item"> {{item.txt}} </p>
                     </li>
                 }
             </ul>
@@ -105,7 +105,7 @@
     
     <!-- TITLE -->
     <div class="title-cont">
-        <p class="font_h5 color_primary font_bold"> 
+        <p class="font__size--h5 font__color--primary font__weight--bold"> 
             {{ 'home.title-3' | translate:translateService.GetLang }} 
         </p>
 
@@ -119,11 +119,11 @@
                 @for ( item of tools; track $index) {
                     <li>
                         <!-- LOGO -->
-                        <img class="img-item" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/tools/logo-'+item.img+'.svg'" [alt]="'logo'+item.img">
+                        <img class="img-item" [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/tools/logo-'+item.img+'.svg'" [alt]="'logo'+item.img"  width="48" height="48">
                         <!-- ! HOVER LOGO -->
-                        <img class="img-item-hover" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/tools/hover/logo-'+item.img+'.svg'" [alt]="'logo'+item.img">
+                        <img class="img-item-hover" [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/tools/hover/logo-'+item.img+'.svg'" [alt]="'logo'+item.img" width="48" height="48">
                         <!-- TXT-->
-                        <p class="font_b1 font_medium color_item"> {{item.txt}} </p>
+                        <p class="font__size--b1 font__weight--medium font__color--item"> {{item.txt}} </p>
                     </li>
                 }
             </ul>

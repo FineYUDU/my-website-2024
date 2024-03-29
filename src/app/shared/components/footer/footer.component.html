@@ -3,10 +3,10 @@
     <!-- ? LOGO CONT -->
     <section>
         <!-- LOGO AVATAR -->
-        <img class="cursor_pointer avatar"
+        <img class="cursor--pointer avatar"
             alt="Logo Avatar FineDev"
             routerLink="./" 
-            [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-avatar-footer.svg'">
+            [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-avatar-footer.svg'" width="60" height="60">
     </section>
 
     <!-- ? NAV MENU -->
@@ -16,7 +16,7 @@
             @for (nav of menuNav; track $index) {
                 <li>
                     <!-- LINK MENU -->
-                    <a  class="font_b1 color_tertiary font_regular"
+                    <a  class="font__size--b1 font__color--tertiary font__weight--regular"
                         [routerLink]="nav.router" 
                         routerLinkActive="active">
                         <!-- TXT -->
@@ -34,19 +34,19 @@
         <!-- Linkedin -->
         <a href="https://www.linkedin.com/in/erick-alcocer-06ba2b149/" target="_blank">
             <!-- ICON -->
-            <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-linkedin.svg'" class="icon_lg" alt="Linkedin logo">
+            <img [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-linkedin.svg'" class="icon_lg" alt="Linkedin logo" width="24" height="24">
         </a>
         
         <!-- GitHub -->
         <a href="https://github.com/FineYUDU" target="_blank">
             <!-- ICON -->
-            <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-github.svg'" class="icon_lg" alt="Github logo">
+            <img [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-github.svg'" class="icon_lg" alt="Github logo" width="24" height="24">
         </a>
         
         <!-- X -->
         <a href="https://twitter.com/FineYUDU" target="_blank">
             <!-- ICON -->
-            <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-x.svg'" class="icon_lg" alt="x logo">
+            <img [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-x.svg'" class="icon_lg" alt="x logo" width="24" height="24">
         </a>
 
     </section>
@@ -54,12 +54,12 @@
     <!-- ? VERSION CONTAINER -->
     <section>
         <!-- TXT -->
-        <p class="font_b1 font_semibold color_tertiary">
+        <p class="font__size--b1 font__weight--semibold font__color--tertiary">
             {{ companyName }}
         </p>
 
         <!-- TXT -->
-        <p class="font_b1 font_regular color_tertiary">
+        <p class="font__size--b1 font__weight--regular font__color--tertiary">
             {{ 'version.current' | translate:translateService.GetLang }}
         </p>
 

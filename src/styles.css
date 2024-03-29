@@ -38,112 +38,100 @@ ul {
 ::marker {
     color: transparent;
 }
-/* * RADIUS */
-.radius_none {
-    border-radius: 0;
-}
-.radius_minimal {
-    border-radius: var(--radius-minimal);
-}
-.radius_rounded {
-    border-radius: var(--radius-rounded);
-}
-.radius_full {
-    border-radius: var(--radius-full);
-}
+
 /* ? HELPERS */
 /* * Screen width */
-.cursor_pointer {
+.cursor--pointer {
     cursor: pointer;
 }
 .none {
     display: none;
 }
-.d_flex {
+.d--flex {
     display: flex;
 }
-.pointer_events_none {
+.pointer-events--none {
     pointer-events: none;
 }
 /* ? FONTS */
 /* * Font sizes */
 /* Headlines */
-.font_h1 {
+.font__size--h1 {
     font-size: var(--font-h1);
 }
-.font_h2 {
+.font__size--h2 {
     font-size: var(--font-h2);
 }
-.font_h3 {
+.font__size--h3 {
     font-size: var(--font-h3);
 }
-.font_h4 {
+.font__size--h4 {
     font-size: var(--font-h4);
 }
-.font_h5 {
+.font__size--h5 {
     font-size: var(--font-h5);
 }
-.font_h6 {
+.font__size--h6 {
     font-size: var(--font-h6);
 }
 /* Body */
-.font_b1 {
+.font__size--b1 {
     font-size: var(--font-b1);
 }
-.font_b2 {
+.font__size--b2 {
     font-size: var(--font-b2);
 }
 /* Captions */
-.font_c1 {
+.font__size--c1 {
     font-size: var(--font-c1);
 }
-.font_c2 {
+.font__size--c2 {
     font-size: var(--font-c2);
 }
-.font_c3 {
+.font__size--c3 {
     font-size: var(--font-c3);
 }
 /* LABEL */
-.font_label {
+.font__size--label {
     font-size: var(--font-b2);
 }
 /* * Font Weight */
-.font_regular {
+.font__weight--regular {
     font-weight:400;
 }
-.font_medium {
+.font__weight--medium {
     font-weight:500;
 }
-.font_semibold {
+.font__weight--semibold {
     font-weight:600;
 }
-.font_bold {
+.font__weight--bold {
     font-weight:700;
 }
 /* * Font Colors */
-.color_primary {
+.font__color--primary {
     color: var(--color-primary);
 }
-.color_secondary {
+.font__color--secondary {
     color: var(--color-secondary);
 }
-.color_tertiary {
+.font__color--tertiary {
     color: var(--color-tertiary);
 }
-.color_quaternary {
+.font__color--quaternary {
     color: var(--color-quaternary);
 }
-.color_brand_primary {
+.font__color--brand-primary {
     color: var(--color-brand-primary);
 }
-.color_brand_secondary {
+.font__color--brand-secondary {
     color: var(--color-brand-secondary);
 }
 /* ! MENU MOVILE */
-.color_group_name {
+.font__color--group-name {
     color: var(--color-group-name-txt);
 }
-.color_item {
+.font__color--item {
     color: var(--color-item);
 }
 /* ? BACKGROUNDS */
@@ -267,13 +255,13 @@ ul {
 }
 /* * Responsive SM */
 @media screen and (max-width:480px) {
-    .font_h4 {
+    .font__size--h4 {
         font-size: var(--font-h5);
     }
-    .font_b1 {
+    .font__size--b1 {
         font-size: var(--font-b2);
     }
-    .font_b2 {
+    .font__size--b2 {
         font-size: var(--font-c1);
     }
 }

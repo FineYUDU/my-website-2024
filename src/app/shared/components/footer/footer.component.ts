@@ -1,5 +1,6 @@
 // * Angular
 import { Component, inject } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 // * Services
 import { LocalStorageService } from '../../../core/services/localstorage.service';
 import { TranslateService } from '../../../core/services/translate.service';
@@ -19,9 +20,10 @@ export interface MenuNav {
   selector: 'footer-menu',
   standalone: true,
   imports: [
-    VersionComponent,
-    TranslatePipe,
+    NgOptimizedImage,
     RouterModule,
+    TranslatePipe,
+    VersionComponent,
   ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'

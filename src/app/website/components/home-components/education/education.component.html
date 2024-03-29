@@ -2,17 +2,17 @@
     @for (item of educationBlock; track $index) {
         <div class="txt-cont block-education">
             <!-- title -->
-            <p class="font_b1 color_item font_semibold" >
+            <p class="font__size--b1 font__color--item font__weight--semibold" >
                 {{ item.title | translate:translateService.GetLang }}
             </p>
             
             <!-- DATE -->
-            <p class="font_b2 color_quaternary font_regular" >
+            <p class="font__size--b2 font__color--quaternary font__weight--regular" >
                 {{ item.date | translate:translateService.GetLang }}
             </p>
 
             <!-- TXT -->
-            <p class="font_b2 color_brand_secondary font_medium">
+            <p class="font__size--b2 font__color--brand-secondary font__weight--medium">
                 {{ item.txt | translate:translateService.GetLang }}
                 
             </p>

@@ -1,5 +1,6 @@
 // * Angular
 import { Component, inject, ElementRef } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 // * Services
 import { LocalStorageService } from '../../../core/services/localstorage.service';
 import { TranslateService } from '../../../core/services/translate.service';
@@ -27,6 +28,7 @@ export interface Logos {
     ChipComponent,
     EducationComponent,
     ExperienceComponent,
+    NgOptimizedImage,
     PieGridComponent,
     TranslatePipe,
     UserCardComponent,
@@ -144,6 +146,10 @@ export default class HomeComponent {
     {
       img:'jira',
       txt:'jira',
+    },
+    {
+      img:'jasmine',
+      txt:'jasmine',
     },
     {
       img:'slack',

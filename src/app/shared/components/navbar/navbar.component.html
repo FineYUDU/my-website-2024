@@ -5,12 +5,12 @@
         <!-- ? SECTION | LOGO -->
         <section class="logo-cont">
             <!-- LOGO AVATAR -->
-            <img class="cursor_pointer avatar"
+            <img class="cursor--pointer avatar"
                 routerLink="./" 
                 alt="Logo Avatar FineDev"
                 [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-avatar.svg'">
             <!-- LOGO TXT -->
-            <img class="cursor_pointer logo-txt"
+            <img class="cursor--pointer logo-txt"
                 routerLink="./" 
                 alt="Logo FineDev"
                 [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-txt.svg'">
@@ -26,7 +26,7 @@
                     @for (nav of menuNav; track $index) {
                         <li>
                             <!-- LINK MENU -->
-                            <a  class="font_b1 color_primary font_regular"
+                            <a  class="font__size--b1 font__color--primary font__weight--regular"
                                 [routerLink]="nav.router" 
                                 routerLinkActive="active">
                                 <!-- TXT -->

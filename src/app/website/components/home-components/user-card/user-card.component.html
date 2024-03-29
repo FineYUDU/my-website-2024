@@ -9,7 +9,7 @@
     <!-- ? PROFILE IMG -->
     <div class="profile-img">
         <!-- AVATAR -->
-        <img class="avatar" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/profile.jpg'" alt="avatar logo">
+        <img class="avatar" [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/profile.webp'" alt="avatar logo" fill priority>
         
     </div>
     
@@ -20,11 +20,11 @@
         <!-- TITLE CONTAINER -->
         <div class="title-cont">
             <!-- TITLE -->
-            <p class="font_h4 font_bold color_brand_primary">
+            <p class="font__size--h4 font__weight--bold font__color--brand-primary">
                 Erick Alcocer
             </p>
             <!-- TXT -->
-            <p class="font_b1 font_medium color_tertiary">
+            <p class="font__size--b1 font__weight--medium font__color--tertiary">
                 {{ 'home.section-1.ocupation' | translate:translateService.GetLang }}
             </p>
         
@@ -40,23 +40,23 @@
                     <!-- Linkedin -->
                     <a href="https://www.linkedin.com/in/erick-alcocer-06ba2b149/" target="_blank">
                         <!-- ICON -->
-                        <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-linkedin.svg'" alt="Linkedin logo">
+                        <img [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-linkedin.svg'" alt="Linkedin logo" width="37" height="37">
                     </a>
                     
                     <!-- GitHub -->
                     <a href="https://github.com/FineYUDU" target="_blank">
                         <!-- ICON -->
-                        <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-github.svg'" alt="Github logo">
+                        <img [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-github.svg'" alt="Github logo" width="37" height="37">
                     </a>
                     
                     <!-- X -->
                     <a href="https://twitter.com/FineYUDU" target="_blank">
                         <!-- ICON -->
-                        <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-x.svg'" alt="x logo">
+                        <img [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-x.svg'" alt="x logo" width="37" height="37">
                     </a>
     
                 </div> 
-                <p class="color_secondary font_c1 font_regular"> {{ 'home.section-1.upgrade' | translate:translateService.GetLang }} {{'03/08/2024'}} </p>
+                <p class="font__color--secondary font__size--c1 font__weight--regular"> {{ 'home.section-1.upgrade' | translate:translateService.GetLang }} {{'03/08/2024'}} </p>
             </div>    
 
             <!-- ? BUTTONS CONTAINER -->

@@ -6,21 +6,21 @@
         <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-avatar.svg'" 
             alt="logo menu movile">
         <div class="txt-cont">
-            <p class="font_b1 color_primary font_medium" >Erick Eduardo</p>
-            <p class="font_c1 color_item font_regular" >Desarrollador web</p>
+            <p class="font__size--b1 font__color--primary font__weight--medium" >Erick Eduardo</p>
+            <p class="font__size--c1 font__color--item font__weight--regular" >Desarrollador web</p>
         </div>
         
     </div>
     <!-- ? MENU NAVIGATION-->
     <ul class="menu-list">
         <!-- GROUP NAME -->
-        <p class="font_b1 color_group_name font_medium">{{ 'menu.nav' | translate:translateService.GetLang | titlecase  }}</p>
+        <p class="font__size--b1 font__color--group-name font__weight--medium">{{ 'menu.nav' | translate:translateService.GetLang | titlecase  }}</p>
 
         @for (nav of menuNav; track $index) {
             <li>
                 <!-- LINK MENU -->
                 @if(nav.close) {
-                    <a  class="font_b1 color_item"
+                    <a  class="font__size--b1 font__color--item"
                         [routerLink]="nav.router" 
                         [href]="nav.router"
                         (click)="closeMenu()"
@@ -30,7 +30,7 @@
                                 class="icon_md"
                                 alt="icon {{nav.icon}}">
                                 <!-- TXT -->
-                                <p class="font_regular" routerLinkActive="font_semibold">
+                                <p class="font__weight--regular" routerLinkActive="font__weight--semibold">
                                     {{ nav.txt | translate:translateService.GetLang }}
                                 </p>
 
@@ -38,7 +38,7 @@
                     </a>
                 }
                 @else {
-                    <a  class="font_b1 color_item"
+                    <a  class="font__size--b1 font__color--item"
                         [href]="nav.router"
                         [routerLink]="nav.router">
                         <!-- ICON CHEVRON -->
@@ -47,7 +47,7 @@
                                 class="icon_md"
                                 alt="icon {{nav.icon}}">
                                 <!-- TXT -->
-                                <p class="font_regular" routerLinkActive="font_semibold">
+                                <p class="font__weight--regular" routerLinkActive="font__weight--semibold">
                                     {{ nav.txt | translate:translateService.GetLang }}
                                 </p>
 

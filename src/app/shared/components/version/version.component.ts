@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template:`
-  <p class="font_b1 font_regular color_tertiary">
+  <p class="font__size--b1 font__weight--regular font__color--tertiary">
       {{version}}
   </p>
   `
