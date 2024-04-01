@@ -1,0 +1,75 @@
+@import './variables';
+.theme--dark {
+    //  
+    //  ?                                   TOKENS 
+    //      
+    // ?                                    Colors
+    //  
+    // * ---------------------------------- Primary --------------------------------------------
+    --color-primary                                                             :#{$grey-50};
+    --color-secondary                                                           :#{$grey-400};
+    --color-tertiary                                                            :#{$grey-50};
+    --color-quaternary                                                          :#{$grey-300};
+    // * ---------------------------------- Background ------------------------------------------
+    --color-bg-primary                                                          :#{$grey-600};
+    --color-bg-secondary                                                        :#{$grey-700};
+    --color-bg-tertiary                                                         :#{$grey-50};
+    --color-bg-quaternary                                                       :#{$grey-500};
+    // * ---------------------------------- Brand ------------------------------------------------
+    --color-brand-primary                                                       :#{$brand-400};
+    --color-brand-secondary                                                     :#{$brand-300};
+    --color-brand-tertiary                                                      :#{$brand-500};
+    //  
+    // ?                                    Buttons
+    //  
+    // * ---------------------------------- Pirmary ---------------------------------------------
+    
+    --color-btn-bg-primary                                                      :#{$grey-700};
+    --color-btn-color-primary                                                   :#{$grey-50};
+    --color-btn-border-primary                                                  :#{$grey-600};    
+    /* ! Hover */
+    --color-btn-bg-primary-hover                                                :var(--grey-500);
+    /* ! Active */
+    --color-btn-bg-primary-active                                               :var(--grey-700);
+    /* * Button Brand Primary */
+    --color-brand-btn-bg-primary                                                :var(--brand-400);
+    --color-brand-btn-color-primary                                             :var(--grey-50);
+    --color-brand-btn-border-primary                                            :transparent;
+    /* ! Hover */
+    --color-brand-btn-border-primary-hover                                      :var(--brand-300);
+    --color-brand-btn-bg-primary-hover                                          :var(--brand-300);
+    /* ! Active */
+    --color-brand-btn-bg-primary-active                                         :var(--brand-500);
+
+    /* * Button Brand Secondary */
+    --color-brand-btn-bg-secondary                                              :transparent;
+    --color-brand-btn-color-secondary                                           :var(--grey-50);
+    --color-brand-btn-border-secondary                                          :var(--brand-400);
+    /* ! Hover */
+    --color-brand-btn-bg-secondary-hover                                        :var(--brand-200);
+    /* ! Active */
+    --color-brand-btn-bg-secondary-active                                       :var(--grey-600);
+
+    /* * Input Primary */
+    --color-input-bg-enabled                                                    :var(--grey-600);
+    --color-input-border-enabled                                                :var(--grey-400);
+    --color-input-txt-enabled                                                   :var(--grey-200);
+    --color-input-txt-placeholder-enabled                                       :var(--grey-400);
+    /* ! Hover */
+    --color-input-border-enabled-hover                                          :var(--grey-400);
+    /* ! Error */
+    --color-input-txt-error                                                     :var(--danger-100);
+    --color-input-border-error                                                  :var(--danger-200);
+    
+    /* * Helpers */
+    --color-main-card                                                           :#{$grey-700};
+    --color-lang-selected-txt                                                   :#{$grey-600};
+
+    /* * Movile menu */
+    --color-bg-movile-menu                                                      :var(--grey-700);
+    --color-group-name-txt                                                      :var(--grey-100);
+    --color-item                                                                :var(--grey-200);
+    --color-item-active                                                         :var(--grey-600);
+    --color-item-active-txt                                                     :var(--brand-100);
+    --color-line-hierarchy                                                      :var(--grey-0);
+}
