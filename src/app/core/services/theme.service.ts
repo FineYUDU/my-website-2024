@@ -11,8 +11,8 @@ export class ThemeService {
 
   constructor() { 
     this.theme = localStorage.getItem('theme') || 'light';
-    document.body.classList.toggle('dark-mode', this.theme === 'dark');
-    document.body.classList.toggle('light-mode',this.theme === 'light');
+    document.body.classList.toggle('theme--dark', this.theme === 'dark');
+    document.body.classList.toggle('theme',this.theme === 'light');
 
     const theme = localStorage.getItem('theme');
 
@@ -28,8 +28,8 @@ export class ThemeService {
     this.theme = theme;
     this.theme = this.theme === 'light' ? 'light' : 'dark';
 
-    document.body.classList.toggle('dark-mode', this.theme === 'dark');
-    document.body.classList.toggle('light-mode', this.theme === 'light');
+    document.body.classList.toggle('theme--dark', this.theme === 'dark');
+    document.body.classList.toggle('theme', this.theme === 'light');
     localStorage.setItem('theme', this.theme);
 
   }
@@ -40,8 +40,8 @@ export class ThemeService {
   
     localStorage.setItem('theme', theme);
   
-    document.body.classList.toggle('dark-mode', this.toggle);
-    document.body.classList.toggle('light-mode', !this.toggle);
+    document.body.classList.toggle('theme--dark', this.toggle);
+    document.body.classList.toggle('theme', !this.toggle);
   }
   
 }

@@ -56,6 +56,28 @@
     --icon-5                                                                    :1.5rem;
 
     /* ? TOKENS -------------------------------------------------------------------->*/ 
+    --fd-btn-font-size                  : var();
+    --fd-btn-font-weight                : var();
+    --fd-btn-border-radius              : var();
+    --fd-btn-outline                    : none;
+    
+    --fd-btn-bg-color                   : var();
+    --fd-btn-color                      : var();
+    --fd-btn-border-color               : var();
+    
+    --fd-btn-hover-bg-color             : var();
+    --fd-btn-hover-color                : var();
+    --fd-btn-hover-border-color         : var();
+    
+    --fd-btn-active-bg-color            : var();
+    --fd-btn-active-color               : var();
+    --fd-btn-active-border-color        : var();
+
+    --fd-btn-focus-box-shadow           : var();
+
+
+
+    
     /* ? Colors --------------> */
     /* * Primary */
     --color-primary                                                             :var(--grey-600);
@@ -203,6 +225,7 @@
     --color-btn-bg-primary                                                      :var(--grey-700);
     --color-btn-color-primary                                                   :var(--grey-50);
     --color-btn-border-primary                                                  :var(--grey-600);
+    
     /* ! Hover */
     --color-btn-bg-primary-hover                                                :var(--grey-500);
     /* ! Active */
