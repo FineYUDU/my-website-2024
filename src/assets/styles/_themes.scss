@@ -15,10 +15,21 @@
         --color-bg-secondary                                                        :#{$color__bg-secondary};
         --color-bg-tertiary                                                         :#{$color__bg-tertiary};
         --color-bg-quaternary                                                       :#{$color__bg-quaternary};
-        // * -------------------------- Brand --------------------------------------------------------   
+        // * -------------------------- Brand ----------------------------------------------------------------   
         --color-brand-primary                                                       :#{$brand-400};
         --color-brand-secondary                                                     :#{$brand-300};
         --color-brand-tertiary                                                      :#{$brand-500};
+        // * -------------------------- Helpers ---------------------------------------------------   
+        --color-main-card                                                           :#{$grey-600};
+        --color-lang-selected-txt                                                   :#{$grey-50};
+        // * -------------------------- Movile menu ------------------------------------------------   
+        --color-bg-movile-menu                                                      :#{$grey-0};
+        --color-group-name-txt                                                      :#{$grey-600};
+        --color-item                                                                :#{$grey-500};
+        --color-item-active                                                         :#{$grey-50};
+        --color-item-active-txt                                                     :#{$brand-200};
+        --color-line-hierarchy                                                      :#{$grey-600};
+
         // 
         // ?                            BUTTONS 
         // 
@@ -41,27 +52,6 @@
         --fd-btn-active-border-color                                                :var();
     
         --fd-btn-focus-box-shadow                                                   :var();
-        //                                       
-        // ?                            Font Colors 
-        //  
-        .font__color--primary {
-            color: var(--color-primary);
-        }
-        .font__color--secondary {
-            color: var(--color-secondary);
-        }
-        .font__color--tertiary {
-            color: var(--color-tertiary);
-        }
-        .font__color--quaternary {
-            color: var(--color-quaternary);
-        }
-        .font__color--brand-primary {
-            color: var(--color-brand-primary);
-        }
-        .font__color--brand-secondary {
-            color: var(--color-brand-secondary);
-        }
         
         @mixin btn {
             display: flex;
@@ -108,6 +98,16 @@
             --color-brand-primary                                                       :#{$brand-400};
             --color-brand-secondary                                                     :#{$brand-300};
             --color-brand-tertiary                                                      :#{$brand-500};
+            // * -------------------------- Helpers ---------------------------------------------------   
+            --color-main-card                                                           :#{$grey-700};
+            --color-lang-selected-txt                                                   :#{$grey-600};
+            // * -------------------------- Movile menu ------------------------------------------------   
+            --color-bg-movile-menu                                                      :#{$grey-700};
+            --color-group-name-txt                                                      :#{$grey-100};
+            --color-item                                                                :#{$grey-200};
+            --color-item-active                                                         :#{$grey-600};
+            --color-item-active-txt                                                     :#{$brand-100};
+            --color-line-hierarchy                                                      :#{$grey-0};
 
         }
     }

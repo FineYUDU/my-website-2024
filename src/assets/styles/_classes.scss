@@ -11,6 +11,9 @@
     body::-webkit-scrollbar {
         width: 0;
     }
+    body {
+        background-color:var(--color-bg-primary);
+    }
     p, a, li {
         transition: font-size var(--transition-time);
     }
@@ -20,6 +23,27 @@
     ::marker {
         color: transparent;
     }    
+    //                                       
+    // ?                                    Font Colors 
+    //  
+    .font__color--primary {
+        color: var(--color-primary);
+    }
+    .font__color--secondary {
+        color: var(--color-secondary);
+    }
+    .font__color--tertiary {
+        color: var(--color-tertiary);
+    }
+    .font__color--quaternary {
+        color: var(--color-quaternary);
+    }
+    .font__color--brand-primary {
+        color: var(--color-brand-primary);
+    }
+    .font__color--brand-secondary {
+        color: var(--color-brand-secondary);
+    }
     //                                       
     // ?                                    Classes 
     //
@@ -44,43 +68,43 @@
     //                                       
     // * ---------------------------------- Headlines ------------------------------------------   
     .font__size--h1 {
-        font-size: var(--font-h1);
+        font-size: $font-h1;
     }
     .font__size--h2 {
-        font-size: var(--font-h2);
+        font-size: $font-h2;
     }
     .font__size--h3 {
-        font-size: var(--font-h3);
+        font-size: $font-h3;
     }
     .font__size--h4 {
-        font-size: var(--font-h4);
+        font-size: $font-h4;
     }
     .font__size--h5 {
-        font-size: var(--font-h5);
+        font-size: $font-h5;
     }
     .font__size--h6 {
-        font-size: var(--font-h6);
+        font-size: $font-h6;
     }
     // * ---------------------------------- Body -----------------------------------------------   
     .font__size--b1 {
-        font-size: var(--font-b1);
+        font-size: $font-b1;
     }
     .font__size--b2 {
-        font-size: var(--font-b2);
+        font-size: $font-b2;
     }
     // * ---------------------------------- Captions -------------------------------------------   
     .font__size--c1 {
-        font-size: var(--font-c1);
+        font-size: $font-c1;
     }
     .font__size--c2 {
-        font-size: var(--font-c2);
+        font-size: $font-c2;
     }
     .font__size--c3 {
-        font-size: var(--font-c3);
+        font-size: $font-c3;
     }
     // * ---------------------------------- Label ----------------------------------------------
     .font__size--label {
-        font-size: var(--font-b2);
+        font-size: $font-b2;
     }
     //                                       
     // ?                                    Font Weight 

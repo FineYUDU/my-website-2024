@@ -138,30 +138,32 @@ $color__line-hierarchy                                                      :#{$
     // 
     // ?                                TOKENS CSS 
     // 
-    // * ------------------------------ Spacing ------------------------------------------------   
-    --spacing-2xs                                                                :#{$spacing-1};
-    --spacing-xs                                                                 :#{$spacing-2};
-    --spacing-sm                                                                 :#{$spacing-4};
-    --spacing-md                                                                 :#{$spacing-6};
-    --spacing-lg                                                                 :#{$spacing-8};
-    --spacing-xl                                                                 :#{$spacing-10};
-    --spacing-2xl                                                                :#{$spacing-15};
-    --spacing-blocks                                                             :#{$spacing-5};
-    // * ------------------------------ Radius ------------------------------------------------   
-    --radius-minimal                                                             :#{$radius-sm};
-    --radius-rounded                                                             :#{$radius-md};
-    --radius-full                                                                :#{$radius-3xl};
-    // * ------------------------------ Icon ------------------------------------------------   
-    --icon-xs                                                                    :#{$icon-1};
-    --icon-sm                                                                    :#{$icon-2};
-    --icon-md                                                                    :#{$icon-4};
-    --icon-lg                                                                    :#{$icon-5};
-    // * ------------------------------ Border ------------------------------------------------   
-    --border                                                                     :.0625rem;
+    // * ------------------------------ Spacing ---------------------------------------------------   
+    --spacing-2xs                                                                   :#{$spacing-1};
+    --spacing-xs                                                                    :#{$spacing-2};
+    --spacing-sm                                                                    :#{$spacing-4};
+    --spacing-md                                                                    :#{$spacing-6};
+    --spacing-lg                                                                    :#{$spacing-8};
+    --spacing-xl                                                                    :#{$spacing-10};
+    --spacing-2xl                                                                   :#{$spacing-15};
+    --spacing-blocks                                                                :#{$spacing-5};
+    // * ------------------------------ Radius ----------------------------------------------------   
+    --radius-minimal                                                                :#{$radius-sm};
+    --radius-rounded                                                                :#{$radius-md};
+    --radius-full                                                                   :#{$radius-3xl};
+    // * ------------------------------ Icon -------------------------------------------------------
+    --icon-xs                                                                       :#{$icon-1};
+    --icon-sm                                                                       :#{$icon-2};
+    --icon-md                                                                       :#{$icon-4};
+    --icon-lg                                                                       :#{$icon-5};
+    // * ------------------------------ Border -------------------------------------------------   
+    --border                                                                        :.0625rem;
     //  
     // ?                                Helpers
     //  
-    --web-width                                                                 :82.45%;
-    --web-max-width                                                             :73.125rem;
-    --sidebar-width                                                             :16.75rem;
+    --web-width                                                                     :82.45%;
+    --web-max-width                                                                 :73.125rem;
+    --sidebar-width                                                                 :16.75rem;
+    // * ------------------------------ Transition -------------------------------------------   
+    --transition-time                                                               :.2s ease-in-out;
 }
