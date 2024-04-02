@@ -13,7 +13,7 @@ import { SidebarComponent } from '../shared/components/sidebar/sidebar.component
     RouterModule,
     NavbarComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
   ],
   templateUrl: './website.component.html',
   styleUrl: './website.component.css'
@@ -39,5 +39,4 @@ export default class WebsiteComponent {
       close:true,
     },
   ];
-
 }

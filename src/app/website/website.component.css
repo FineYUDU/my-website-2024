@@ -18,8 +18,8 @@ section p {
 }
 /* ? ROUTER OUTLET CONTAINER */
 .ro-cont {
-    width: var(--web-width);
-    max-width: var(--web-max-width);
+    width: var(--website--width);
+    max-width: var(--website--max-width);
 }
 
 /* * Responsive SM */

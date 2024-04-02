@@ -1,5 +1,5 @@
-@import './_variables';
+@import './variables-primitives';
+@import './variables-tokens';
+@import './variables-dark';
+@import './variables-light';
 @import './classes';
-// @import './themes';
-@import './theme-dark';
-@import './theme-light';

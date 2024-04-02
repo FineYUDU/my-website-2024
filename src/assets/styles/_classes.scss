@@ -1,11 +1,61 @@
+// TODO:Eliminate icon sizes
+// TODO:Optimizate bg_classes
 * {
-    // ?                                    Set Default Properties 
+    // 
+    // ?                            Local Styles
+    // 
+    // * -------------------------- Text Styles -----------------------------------------------------   
+    --font--family__primary                                                 :'Work Sans', sans-serif;
+    // * -------------------------- Headlines -----------------------------------
+    --font__size--h1                                                        :4em;
+    --font__size--h2                                                        :3.75em;
+    --font__size--h3                                                        :3em;
+    --font__size--h4                                                        :2.125em;
+    --font__size--h5                                                        :1.5em;
+    --font__size--h6                                                        :1.3125em;
+    // * -------------------------- Body ----------------------------------------   
+    --font__size--b1                                                        :1em;
+    --font__size--b2                                                        :.875em;
+    // * -------------------------- Captions --------------------------------------   
+    --font__size--c1                                                        :.75em;
+    --font__size--c2                                                        :.625em;
+    --font__size--c3                                                        :.5em;
+    //  
+    // ?                            Helpers
+    //  
+    --website--width                                                        :82.45%;
+    --website--max-width                                                    :73.125rem;
+    --sidebar--width                                                        :16.75rem;
+    // * -------------------------- Transition ----------------------------------------------   
+    --transition-time                                                       :.2s ease-in-out;
+    //  
+    // ?                            Buttons
+    //  
+    --fd-btn-font-size                                                      :var();
+    --fd-btn-font-weight                                                    :var();
+    --fd-btn-border-radius                                                  :var();
+    --fd-btn-outline                                                        :none;
+    
+    --fd-btn-bg-color                                                       :var();
+    --fd-btn-color                                                          :var();
+    --fd-btn-border-color                                                   :var();
+    
+    --fd-btn-hover-bg-color                                                 :var();
+    --fd-btn-hover-color                                                    :var();
+    --fd-btn-hover-border-color                                             :var();
+    
+    --fd-btn-active-bg-color                                                :var();
+    --fd-btn-active-color                                                   :var();
+    --fd-btn-active-border-color                                            :var();
+    
+    --fd-btn-focus-box-shadow                                               :var();
     //
-    font-family:$primary-font;
+    // ?                            Set Default Properties
+    //
+    font-family:var(--font--family__primary);
     margin: 0;
     padding: 0;
     font-weight: 400;
-    /* * Create transition bg-color when the theme change */
     transition: background-color var(--transition-time);
     line-height: 150%;
     body::-webkit-scrollbar {
@@ -47,64 +97,47 @@
     //                                       
     // ?                                    Classes 
     //
-    .icon_xs {
-        width: var(--icon-xs);
-        height: var(--icon-xs);
-    }
-    .icon_sm {
-        width: var(--icon-sm);
-        height: var(--icon-sm);
-    }
-    .icon_md {
-        width: var(--icon-md);
-        height: var(--icon-md);
-    }
-    .icon_lg {
-        width: var(--icon-lg);
-        height: var(--icon-lg);
-    }
-    //                                       
     // ?                                    Font size 
     //                                       
     // * ---------------------------------- Headlines ------------------------------------------   
     .font__size--h1 {
-        font-size: $font-h1;
+        font-size: var(--font__size--h1);
     }
     .font__size--h2 {
-        font-size: $font-h2;
+        font-size: var(--font__size--h2);
     }
     .font__size--h3 {
-        font-size: $font-h3;
+        font-size: var(--font__size--h3);
     }
     .font__size--h4 {
-        font-size: $font-h4;
+        font-size: var(--font__size--h4);
     }
     .font__size--h5 {
-        font-size: $font-h5;
+        font-size: var(--font__size--h5);
     }
     .font__size--h6 {
-        font-size: $font-h6;
+        font-size: var(--font__size--h6);
     }
     // * ---------------------------------- Body -----------------------------------------------   
     .font__size--b1 {
-        font-size: $font-b1;
+        font-size: var(--font__size--b1);
     }
     .font__size--b2 {
-        font-size: $font-b2;
+        font-size: var(--font__size--b2);
     }
     // * ---------------------------------- Captions -------------------------------------------   
     .font__size--c1 {
-        font-size: $font-c1;
+        font-size: var(--font__size--c1);
     }
     .font__size--c2 {
-        font-size: $font-c2;
+        font-size: var(--font__size--c2);
     }
     .font__size--c3 {
-        font-size: $font-c3;
+        font-size: var(--font__size--c3);
     }
     // * ---------------------------------- Label ----------------------------------------------
     .font__size--label {
-        font-size: $font-b2;
+        font-size: var(--font__size--b2);
     }
     //                                       
     // ?                                    Font Weight 
@@ -172,5 +205,19 @@
     .icon_lg {
         width: var(--icon-lg);
         height: var(--icon-lg);
+    }
+    //                                       
+    // ?                                     Responsive SM 
+    //  
+    @media screen and (max-width:480px) {
+        .font__size--h4 {
+            font-size: var(--font__size--h5);
+        }
+        .font__size--b1 {
+            font-size: var(--font__size--b2);
+        }
+        .font__size--b2 {
+            font-size: var(--font__size--c1);
+        }
     }
 }

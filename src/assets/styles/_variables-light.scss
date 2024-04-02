@@ -1,0 +1,35 @@
+@import './variables-primitives';
+
+.theme--light {
+    //  
+    //  ?                                   TOKENS 
+    //      
+    // * ---------------------------------- Primary ------------------------------------------
+    --color-primary                                                             :#{$grey-600};
+    --color-secondary                                                           :#{$grey-200};
+    --color-tertiary                                                            :#{$grey-50};
+    --color-quaternary                                                          :#{$grey-500};
+    
+    // * ---------------------------------- Background --------------------------------------
+    --color-bg-primary                                                          :#{$grey-50};
+    --color-bg-secondary                                                        :#{$grey-0};
+    --color-bg-tertiary                                                         :#{$grey-600};
+    --color-bg-quaternary                                                       :#{$grey-500};
+    
+    // * ---------------------------------- Brand ---------------------------------------------
+    --color-brand-primary                                                       :#{$brand-200};
+    --color-brand-secondary                                                     :#{$brand-100};
+    --color-brand-tertiary                                                      :#{$brand-400};
+
+    // * ---------------------------------- Helpers ------------------------------------------
+    --color-main-card                                                           :#{$grey-600};
+    --color-lang-selected-txt                                                   :#{$grey-50};
+
+    // * ---------------------------------- Movile Menu --------------------------------------
+    --color-bg-movile-menu                                                      :#{$grey-0};
+    --color-group-name-txt                                                      :#{$grey-600};
+    --color-item                                                                :#{$grey-500};
+    --color-item-active                                                         :#{$grey-50};
+    --color-item-active-txt                                                     :#{$brand-200};
+    --color-line-hierarchy                                                      :#{$grey-600};
+}

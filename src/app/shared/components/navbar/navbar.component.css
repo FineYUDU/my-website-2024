@@ -11,8 +11,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: var(--web-width);
-    max-width: var(--web-max-width);
+    width: var(--website--width);
+    max-width: var(--website--max-width);
 }
 /* ? SECTION | LOGO */
 .logo-cont {
