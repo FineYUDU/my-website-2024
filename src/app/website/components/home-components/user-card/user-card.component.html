@@ -62,7 +62,7 @@
             <!-- ? BUTTONS CONTAINER -->
             <div class="btns-cont">
                 <!-- BUTTON -->
-                <button type="button" class="btn_brand_primary">
+                <button type="button" class="btn">
                     {{ 'button.cv' | translate:translateService.GetLang }}
                     <!-- ICON -->
                     <img class="icon_sm" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-file-download.svg'" alt="Download file">
@@ -70,7 +70,7 @@
                 </button>
     
                 <!-- BUTTON -->
-                <button type="button" class="btn_brand_secondary">
+                <button type="button" class="btn btn--outline" routerLink="../contact">
                     {{ 'button.contact' | translate:translateService.GetLang }}
                     <!-- ICON -->
                     <img class="icon_sm" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-paper-plane.svg'" alt="Download file">

@@ -24,10 +24,10 @@ section {
     left: 0;
     right: 0;
     top: 100%;
-    background-color: var(--color-bg-secondary);
+    background-color: var(--fd-color-bg-secondary);
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--radius-minimal);
-    border:.0625rem solid var(--color-secondary);
+    border:.0625rem solid var(--fd-color-secondary);
     z-index: 99;
 }
 /* * DROPDOWN OPEN */
@@ -49,13 +49,13 @@ section {
     border-radius: var(--radius-minimal);
 }
 .dropdown ul li:hover {
-    background-color: var(--color-bg-primary);
+    background-color: var(--fd-color-bg-primary);
 }
 .selected {
-    background-color: var(--color-primary);
-    color: var(--color-lang-selected-txt);
+    background-color: var(--fd-color-primary);
+    color: var(--fd-color-lang-selected-txt);
 }
 .dropdown ul .selected:hover {
-    background-color: var(--color-primary);
-    color: var(--color-lang-selected-txt);
+    background-color: var(--fd-color-primary);
+    color: var(--fd-color-lang-selected-txt);
 }

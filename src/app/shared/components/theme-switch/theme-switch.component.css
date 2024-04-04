@@ -3,7 +3,7 @@
     height: 1.6875rem;
     width: 3.17rem;
     border-radius: var(--radius-rounded);
-    background-color: var(--color-secondary);
+    background-color: var(--fd-color-secondary);
     display: flex;
     align-items: center;
     position: relative;
@@ -16,12 +16,12 @@
 .main-cont img:nth-of-type(2) {
     position: absolute;
     z-index: 20;
-    right: .3125rem;
+    right: .4125rem;
 }
 /* CIRCLE */
 .circle {
     position: absolute;
-    background-color: var(--color-tertiary);
+    background-color: var(--fd-color-tertiary);
     border-radius: var(--radius-full);
     width:  1.36rem;
     height: 1.36rem;

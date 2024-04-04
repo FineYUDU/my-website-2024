@@ -9,14 +9,14 @@
 /* ? PROFILE CONTAINER */
 .profile-cont {
     overflow: hidden;
-    background-color: var(--color-brand-primary);
+    background-color: var(--fd-color-brand-primary);
 }
 /* ? PROFILE IMG */
 .profile-img {
     top: 0.25rem;
     right: 1rem;
     position: absolute;
-    border: .39rem solid var(--color-main-card);
+    border: .39rem solid var(--fd-color-main-card);
     border-radius: var(--radius-full);
     width: 7.375rem;
     height: 7.375rem;
@@ -35,7 +35,7 @@
     height: 1rem;
     overflow: hidden;
     background-color: rgb(15, 136, 15);
-    border: .29rem solid var(--color-main-card);
+    border: .29rem solid var(--fd-color-main-card);
 }
 /* ? SECTION | SOCIAL MEDIA */
 .social-media {
@@ -87,7 +87,7 @@ section:nth-of-type(2) {
         right: 2.3rem;
         width: .7rem;
         height: .7rem;
-        border: .2rem solid var(--color-main-card);
+        border: .2rem solid var(--fd-color-main-card);
     }
     /* ? BUTTONS CONTAINER */
     .btns-cont {

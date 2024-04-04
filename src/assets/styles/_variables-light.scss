@@ -5,31 +5,59 @@
     //  ?                                   TOKENS 
     //      
     // * ---------------------------------- Primary ------------------------------------------
-    --color-primary                                                             :#{$grey-600};
-    --color-secondary                                                           :#{$grey-200};
-    --color-tertiary                                                            :#{$grey-50};
-    --color-quaternary                                                          :#{$grey-500};
+    --fd-color-primary                                                             :#{$grey-600};
+    --fd-color-secondary                                                           :#{$grey-200};
+    --fd-color-tertiary                                                            :#{$grey-50};
+    --fd-color-quaternary                                                          :#{$grey-500};
     
     // * ---------------------------------- Background --------------------------------------
-    --color-bg-primary                                                          :#{$grey-50};
-    --color-bg-secondary                                                        :#{$grey-0};
-    --color-bg-tertiary                                                         :#{$grey-600};
-    --color-bg-quaternary                                                       :#{$grey-500};
+    --fd-color-bg-primary                                                          :#{$grey-50};
+    --fd-color-bg-secondary                                                        :#{$grey-0};
+    --fd-color-bg-tertiary                                                         :#{$grey-600};
+    --fd-color-bg-quaternary                                                       :#{$grey-500};
     
     // * ---------------------------------- Brand ---------------------------------------------
-    --color-brand-primary                                                       :#{$brand-200};
-    --color-brand-secondary                                                     :#{$brand-100};
-    --color-brand-tertiary                                                      :#{$brand-400};
+    --fd-color-brand-primary                                                       :#{$brand-200};
+    --fd-color-brand-secondary                                                     :#{$brand-100};
+    --fd-color-brand-tertiary                                                      :#{$brand-400};
 
     // * ---------------------------------- Helpers ------------------------------------------
-    --color-main-card                                                           :#{$grey-600};
-    --color-lang-selected-txt                                                   :#{$grey-50};
+    --fd-color-main-card                                                           :#{$grey-600};
+    --fd-color-lang-selected-txt                                                   :#{$grey-50};
 
     // * ---------------------------------- Movile Menu --------------------------------------
-    --color-bg-movile-menu                                                      :#{$grey-0};
-    --color-group-name-txt                                                      :#{$grey-600};
-    --color-item                                                                :#{$grey-500};
-    --color-item-active                                                         :#{$grey-50};
-    --color-item-active-txt                                                     :#{$brand-200};
-    --color-line-hierarchy                                                      :#{$grey-600};
+    --fd-color-bg-movile-menu                                                      :#{$grey-0};
+    --fd-color-group-name-txt                                                      :#{$grey-600};
+    --fd-color-item                                                                :#{$grey-500};
+    --fd-color-item-active                                                         :#{$grey-50};
+    --fd-color-item-active-txt                                                     :#{$brand-200};
+    --fd-color-line-hierarchy                                                      :#{$grey-600};
+    //  
+    // ?                                    Buttons Default
+    //  
+    // * ---------------------------------- Button / Default -------------------------------------
+    --fd-btn-bg-color                                                               :#{$brand-300};
+    --fd-btn-color                                                                  :#{$grey-50};
+    // * ---------------------------------- Hover ------------------------------------------------
+    --fd-btn-hover-bg-color                                                         :#{$brand-200};
+    --fd-btn-hover-color                                                            :#{$grey-100};
+    // * ---------------------------------- Active -----------------------------------------------
+    --fd-btn-active-bg-color                                                        :#{$brand-500};
+    --fd-btn-active-color                                                           :#{$grey-0};
+    // * ---------------------------------- Focus -----------------------------------------------
+    --fd-btn-focus-outline                                                          :#{$grey-200};
+    // * ---------------------------------- Button / Outline --------------------------------------------
+    --fd-btn-outline-bg-color                                                       :transparent;
+    --fd-btn-outline-color                                                          :#{$grey-0};
+    --fd-btn-outline-outline-color                                                  :#{$grey-0};
+    // * ---------------------------------- Hover ------------------------------------------------
+    --fd-btn-outline-hover-bg-color                                                 :transparent;
+    --fd-btn-outline-hover-color                                                    :#{$grey-200};
+    --fd-btn-outline-hover-outline-color                                            :#{$grey-200};
+    // * ---------------------------------- Active -----------------------------------------------
+    --fd-btn-outline-active-bg-color                                                :transparent;
+    --fd-btn-outline-active-color                                                   :#{$grey-300};
+    --fd-btn-outline-active-outline-color                                           :#{$grey-300};
+    // * ---------------------------------- Focus ------------------------------------------------
+    --fd-btn-outline-focus-outline                                                  :#{$grey-200};
 }

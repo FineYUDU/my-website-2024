@@ -2,7 +2,7 @@
 .main-cont {
     padding: var(--spacing-sm) 0;
     border-radius: var(--radius-minimal);
-    background-color: var(--color-bg-secondary);
+    background-color: var(--fd-color-bg-secondary);
     display: flex;
     justify-content: center;
 }

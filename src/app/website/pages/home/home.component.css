@@ -19,7 +19,7 @@
 }
 /* ? SECTIONS | USER  */
 .user-cont {
-    background-color: var(--color-main-card);
+    background-color: var(--fd-color-main-card);
     border-radius: var(--radius-minimal);
     overflow: hidden;
     grid-column-start:1;
@@ -27,7 +27,7 @@
 }
 /* ? SECTION | EXPERIENCE */
 .experience-section {
-    background-color: var(--color-bg-secondary);
+    background-color: var(--fd-color-bg-secondary);
     border-radius: var(--radius-minimal);
     padding: var(--spacing-sm) var(--spacing-md);
     grid-column-start:5;
@@ -48,7 +48,7 @@
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
-    background-color: var(--color-bg-secondary);
+    background-color: var(--fd-color-bg-secondary);
     border-radius: var(--radius-minimal);
     padding: var(--spacing-sm) var(--spacing-md);
     justify-content: space-between;
@@ -78,19 +78,19 @@
     justify-items: center;
     align-items: center;
     text-align: center;
-    background-color: var(--color-bg-secondary);
+    background-color: var(--fd-color-bg-secondary);
     border-radius: var(--radius-minimal);
     gap: var(--spacing-sm);
     padding: var(--spacing-md);
     transition: background-color .3s ease-in-out;
 }
 .item-section ul li:hover {
-    background-color: var(--color-primary);
+    background-color: var(--fd-color-primary);
     cursor: pointer;
     transition: background-color .3s ease-in-out;
 }
 .item-section ul li:hover p {
-    color: var(--color-bg-secondary);
+    color: var(--fd-color-bg-secondary);
     font-weight: 700;
 } 
 .item-section ul li img {
@@ -136,12 +136,12 @@
     }
     /* ! HOVER */
     .item-section ul li:hover {
-        background-color: var(--color-bg-secondary);
+        background-color: var(--fd-color-bg-secondary);
         cursor: auto;
         transition: background-color .3s ease-in-out;
     }
     .item-section ul li:hover p {
-        color: var(--color-item);
+        color: var(--fd-color-item);
         font-weight: 500;
     } 
     
@@ -173,12 +173,12 @@
     }
     /* ! HOVER */
     .item-section ul li:hover {
-        background-color: var(--color-bg-secondary);
+        background-color: var(--fd-color-bg-secondary);
         cursor: auto;
         transition: background-color .3s ease-in-out;
     }
     .item-section ul li:hover p {
-        color: var(--color-item);
+        color: var(--fd-color-item);
         font-weight: 500;
     } 
 }

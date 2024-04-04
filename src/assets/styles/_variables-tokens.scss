@@ -20,9 +20,9 @@
     --radius-minimal                                            :#{$baseunit-4};
     --radius-rounded                                            :#{$baseunit-6};
     --radius-full                                               :#{$baseunit-22};
-    // * -------------------------- Border -------------------------------   
-    --border                                                    :#{$auxunit-1};
+    // * -------------------------- Border ------------------------------------   
+    --border-xs                                                 :#{$auxunit-1};
     --border-sm                                                 :#{$auxunit-2};
     --border-md                                                 :#{$auxunit-3};
-    --border-lg                                                 :#{$auxunit-4};
+    --border-lg                                                 :#{$auxunit-5};
 }

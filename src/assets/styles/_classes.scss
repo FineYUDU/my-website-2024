@@ -1,54 +1,6 @@
 // TODO:Eliminate icon sizes
 // TODO:Optimizate bg_classes
 * {
-    // 
-    // ?                            Local Styles
-    // 
-    // * -------------------------- Text Styles -----------------------------------------------------   
-    --font--family__primary                                                 :'Work Sans', sans-serif;
-    // * -------------------------- Headlines -----------------------------------
-    --font__size--h1                                                        :4em;
-    --font__size--h2                                                        :3.75em;
-    --font__size--h3                                                        :3em;
-    --font__size--h4                                                        :2.125em;
-    --font__size--h5                                                        :1.5em;
-    --font__size--h6                                                        :1.3125em;
-    // * -------------------------- Body ----------------------------------------   
-    --font__size--b1                                                        :1em;
-    --font__size--b2                                                        :.875em;
-    // * -------------------------- Captions --------------------------------------   
-    --font__size--c1                                                        :.75em;
-    --font__size--c2                                                        :.625em;
-    --font__size--c3                                                        :.5em;
-    //  
-    // ?                            Helpers
-    //  
-    --website--width                                                        :82.45%;
-    --website--max-width                                                    :73.125rem;
-    --sidebar--width                                                        :16.75rem;
-    // * -------------------------- Transition ----------------------------------------------   
-    --transition-time                                                       :.2s ease-in-out;
-    //  
-    // ?                            Buttons
-    //  
-    --fd-btn-font-size                                                      :var();
-    --fd-btn-font-weight                                                    :var();
-    --fd-btn-border-radius                                                  :var();
-    --fd-btn-outline                                                        :none;
-    
-    --fd-btn-bg-color                                                       :var();
-    --fd-btn-color                                                          :var();
-    --fd-btn-border-color                                                   :var();
-    
-    --fd-btn-hover-bg-color                                                 :var();
-    --fd-btn-hover-color                                                    :var();
-    --fd-btn-hover-border-color                                             :var();
-    
-    --fd-btn-active-bg-color                                                :var();
-    --fd-btn-active-color                                                   :var();
-    --fd-btn-active-border-color                                            :var();
-    
-    --fd-btn-focus-box-shadow                                               :var();
     //
     // ?                            Set Default Properties
     //
@@ -57,12 +9,13 @@
     padding: 0;
     font-weight: 400;
     transition: background-color var(--transition-time);
+    transition: font-size var(--transition-time);
     line-height: 150%;
     body::-webkit-scrollbar {
         width: 0;
     }
     body {
-        background-color:var(--color-bg-primary);
+        background-color:var(--fd-color-bg-primary);
     }
     p, a, li {
         transition: font-size var(--transition-time);
@@ -77,22 +30,22 @@
     // ?                                    Font Colors 
     //  
     .font__color--primary {
-        color: var(--color-primary);
+        color: var(--fd-color-primary);
     }
     .font__color--secondary {
-        color: var(--color-secondary);
+        color: var(--fd-color-secondary);
     }
     .font__color--tertiary {
-        color: var(--color-tertiary);
+        color: var(--fd-color-tertiary);
     }
     .font__color--quaternary {
-        color: var(--color-quaternary);
+        color: var(--fd-color-quaternary);
     }
     .font__color--brand-primary {
-        color: var(--color-brand-primary);
+        color: var(--fd-color-brand-primary);
     }
     .font__color--brand-secondary {
-        color: var(--color-brand-secondary);
+        color: var(--fd-color-brand-secondary);
     }
     //                                       
     // ?                                    Classes 
@@ -174,20 +127,20 @@
     // ?                                    Menu Movile 
     //  
     .font__color--group-name {
-        color: var(--color-group-name-txt);
+        color: var(--fd-color-group-name-txt);
     }
     .font__color--item {
-        color: var(--color-item);
+        color: var(--fd-color-item);
     }
     // * ---------------------------------- Color Background -----------------------------------
     .bg_primary {
-        color: var(--color-bg-primary);
+        color: var(--fd-color-bg-primary);
     }
     .bg_secondary {
-        color: var(--color-bg-secondary);
+        color: var(--fd-color-bg-secondary);
     }
     .bg_tertiary {
-        color: var(--color-bg-tertiary);
+        color: var(--fd-color-bg-tertiary);
     }
     // * ---------------------------------- Icon Size ------------------------------------------
     .icon_xs {
@@ -207,6 +160,63 @@
         height: var(--icon-lg);
     }
     //                                       
+    // ?                                     Buttons 
+    //                                       
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        gap: .5rem;
+        font-size: var(--font__size--c1);
+        padding:var(--spacing-xs) 1rem;
+        border-radius: var(--radius-full);
+        cursor: pointer;
+        font-weight: 400;
+        border:none;
+        background-color: var(--fd-btn-bg-color);
+        color: var(--fd-btn-color);
+        & img {
+            width: .825rem;
+            height: .825rem;
+        }
+        &:hover {
+            background-color: var(--fd-btn-hover-bg-color);
+            color: var(--fd-btn-hover-color);
+        }
+        &:active {
+            background-color: var(--fd-btn-active-bg-color);
+            color: var(--fd-btn-active-color);
+        }
+        &:focus-visible {
+            outline:var(--border-lg) solid var(--fd-btn-focus-outline);
+        }
+        &.btn--outline {
+            background-color: var(--fd-btn-outline-bg-color);
+            color: var(--fd-btn-outline-color);    
+            outline:var(--border-xs) solid var(--fd-btn-outline-outline-color);
+            &:hover {
+                background-color: var(--fd-btn-outline-hover-bg-color);
+                color: var(--fd-btn-outline-hover-color);
+                outline:var(--border-xs) solid var(--fd-btn-outline-hover-outline-color);
+            }
+            &:active {
+                background-color: var(--fd-btn-outline-active-bg-color);
+                color: var(--fd-btn-outline-active-color);
+                outline:var(--border-xs) solid var(--fd-btn-outline-active-outline-color);
+            }
+            &:focus-visible {
+                outline:var(--border-lg) solid var(--fd-btn-outline-focus-outline);
+            }
+        }
+    }
+    //  
+    // ?                                     Helpers 
+    //  
+    .w--100 {
+        width: 100%;
+    }
+    //  
     // ?                                     Responsive SM 
     //  
     @media screen and (max-width:480px) {
@@ -220,4 +230,5 @@
             font-size: var(--font__size--c1);
         }
     }
+
 }

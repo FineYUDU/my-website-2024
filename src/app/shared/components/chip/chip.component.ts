@@ -29,12 +29,12 @@ export interface ChipMenu {
   }
   /* TXT */
   span {
-      border: .1125rem solid var(--color-bg-quaternary);
+      border: .1125rem solid var(--fd-color-bg-quaternary);
       padding: var(--spacing-xs) var(--spacing-sm);
       border-radius: var(--radius-full);
   }
   span:hover {
-    background-color:var(--color-bg-quaternary);
+    background-color:var(--fd-color-bg-quaternary);
     cursor:pointer;
   }
   `

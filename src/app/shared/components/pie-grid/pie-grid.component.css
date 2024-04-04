@@ -21,7 +21,7 @@ p {
     bottom: 0;
     left: 0;
     position: absolute;
-    border: .24rem solid var(--color-primary);
+    border: .24rem solid var(--fd-color-primary);
     border-radius: 50%;
     border-top-color: transparent;
     transform: rotate(45deg);
@@ -32,7 +32,7 @@ p {
     bottom: 0;
     left: 0;
     position: absolute;
-    border: .24rem solid var(--color-primary);
+    border: .24rem solid var(--fd-color-primary);
     border-radius: 50%;
     border-top-color: transparent;
     transform: rotate(20deg);
@@ -44,7 +44,7 @@ p {
     bottom: 0;
     left: 0;
     position: absolute;
-    border: .24rem solid var(--color-primary);
+    border: .24rem solid var(--fd-color-primary);
     border-radius: 50%;
     border-top-color: transparent;
     border-right-color: transparent;
@@ -56,7 +56,7 @@ p {
     bottom: 0;
     left: 0;
     position: absolute;
-    border: .24rem solid var(--color-primary);
+    border: .24rem solid var(--fd-color-primary);
     border-radius: 50%;
     border-top-color: transparent;
     border-right-color: transparent;

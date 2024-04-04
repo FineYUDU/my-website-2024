@@ -2,7 +2,7 @@
 .main-cont {
     display: flex;
     flex-direction: column;
-    background-color: var(--color-main-card);
+    background-color: var(--fd-color-main-card);
     padding: var(--spacing-sm) 0;
     border-radius: var(--radius-minimal);
     gap: var(--spacing-md);
