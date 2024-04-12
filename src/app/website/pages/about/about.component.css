@@ -1,0 +1,15 @@
+section {
+    height: 100vh;
+}
+section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+section div img {
+    width: 28.125rem;
+    height: 28.125rem;
+}

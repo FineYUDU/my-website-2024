@@ -106,16 +106,16 @@ export default class HomeComponent {
       txt:'css',
     },
     {
+      img:'sass',
+      txt:'sass',
+    },
+    {
       img:'js',
       txt:'javascript',
     },
     {
       img:'ts',
       txt:'typescript',
-    },
-    {
-      img:'sql',
-      txt:'sql',
     },
     {
       img:'dart',
