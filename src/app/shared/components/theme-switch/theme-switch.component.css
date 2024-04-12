@@ -1,3 +1,31 @@
+.input--checkbox {
+    display: none;
+}
+.label__toggle {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  .label__toggle::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+  }
+  
+  input[type="checkbox"]:checked + .label__toggle::after {
+    transform: translateX(25px) translateY(-50%);
+  }
 /* ? MAIN CONTAINER */
 .main-cont {
     height: 1.6875rem;

@@ -10,7 +10,7 @@ export class ThemeService {
   toggle:boolean;
 
   constructor() { 
-    this.theme = localStorage.getItem('theme') || 'light';
+    this.theme = localStorage.getItem('theme') || 'dark';
     document.body.classList.toggle('theme--dark', this.theme === 'dark');
     document.body.classList.toggle('theme--light',this.theme === 'light');
 
@@ -20,7 +20,7 @@ export class ThemeService {
     else this.toggle = false
 
     if(!theme) {
-      localStorage.setItem('theme', 'light');
+      localStorage.setItem('theme', 'dark');
     }
   }
 

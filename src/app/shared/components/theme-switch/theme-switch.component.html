@@ -1,15 +1,24 @@
-<!-- ? MAIN CONTAINER -->
-<div class="main-cont cursor--pointer"(click)="themeService.toggleTheme()">
-    <!-- ICON -->
-    <img class="icon_sm" [src]="'../../../../assets/theme/'+ls.GetMode +'/icon/icon-sun.svg'" alt="Icon sun">
-    <!-- ICON -->
-    <img class="icon_sm" [src]="'../../../../assets/theme/'+ls.GetMode +'/icon/icon-moon.svg'" alt="Icon moon">
+<input class="input--checkbox" type="checkbox" id="toggle" (click)="themeService.toggleTheme()">
+<label for="toggle" class="label__toggle"></label>
+<!-- <div class="main-cont cursor--pointer"(click)="themeService.toggleTheme()">
 
-    <!-- SELECTED -->
+    <img 
+        alt="Icon sun"
+        width="12"
+        height="12"
+        [ngSrc]="'../../../../assets/theme/'+ls.GetMode +'/icon/icon-sun.svg'" 
+    >
+    <img 
+        alt="Icon moon"
+        width="12"
+        height="12"
+        [ngSrc]="'../../../../assets/theme/'+ls.GetMode +'/icon/icon-moon.svg'" 
+    >
+
     <div class="circle" [ngClass]="{
         'light' : !themeService.toggle, 
         'dark'  : themeService.toggle
         }">
     </div>
 
-</div>
+</div> -->
