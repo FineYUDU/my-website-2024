@@ -5,8 +5,8 @@ import { Router, RouterModule } from '@angular/router';
 import { LocalStorageService } from '../../../core/services/localstorage.service';
 import { TranslateService } from '../../../core/services/translate.service';
 import { CommonModule } from '@angular/common';
-import { MenuNav } from '../navbar/navbar.component';
 import { TranslatePipe } from '../../pipes/translate.pipe';
+import { Menu } from '@models/index.interfaces';
 
 @Component({
   selector: 'sidebar',
@@ -20,7 +20,7 @@ import { TranslatePipe } from '../../pipes/translate.pipe';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
-  @Input() menuNav:MenuNav[] = [];
+  @Input() menuNav:Menu[] = [];
   @Input() isOpenMenu!:boolean;
   @Output() closeMenuEvent: EventEmitter<void> = new EventEmitter<void>();
 

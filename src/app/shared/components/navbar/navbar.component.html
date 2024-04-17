@@ -1,34 +1,41 @@
 <nav>
-    <!-- ? CONTAINER -->
-    <div class="cont">
-        <!-- ? SECTION | LOGO -->
-        <section class="logo-cont">
-            <!-- LOGO AVATAR -->
-            <img class="cursor--pointer avatar"
+    <div class="nav__container">
+        <section class="container__header">
+            <img 
+                class="cursor--pointer"
+                width="43"
+                height="43"
+                alt="Avatar FineDev"
+                priority
                 routerLink="./"
-                alt="Logo Avatar FineDev"
-                [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-avatar.svg'">
-            <!-- LOGO TXT -->
-            <img class="cursor--pointer logo-txt"
-                routerLink="./"
+                [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-avatar.svg'"
+            >
+            <img 
+                class="cursor--pointer"
+                width="90"
+                height="28"
                 alt="Logo FineDev"
-                [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-txt.svg'">
+                priority
+                routerLink="./"
+                [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-txt.svg'"
+            >
 
         </section>
 
-        <!-- ? SECTION | MENU -->
-        <section class="menu-cont">
-            <!-- ? BLOCK | MENU -->
-            <div class="block">
-                <!-- ? MENU -->
+        <section class="container__body">
+            <div class="container__body--block">
                 <ul>
-                    @for (nav of menuNav; track $index) {
+                    @for (nav of menuNavigator; track $index) {
                         <li>
-                            <!-- LINK MENU -->
-                            <a  class="font__size--b1 font__color--primary font__weight--regular"
+                            <a  
+                                class="
+                                    font__size--b1 
+                                    font__color--primary 
+                                    font__weight--regular
+                                "
                                 [routerLink]="nav.router"
-                                routerLinkActive="active">
-                                <!-- TXT -->
+                                routerLinkActive="active--route"
+                                >
                                 {{ nav.txt | translate:translateService.GetLang }}
                             </a>
                         </li>
@@ -36,27 +43,30 @@
                 </ul>
 
             </div>
-            <!-- ? BLOCK | MENU -->
-            <div class="block">
-                <!-- THEME -->
+
+            <div class="container__body--block">
                 <theme-switch></theme-switch>
-                <!-- TRANSLATE -->
                 <translate-switch></translate-switch>
 
             </div>
 
         </section>
 
-        <!-- ? SECTION | MENU MOVILE -->
-        <section class="menu-movile">
-            <div class="menu-movile-cont">
-                <img (click)="closeMenu()" class="icon_lg" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-menu.svg'" alt="icon menu">
+        <section class="container__movile">
+            <div class="container__movile-container">
+                <img 
+                alt="hamburger icon"
+                width="24"
+                height="24"
+                (click)="closeMenu()" 
+                [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-menu.svg'" alt="icon menu"
+            >
             </div>
 
             <menu-movile
             (closeMenuEvent)="closeMenu()"
             [isOpenMenu]="isOpenMenu"
-            [menuNav]="menuNav"
+            [menuNavigator]="menuNavigator"
             />
 
         </section>

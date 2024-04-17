@@ -1,9 +1,11 @@
 // * Angular
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+// * Interfaces
+import { Menu } from '@models/index.interfaces';
 // * Components
 import { FooterComponent } from '../shared/components/footer/footer.component';
-import { MenuNav, NavbarComponent } from '../shared/components/navbar/navbar.component';
+import { NavbarComponent } from '../shared/components/navbar/navbar.component';
 import { SidebarComponent } from '../shared/components/sidebar/sidebar.component';
 
 @Component({
@@ -19,7 +21,7 @@ import { SidebarComponent } from '../shared/components/sidebar/sidebar.component
   styleUrl: './website.component.css'
 })
 export default class WebsiteComponent {
-  menuNavigator:MenuNav[] =[
+  menuNavigator:Menu[] =[
     {
       txt:'menu.home',
       icon:'home',

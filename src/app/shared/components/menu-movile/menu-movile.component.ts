@@ -7,8 +7,8 @@ import { TranslatePipe } from '../../pipes/translate.pipe';
 // * Components
 import { TranslateService } from '../../../core/services/translate.service';
 import { LocalStorageService } from '../../../core/services/localstorage.service';
-import { MenuNav } from '../navbar/navbar.component';
 import { ThemeService } from '../../../core/services/theme.service';
+import { Menu } from '@models/index.interfaces';
 
 @Component({
   selector: 'menu-movile',
@@ -23,7 +23,7 @@ import { ThemeService } from '../../../core/services/theme.service';
   styleUrl: './menu-movile.component.css'
 })
 export class MenuMovileComponent {
-  @Input() menuNav:MenuNav[] = [];
+  @Input() menuNavigator:Menu[] = [];
   @Input() isOpenMenu!:boolean;
   @Output() closeMenuEvent: EventEmitter<void> = new EventEmitter<void>();
 

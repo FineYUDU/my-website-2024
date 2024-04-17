@@ -5,6 +5,7 @@
     "paths": {
       "@shared/*":["./src/app/shared/*"],
       "@services/*":["./src/app/core/services/*"],
+      "@models/*":["./src/app/core/models/*"],
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
