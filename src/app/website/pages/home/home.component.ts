@@ -82,6 +82,10 @@ export default class HomeComponent {
       txt:'NET',
     },
     {
+      img:'ionic',
+      txt:'ionic',
+    },
+    {
       img:'bootstrap',
       txt:'bootstrap',
     },
@@ -117,10 +121,6 @@ export default class HomeComponent {
       img:'ts',
       txt:'typescript',
     },
-    {
-      img:'dart',
-      txt:'dart',
-    },
   ];
   tools:Logos[] = [
     {
@@ -146,6 +146,10 @@ export default class HomeComponent {
     {
       img:'jira',
       txt:'jira',
+    },
+    {
+      img:'notion',
+      txt:'notion',
     },
     {
       img:'jasmine',

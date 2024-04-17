@@ -1,20 +1,16 @@
 <main>
-    <!-- ? SIDEBAR CONTAINER -->
-    <nav class="sidebar-cont">   
-        <!-- <sidebar [menuNav]="menuNav"/> -->
-        <navbar-menu [menuNav]="menuNav"/>
-    </nav>
+    <navbar-menu 
+        [menuNav]="menuNavigator"
+    />
     
-    <!-- ? ROUTER OUTLET CONTAINER -->
-    <section class="ro-cont">
-        <!-- Router Outlet -->
-        <router-outlet/>
+    <section>
+        <div class="section__body">
+            <router-outlet/>
+        </div>
         
     </section>
-    
-    <!-- ? FOOTER CONTAINER -->
-    <footer class="footer-cont">
-        <footer-menu/>
-    </footer>
+
+    <footer-menu
+    />
     
 </main>

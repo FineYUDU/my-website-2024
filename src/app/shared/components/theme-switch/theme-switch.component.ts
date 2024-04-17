@@ -1,5 +1,5 @@
 // * Angular
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component, inject } from '@angular/core';
 // * Services
 import { LocalStorageService } from '../../../core/services/localstorage.service';
@@ -10,6 +10,7 @@ import { ThemeService } from '../../../core/services/theme.service';
   standalone: true,
   imports: [
     CommonModule,
+    NgOptimizedImage,
   ],
   templateUrl: './theme-switch.component.html',
   styleUrl: './theme-switch.component.css'
