@@ -41,16 +41,16 @@ export class FooterComponent {
       icon:'home',
       router:'home',
     },
-    {
-      txt:'menu.about',
-      icon:'about',
-      router:'about',
-    },
-    {
-      txt:'menu.contact',
-      icon:'contact',
-      router:'contact',
-    },
+    // {
+    //   txt:'menu.about',
+    //   icon:'about',
+    //   router:'about',
+    // },
+    // {
+    //   txt:'menu.contact',
+    //   icon:'contact',
+    //   router:'contact',
+    // },
   ]
 
 }

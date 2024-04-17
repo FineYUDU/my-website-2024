@@ -1,23 +1,14 @@
 main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: var(--navbar--width) auto auto;
     gap: var(--spacing-blocks);
-    align-items: center;
-    /* height: calc(100vh - (var(--spacing-sm)*2)); */
     padding: var(--spacing-sm);
-}
-nav, footer, section {
-    width: 100%;
 }
 section {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
-section p {
-    padding-bottom: var(--spacing-blocks);
-}
-/* ? ROUTER OUTLET CONTAINER */
-.ro-cont {
+.section__body {
     width: var(--website--width);
     max-width: var(--website--max-width);
 }
@@ -26,10 +17,6 @@ section p {
 @media screen and (max-width:480px) {
     main {
         height:100%;
-    }
-    /* ? ROUTER OUTLET CONTAINER */
-    .ro-cont {
-        width:100%;
     }
 }
 /* * Responsive MD */

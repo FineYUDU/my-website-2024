@@ -1,22 +1,21 @@
-<!-- ? MAIN CONTAINER -->
-<div class="main-cont">
+<nav>
     <!-- ? CONTAINER -->
     <div class="cont">
         <!-- ? SECTION | LOGO -->
         <section class="logo-cont">
             <!-- LOGO AVATAR -->
             <img class="cursor--pointer avatar"
-                routerLink="./" 
+                routerLink="./"
                 alt="Logo Avatar FineDev"
                 [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-avatar.svg'">
             <!-- LOGO TXT -->
             <img class="cursor--pointer logo-txt"
-                routerLink="./" 
+                routerLink="./"
                 alt="Logo FineDev"
                 [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-txt.svg'">
-    
+
         </section>
-    
+
         <!-- ? SECTION | MENU -->
         <section class="menu-cont">
             <!-- ? BLOCK | MENU -->
@@ -27,7 +26,7 @@
                         <li>
                             <!-- LINK MENU -->
                             <a  class="font__size--b1 font__color--primary font__weight--regular"
-                                [routerLink]="nav.router" 
+                                [routerLink]="nav.router"
                                 routerLinkActive="active">
                                 <!-- TXT -->
                                 {{ nav.txt | translate:translateService.GetLang }}
@@ -54,7 +53,7 @@
                 <img (click)="closeMenu()" class="icon_lg" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-menu.svg'" alt="icon menu">
             </div>
 
-            <menu-movile 
+            <menu-movile
             (closeMenuEvent)="closeMenu()"
             [isOpenMenu]="isOpenMenu"
             [menuNav]="menuNav"
@@ -63,5 +62,4 @@
         </section>
 
     </div>
-
-</div>
+</nav>

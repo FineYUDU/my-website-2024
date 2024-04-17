@@ -1,6 +1,6 @@
 // * Angular
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 // * Services
 import { ThemeService } from './core/services/theme.service';
@@ -19,12 +19,10 @@ import { ThemeSwitchComponent } from '@shared/components/theme-switch/theme-swit
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'my-website';
+  // @injections
+  private translateService = inject (TranslateService); 
+  private themeService = inject(ThemeService)
 
-  constructor( 
-    private ts    : TranslateService,
-    private theme : ThemeService
- ) {}
 
 
 }
