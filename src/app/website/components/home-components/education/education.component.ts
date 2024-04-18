@@ -4,12 +4,8 @@ import { Component, Input, inject } from '@angular/core';
 import { TranslatePipe } from '../../../../shared/pipes/translate.pipe';
 // * Services
 import { TranslateService } from '../../../../core/services/translate.service';
-
-export interface Education {
-  date:string;
-  title:string;
-  txt:string;
-}
+// * Interfaces
+import { Education } from '@models/index.interfaces';
 
 @Component({
   selector: 'education',
@@ -21,8 +17,8 @@ export interface Education {
   styleUrl: './education.component.css'
 })
 export class EducationComponent {
+  // * @inputs
   @Input() educationBlock:Education[] = []
-
-  // * @Injections
+  // * @injections
   public translateService = inject( TranslateService );
 }
