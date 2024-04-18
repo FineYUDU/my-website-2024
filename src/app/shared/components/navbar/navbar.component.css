@@ -1,16 +1,16 @@
-nav {
+.nav {
     display: flex;
     justify-content: center;
-    padding: var(--spacing-sm) 0;
-    border-radius: var(--radius-minimal);
-    background-color: var(--fd-color-bg-secondary);
-}
-.nav__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: var(--website--width);
-    max-width: var(--website--max-width);
+    .nav__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--spacing-sm);
+        border-radius: var(--radius-minimal);
+        background-color: var(--fd-color-bg-secondary);
+        width: calc(var(--website--width) - calc(var(--spacing-sm) * 2));
+        max-width: calc(var(--website--max-width) - calc(var(--spacing-sm) * 2));
+    }
 }
 .container__header {
     display: flex;
