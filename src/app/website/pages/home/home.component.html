@@ -1,59 +1,78 @@
-<!-- ? MAIN CONTAINER -->
-<div class="main-cont">
-    <!-- TITLE -->
-    <div class="title-cont">
-        <p class="font__size--h5 font__color--primary font__weight--bold">
+<div class="container">
+    <div class="block title">
+        <p class="
+            font__size--h5 
+            font__color--primary 
+            font__weight--bold"
+            >
             {{ 'home.title' | translate:translateService.GetLang }}
         </p>
         
-        <p class="font__size--b1 font__color--quaternary font__weight--regular">
+        <p class="
+            font__size--b1 
+            font__color--quaternary 
+            font__weight--regular"
+            >
             {{ 'home.subtitle' | translate:translateService.GetLang }} Angular v17.0.8
         </p>
 
     </div>
 
-    <!-- ? GRID SECTION -->
-    <div class="grid-section">
-        <!-- ? SECTION | USER -->
-        <section class="user-cont">
+    <div class="block__cards">
+        <section class="card__user">
             <user-card/>
             
         </section>
     
-        <!-- ? SECTION | EXPERIENCE -->
-        <section class="experience-section">
+        <section class="card__experience">
             <experience/>
+
         </section>
     
-        <!-- ? SECTION | LANG -->
-        <section class="lang-section" >
-            <!-- ? LANG | ES -->
+        <section class="card__lang" >
             <div class="lang">
-                <!-- PERCENT -->
                 <pie-grid [pieGrid]="'es'" [percent]="90"/>
                 
-                <!-- ? TEXT CONTAINER -->
-                <div class="txt-cont">
-                    <!-- TITLE -->
-                    <p class="font__size--b1 font__weight--bold font__color--primary">{{ 'lang.es' | translate:translateService.GetLang }}</p>
-                    <!-- TXT -->
-                    <p class="font__size--b2 font__weight--regular font__color--quaternary">{{ 'lang.native' | translate:translateService.GetLang }}</p>
+                <div>
+                    <p class="
+                        font__size--b1 
+                        font__weight--bold 
+                        font__color--primary"
+                        >
+                        {{ 'lang.es' | translate:translateService.GetLang }}
+                    </p>
+
+                    <p class="
+                        font__size--b2 
+                        font__weight--regular 
+                        font__color--quaternary"
+                        >
+                        {{ 'lang.native' | translate:translateService.GetLang }}
+                    </p>
 
                 </div>
 
             </div>
     
-            <!-- ? LANG | EN -->
             <div class="lang">
-                <!-- PERCENT -->
                 <pie-grid [pieGrid]="'en'" [percent]="60"/>
 
-                <!-- ? TEXT CONTAINER -->
-                <div class="txt-cont">
-                    <!-- TITLE -->
-                    <p class="font__size--b1 font__weight--bold font__color--primary">{{ 'lang.en' | translate:translateService.GetLang }}</p>
-                    <!-- TXT -->
-                    <p class="font__size--b2 font__weight--regular font__color--quaternary">{{ 'lang.level' | translate:translateService.GetLang }}</p>
+                <div>
+                    <p class="
+                        font__size--b1 
+                        font__weight--bold 
+                        font__color--primary"
+                        >
+                        {{ 'lang.en' | translate:translateService.GetLang }}
+                    </p>
+
+                    <p class="
+                        font__size--b2 
+                        font__weight--regular 
+                        font__color--quaternary"
+                        >
+                        {{ 'lang.level' | translate:translateService.GetLang }}
+                    </p>
 
                 </div>
     
@@ -63,9 +82,12 @@
 
     </div>
     
-    <!-- TITLE -->
-    <div class="title-cont">
-        <p class="font__size--h5 font__color--primary font__weight--bold"> 
+    <div class="title--block">
+        <p class="
+            font__size--h5 
+            font__color--primary 
+            font__weight--bold"
+            > 
             {{ 'home.title-2' | translate:translateService.GetLang }} 
         </p>
 
@@ -74,60 +96,93 @@
     <education [educationBlock]="education"/>
 
     
-    <!-- TITLE -->
-    <div class="title-cont">
-        <p class="font__size--h5 font__color--primary font__weight--bold"> 
+    <div class="title--block">
+        <p class="
+            font__size--h5 
+            font__color--primary 
+            font__weight--bold"
+            > 
             {{ 'Stack' | translate:translateService.GetLang }} 
         </p>
 
     </div>
 
-    <!-- ? STACK | SECTION -->
-    <div class="item-section">
+    <div class="items--block">
+        <ul>
+            @for ( item of stacks; track $index) {
+                <li>
+                    <img 
+                        class="img-item" 
+                        width="48" 
+                        height="48"
+                        [alt]="'logo'+item.img" 
+                        [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/stacks/logo-'+item.img+'.svg'" 
+                        >
+                    <!-- ! HOVER LOGO -->
+                    <img 
+                        class="img-item-hover" 
+                        width="48" 
+                        height="48"
+                        [alt]="'logo'+item.img" 
+                        [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/stacks/hover/logo-'+item.img+'.svg'" 
+                        >
 
-        <!-- ? ITEMS | CONTAINER -->
-        <div class="items">
-            <ul>
-                @for ( item of stacks; track $index) {
-                    <li>
-                        <!-- LOGO -->
-                        <img class="img-item" [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/stacks/logo-'+item.img+'.svg'" [alt]="'logo'+item.img" width="48" height="48">
-                        <!-- ! HOVER LOGO -->
-                        <img class="img-item-hover" [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/stacks/hover/logo-'+item.img+'.svg'" [alt]="'logo'+item.img" width="48" height="48">
-                        <!-- TXT -->
-                        <p class="font__size--b1 font__weight--medium font__color--item"> {{item.txt}} </p>
-                    </li>
-                }
-            </ul>
-        </div>
+                    <p class="
+                        font__size--b1 
+                        font__weight--medium 
+                        font__color--item"
+                        > 
+                        {{item.txt}} 
+                    </p>
 
+                </li>
+            }
+        </ul>
     </div>
     
-    <!-- TITLE -->
-    <div class="title-cont">
-        <p class="font__size--h5 font__color--primary font__weight--bold"> 
+    <div class="title--block">
+        <p class="
+            font__size--h5 
+            font__color--primary 
+            font__weight--bold"
+            > 
             {{ 'home.title-3' | translate:translateService.GetLang }} 
+            
         </p>
 
     </div>
 
-    <!-- ? TOOLS | SECTION -->
-    <div class="item-section">
-        <!-- ? ITEMS | CONTAINER -->
-        <div class="items">
-            <ul>
-                @for ( item of tools; track $index) {
-                    <li>
-                        <!-- LOGO -->
-                        <img class="img-item" [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/tools/logo-'+item.img+'.svg'" [alt]="'logo'+item.img"  width="48" height="48">
-                        <!-- ! HOVER LOGO -->
-                        <img class="img-item-hover" [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/tools/hover/logo-'+item.img+'.svg'" [alt]="'logo'+item.img" width="48" height="48">
-                        <!-- TXT-->
-                        <p class="font__size--b1 font__weight--medium font__color--item"> {{item.txt}} </p>
-                    </li>
-                }
-            </ul>
-        </div>
+    <div class="items--block">
+        <ul>
+            @for ( item of tools; track $index) {
+                <li>
+                    <img 
+                        class="img-item" 
+                        width="48" 
+                        height="48"
+                        [alt]="'logo'+item.img"  
+                        [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/tools/logo-'+item.img+'.svg'" 
+                        >
+
+                    <!-- ! HOVER LOGO -->
+                    <img 
+                        class="img-item-hover" 
+                        width="48" 
+                        height="48"
+                        [alt]="'logo'+item.img" 
+                        [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/tools/hover/logo-'+item.img+'.svg'" 
+                        >
+
+                    <p class="
+                        font__size--b1 
+                        font__weight--medium 
+                        font__color--item"> 
+                        {{item.txt}} 
+                    </p>
+                    
+                </li>
+            }
+        </ul>
 
     </div>
 
