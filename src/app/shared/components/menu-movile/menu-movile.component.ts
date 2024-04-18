@@ -23,7 +23,7 @@ import { Menu } from '@models/index.interfaces';
   styleUrl: './menu-movile.component.css'
 })
 export class MenuMovileComponent {
-  @Input() menuNavigator:Menu[] = [];
+  @Input() menuNavigation:Menu[] = [];
   @Input() isOpenMenu!:boolean;
   @Output() closeMenuEvent: EventEmitter<void> = new EventEmitter<void>();
 

@@ -21,7 +21,7 @@
         <!-- GROUP NAME -->
         <p class="font__size--b1 font__color--group-name font__weight--medium">{{ 'menu.nav' | translate:translateService.GetLang | titlecase  }}</p>
 
-        @for (nav of menuNavigator; track $index) {
+        @for (nav of menuNavigation; track $index) {
             <li>
                 <!-- LINK MENU -->
                 @if(nav.close) {

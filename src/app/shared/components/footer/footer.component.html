@@ -1,71 +1,83 @@
-<!-- ? MAIN CONTAINER -->
-<div class="main-cont">
-    <!-- ? LOGO CONT -->
-    <section>
-        <!-- LOGO AVATAR -->
-        <img class="cursor--pointer avatar"
-            alt="Logo Avatar FineDev"
-            routerLink="./" 
-            [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-avatar-footer.svg'" width="60" height="60">
-    </section>
-
-    <!-- ? NAV MENU -->
-    <section>
-        <!-- ? MENU -->
-        <ul>
-            @for (nav of menuNav; track $index) {
-                <li>
-                    <!-- LINK MENU -->
-                    <a  class="font__size--b1 font__color--tertiary font__weight--regular"
-                        [routerLink]="nav.router" 
-                        routerLinkActive="active">
-                        <!-- TXT -->
-                        {{ nav.txt | translate:translateService.GetLang }}
-                    </a>
-                </li>
-            }
-        </ul>
-
-    </section>
-
-    <!-- ? SOCIAL MEDIA -->
-    <section class="social-media-cont">
+<footer class="footer">
+    <div class="footer__container">
         
-        <!-- Linkedin -->
-        <a href="https://www.linkedin.com/in/erick-alcocer-06ba2b149/" target="_blank">
-            <!-- ICON -->
-            <img [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-linkedin.svg'" class="icon_lg" alt="Linkedin logo" width="24" height="24">
-        </a>
-        
-        <!-- GitHub -->
-        <a href="https://github.com/FineYUDU" target="_blank">
-            <!-- ICON -->
-            <img [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-github.svg'" class="icon_lg" alt="Github logo" width="24" height="24">
-        </a>
-        
-        <!-- X -->
-        <a href="https://twitter.com/FineYUDU" target="_blank">
-            <!-- ICON -->
-            <img [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-x.svg'" class="icon_lg" alt="x logo" width="24" height="24">
-        </a>
+        <section class="section section__logo">
+            <img class="cursor--pointer"
+                width="60"
+                height="60"
+                routerLink="./"
+                alt="Logo Avatar FineDev"
+                [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logo/logo-avatar-footer.svg'"
+            >
+        </section>
+        <section class="section">
+            <ul>
+                @for (nav of menuNavigation; track $index) {
+                    <li>
+                        <a
+                            class="
+                                font__size--b1
+                                font__color--tertiary
+                                font__weight--regular"
+                            [routerLink]="nav.router"
+                            routerLinkActive="active--route"
+                            >
+                            {{ nav.txt | translate:translateService.GetLang }}
+                        </a>
+                    </li>
+                }
+            </ul>
+        </section>
+        <section class="section section__social-media">
+            <!-- Linkedin -->
+            <a href="https://www.linkedin.com/in/erick-alcocer-06ba2b149/" target="_blank">
+                <img
+                    class="icon_lg"
+                    alt="Linkedin logo"
+                    width="24"
+                    height="24"
+                    [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-linkedin.svg'"
+                >
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/FineYUDU" target="_blank">
+                <img
+                    class="icon_lg"
+                    alt="Github logo"
+                    width="24"
+                    height="24"
+                    [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-github.svg'"
+                >
+            </a>
+            <!-- X -->
+            <a href="https://twitter.com/FineYUDU" target="_blank">
+                <img
+                class="icon_lg"
+                alt="x logo"
+                width="24"
+                height="24"
+                [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-x.svg'"
+                >
+            </a>
+        </section>
+        <section class="section">
+            <p class="
+                font__size--b2
+                font__weight--semibold
+                font__color--tertiary"
+                >
+                {{ companyName }}
+            </p>
+            <p class="
+                font__size--b2
+                font__weight--regular
+                font__color--tertiary"
+                >
+                {{ 'version.current' | translate:translateService.GetLang }}
+            </p>
+            <!-- VERSION -->
+            <version/>
+        </section>
+    </div>
 
-    </section>
-
-    <!-- ? VERSION CONTAINER -->
-    <section>
-        <!-- TXT -->
-        <p class="font__size--b1 font__weight--semibold font__color--tertiary">
-            {{ companyName }}
-        </p>
-
-        <!-- TXT -->
-        <p class="font__size--b1 font__weight--regular font__color--tertiary">
-            {{ 'version.current' | translate:translateService.GetLang }}
-        </p>
-
-        <!-- VERSION -->
-        <version/>
-
-    </section>
-
-</div>
+</footer>

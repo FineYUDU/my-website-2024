@@ -21,7 +21,7 @@ import { SidebarComponent } from '../shared/components/sidebar/sidebar.component
   styleUrl: './website.component.css'
 })
 export default class WebsiteComponent {
-  menuNavigator:Menu[] =[
+  menuNavigation:Menu[] =[
     {
       txt:'menu.home',
       icon:'home',

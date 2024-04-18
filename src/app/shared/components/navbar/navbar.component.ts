@@ -29,7 +29,7 @@ import { TranslateSwitchComponent } from '../translate-switch/translate-switch.c
 })
 export class NavbarComponent {
   // * @Inputs
-  @Input() menuNavigator:Menu[] = [];
+  @Input() menuNavigation:Menu[] = [];
   // * @injections
   public translateService = inject( TranslateService );
   public localStorageService = inject( LocalStorageService );

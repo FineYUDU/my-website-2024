@@ -1,5 +1,5 @@
 // * Angular
-import { Component, inject } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 // * Services
 import { LocalStorageService } from '../../../core/services/localstorage.service';
@@ -8,6 +8,7 @@ import { TranslateService } from '../../../core/services/translate.service';
 import { VersionComponent } from '../version/version.component';
 import { TranslatePipe } from '../../pipes/translate.pipe';
 import { RouterModule } from '@angular/router';
+import { Menu } from '@models/index.interfaces';
 
 // * Interfaces
 export interface MenuNav {
@@ -24,33 +25,17 @@ export interface MenuNav {
     RouterModule,
     TranslatePipe,
     VersionComponent,
+    NgOptimizedImage,
   ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-  // * @Injections
+  // * @inputs
+  @Input() menuNavigation:Menu[] = [];
+  // * @injections
   public translateService = inject( TranslateService );
   public localStorageService = inject( LocalStorageService );
-  // * @Params
+  // * @params
   companyName:string = 'Fine Dev';
-
-  menuNav:MenuNav[] =[
-    {
-      txt:'menu.home',
-      icon:'home',
-      router:'home',
-    },
-    // {
-    //   txt:'menu.about',
-    //   icon:'about',
-    //   router:'about',
-    // },
-    // {
-    //   txt:'menu.contact',
-    //   icon:'contact',
-    //   router:'contact',
-    // },
-  ]
-
 }

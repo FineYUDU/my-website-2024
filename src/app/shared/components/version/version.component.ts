@@ -6,12 +6,16 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template:`
-  <p class="font__size--b1 font__weight--regular font__color--tertiary">
+  <p class="
+        font__size--b2 
+        font__weight--regular 
+        font__color--tertiary"
+      >
       {{version}}
   </p>
   `
 })
 export class VersionComponent {
-  // * @Params
+  // * @params
   version:string = 'v1.0.0'
 }
