@@ -11,7 +11,7 @@ import { TranslatePipe } from '../../pipes/translate.pipe';
 import { Menu } from '@models/index.interfaces';
 // * Components
 import { MenuMovileComponent } from '../menu-movile/menu-movile.component';
-import { ThemeSwitchComponent } from '../theme-switch/theme-switch.component';
+import { ToggleThemeComponent } from '../toggle-theme/toggle-theme.component';
 import { TranslateSwitchComponent } from '../translate-switch/translate-switch.component';
 @Component({
   selector: 'navbar-menu',
@@ -20,7 +20,7 @@ import { TranslateSwitchComponent } from '../translate-switch/translate-switch.c
     MenuMovileComponent,
     NgOptimizedImage,
     RouterModule,
-    ThemeSwitchComponent,
+    ToggleThemeComponent,
     TranslatePipe,
     TranslateSwitchComponent,
   ],

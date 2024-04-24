@@ -22,6 +22,9 @@ export class ThemeService {
     if(!theme) {
       localStorage.setItem('theme', 'dark');
     }
+    this.toggle = localStorage.getItem('theme') == 'dark' ? true : false; 
+    console.log(this.toggle);
+    console.log(theme);
   }
 
   changeMode(theme:string): void {

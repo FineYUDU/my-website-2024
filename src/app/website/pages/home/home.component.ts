@@ -64,8 +64,8 @@ export default class HomeComponent {
       txt:'NET',
     },
     {
-      img:'ionic',
-      txt:'ionic',
+      img:'flutter',
+      txt:'flutter',
     },
     {
       img:'bootstrap',
@@ -132,6 +132,14 @@ export default class HomeComponent {
     {
       img:'notion',
       txt:'notion',
+    },
+    {
+      img:'npm',
+      txt:'npm',
+    },
+    {
+      img:'graphql',
+      txt:'graph ql',
     },
     {
       img:'jasmine',

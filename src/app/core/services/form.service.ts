@@ -1,15 +1,13 @@
-// * Angular
+// @angular
 import { FormGroup, ValidationErrors } from '@angular/forms';
 import { Injectable } from '@angular/core';
 
 @Injectable({providedIn: 'root'})
 
 export class FormService {
-    // * @Params
+    // @params
     emailPattern:string = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$';
     
-    constructor() {}
-
 	public isInvalidField(formGroup:FormGroup, field?:string, formSubmit?:boolean):boolean {
         if(!field) return false;
 

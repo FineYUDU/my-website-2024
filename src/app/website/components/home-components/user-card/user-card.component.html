@@ -62,12 +62,15 @@
             <!-- ? BUTTONS CONTAINER -->
             <div class="btns-cont">
                 <!-- BUTTON -->
-                <button type="button" class="btn">
+                <a 
+                    href="../../../../../assets/pdf/Erick_Eduardo_resume.pdf" 
+                    class="btn"
+                    target="_blank">
                     {{ 'button.cv' | translate:translateService.GetLang }}
                     <!-- ICON -->
                     <img class="icon_sm" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-file-download.svg'" alt="Download file">
-            
-                </button>
+
+                </a>
     
                 <!-- BUTTON -->
                 <button type="button" class="btn btn--outline" routerLink="../contact">
