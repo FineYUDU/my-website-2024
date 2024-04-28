@@ -1,31 +1,39 @@
-  <!-- ? FIELD -->
-  <div class="field_">
-    <!-- ? INPUT -->
-    <label class="input_"> 
-        <!-- LEGEND -->
+  <div class="field">
+    <label class="field__container"> 
         @if( legendName ) {
-            <legend class="font__size--label font__weight--medium font__color--quaternary"> 
+            <legend class="field__legend"> 
                 {{  legendName  }} 
             </legend>
         }
-        <!-- ? INPUT PRIMARY -->
-        <input  [type]="inputType" 
-                (change)="changeText($event)"
-                [maxLength]="maxLength"
-                [minLength]="minLength"
-                [disabled]="isDisabled"
-                [value]="fieldValue"
-                class="primary_input"
-                [ngClass]="{ 'input_error' : isSubmitted }">
+        <input  
+            class="input"
+            [type]="inputType" 
+            (change)="changeText($event)"
+            [placeholder]="placeholder"
+            [maxLength]="maxLength"
+            [minLength]="minLength"
+            [disabled]="isDisabled"
+            [value]="fieldValue"
+            [ngClass]="{ 'input--error' : isSubmitted }
+        ">
         @if(showIcon) {
-            <!-- ICON -->
-            <img [src]="'../../../../assets/theme/'+ localStorageService.GetMode +'/icon/'+icon+'.svg'" alt="">
+            <img
+                class="field__icon"
+                width="17" 
+                height="17"
+                [alt]="iconName"
+                [ngSrc]="'../../../../assets/theme/'+ localStorageService.GetMode +'/icon/'+iconName+'.svg'"
+            >
         }
 
     </label>
     <!-- ! ERROR MSN -->
     @if ( isSubmitted ) {
-        <span  class="font__size--c1 font__weight--regular input_error_msn"> 
+        <span class="
+                font__size--c1 
+                font__weight--regular 
+                input_error_msn
+            "> 
             {{errorMessage}} 
         </span>
     }

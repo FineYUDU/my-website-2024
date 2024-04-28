@@ -9,11 +9,6 @@ export const routes: Routes = [
         loadComponent: () => import('./website/website.component'),
         children: [
             {
-                path:'home',
-                title:'Home',
-                loadComponent: () => import('./website/pages/home/home.component')
-            },
-            {
                 path:'about',
                 title:'About',
                 loadComponent: () => import('./website/pages/about/about.component')
@@ -23,7 +18,7 @@ export const routes: Routes = [
                 title:'Contact',
                 loadComponent: () => import('./website/pages/contact/contact.component')
             },
-            { path:'', redirectTo:'home', pathMatch:'full' }
+            { path:'', redirectTo:'about', pathMatch:'full' }
         ]
     },
     { path:'404', component: Page404Component },

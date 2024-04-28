@@ -167,10 +167,11 @@
         align-items: center;
         justify-content: center;
         width: fit-content;
+        min-width: 5.1875rem;
         gap: .5rem;
         font-size: var(--font__size--c1);
         padding:var(--spacing-xs) 1rem;
-        border-radius: var(--radius-full);
+        border-radius: var(--radius-minimal);
         cursor: pointer;
         font-weight: 400;
         border:none;

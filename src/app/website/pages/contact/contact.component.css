@@ -1,19 +1,154 @@
-/* ? MAIN CONTACT */
-.main-cont {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-}
-form {
+.container {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-blocks);
+    .contact {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: var(--spacing-blocks);
+        /* FORM */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+            background-color: var(--fd-color-bg-secondary);
+            border-radius: var(--radius-minimal);
+            padding: var(--spacing-sm) var(--spacing-md);
+        }
+        /* ROWS */
+        .row--1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: var(--spacing-sm);
+        }    
+        .contact__games {
+            display: grid;
+            row-gap: var(--spacing-blocks);
+            grid-template-rows: repeat(2,1fr);
+        }
+        .game__card {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+            background-color: var(--fd-color-bg-secondary);
+            border-radius: var(--radius-minimal);
+            padding: var(--spacing-sm) var(--spacing-md);
+        }    
+        /* NINTENDO HOVER */
+        .game__card:hover {
+            background-color: var(--fd-color-bg-tertiary);
+            p {
+                color: var(--fd-color-bg-secondary);
+            }
+        }
+        .game__card--console {
+            .txt__block {
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-sm);
+                .txt__block--title {
+                    display: flex;       
+                    flex-direction: column;
+                    gap: var(--spacing-xs);
+                }
+            }
+            .game__card--img {
+                position: absolute;
+                top: -3rem;
+                right: -6rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: .6;
+                width: 80%;
+                transition: all .4s ease-out;
+                &:hover {
+                    width: 90%;
+                    transition: all .4s ease-out;
+                    opacity: 1;
+                }
+            }
+        }
+    }
 }
 
 /* * Responsive SM */
 @media screen and (max-width:480px) {
-    /* ? MAIN CONTACT */
-    .main-cont {
-        display: flex;
-        flex-direction: column;
-    }  
+    .container {
+        .contact {
+            display:flex;
+            flex-direction: column;
+            gap: var(--spacing-blocks);
+            .row--1 {
+                display: flex;
+                flex-direction: column;
+            }
+            /* NINTENDO CARD */
+            .contact__card-nintendo {
+                .logo__container {
+                    display: flex;
+                }
+                .img-logo {
+                    display: none;
+                }
+                .img-main {
+                    position: absolute;
+                    top: -2.125rem;
+                    right: -4.125rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: .6;
+                    width: 80%;
+                    transition: all .4s ease-out;
+                    &:hover {
+                        width: 80%;
+                        transition: all .4s ease-out;
+                        opacity: .6;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ? Breakpoint MD */
+@media screen and (min-width:461px) and (max-width:1024px) {   
+    .container {
+        .contact {
+            display:flex;
+            flex-direction: column;
+            gap: var(--spacing-blocks);
+            .row--1 {
+                display: flex;
+                flex-direction: column;
+            }
+            /* NINTENDO CARD */
+            .contact__card-nintendo {
+                .logo__container {
+                    display: flex;
+                }
+                .img-logo {
+                    display: none;
+                }
+                .img-main {
+                    position: absolute;
+                    top: -2.125rem;
+                    right: -4.125rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: .6;
+                    width: 80%;
+                    transition: all .4s ease-out;
+                    &:hover {
+                        width: 80%;
+                        transition: all .4s ease-out;
+                        opacity: .6;
+                    }
+                }
+            }
+        }
+    }
 }

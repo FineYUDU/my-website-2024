@@ -23,12 +23,6 @@ import { SidebarComponent } from '../shared/components/sidebar/sidebar.component
 export default class WebsiteComponent {
   menuNavigation:Menu[] =[
     {
-      txt:'menu.home',
-      icon:'home',
-      router:'home',
-      close:true,
-    },
-    {
       txt:'menu.about',
       icon:'about',
       router:'about',

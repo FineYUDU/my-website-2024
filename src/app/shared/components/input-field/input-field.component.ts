@@ -1,8 +1,8 @@
-// * Angular
-import { CommonModule } from '@angular/common';
+// @angular
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component, Input, forwardRef, inject } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-// * Service
+// @service
 import { FormService } from '@services/form.service';
 import { LocalStorageService } from '@services/localstorage.service';
 
@@ -10,7 +10,8 @@ import { LocalStorageService } from '@services/localstorage.service';
   selector: 'input-field',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
+    NgOptimizedImage,
   ],
   templateUrl: './input-field.component.html',
   styleUrl: './input-field.component.css',
@@ -23,23 +24,23 @@ import { LocalStorageService } from '@services/localstorage.service';
   ]
 })
 export class InputFieldComponent implements ControlValueAccessor {
-  // * @Params Input
+  // @inputs
+  @Input() errorMessage?:string; 
+  @Input() iconName:string= 'icon-email';
+  @Input() inputType:string = 'text';
+  @Input() isDisabled:boolean = false;
+  @Input() isInvalidPassword?:boolean; 
+  @Input() isSubmitted!:boolean; 
   @Input() legendName:string = '';
   @Input() maxLength:number = 100;
   @Input() minLength:number = 0;
-  @Input() isSubmitted!:boolean; 
-  @Input() isInvalidPassword?:boolean; 
-  @Input() errorMessage?:string; 
-  @Input() isDisabled:boolean = false;
+  @Input() placeholder:string = '';
   @Input() showIcon:boolean = false;
-  @Input() icon:string= 'icon-email';
-  @Input() inputType:string = 'text';
-
-  // * @Injections
+  // @injections
   private onChangeCb?: Function;
   public formService = inject( FormService );
   public localStorageService = inject( LocalStorageService );
-  // * @Params
+  // @params
   fieldValue:any = '';
   onTouchCb?: () => void;
 
@@ -55,10 +56,7 @@ export class InputFieldComponent implements ControlValueAccessor {
   registerOnTouched(fn: any): void {
     fn = this.onTouchCb;
   }
-
   setDisabledState?(isDisabled: boolean): void {
     isDisabled = this.isDisabled;
   }
-
-
 }

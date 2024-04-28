@@ -8,7 +8,15 @@
     },
     "button":{
         "cv":"Download CV",
-        "contact":"Contact me"
+        "contact":"Contact me",
+        "send":"Send"
+    },
+    "input":{
+        "full-name":"Full name",
+        "email":"Email",
+        "email-example":"example@example.com",
+        "subject":"Your subject",
+        "subject-example":"I look for info about..."
     },
     "version":{
         "current":"Currently"
@@ -64,5 +72,21 @@
         },
         "title-2":"Education",
         "title-3":"Tools"
+    },
+    "contact": {
+        "title":"Contact",
+        "subtitle":"Let's talk",
+        "card-form":{
+            "title":"Send me an email",
+            "subtitle":""
+        },
+        "card-smash":{
+            "title":"Play with me",
+            "subtitle":"Friend code: "
+        },
+        "card-steam":{
+            "title":"Or maybe",
+            "subtitle":"Username: "
+        }
     }
 }

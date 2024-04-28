@@ -1,0 +1,30 @@
+.field__container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    /* LEGEND */
+    .field__label {
+        cursor: pointer;
+        font-size: var(--font__size--b2);
+        font-weight:500;
+        color: var(--fd-color-bg-quaternary);
+    }
+    textarea {
+        resize: none;
+        border:.0625rem solid var(--fd-input-border);
+        color: var(--fd-input-txt);
+        background-color: var(--fd-input-bg);
+        padding: var(--spacing-xs);
+        border-radius: var(--radius-minimal);
+        font-size: var(--font__size--b2);
+        transition:background-color .2s ease-in-out;    
+    }
+}
+
+/* ? Breakpoint SM */
+@media screen and (max-width:460px) {
+    textarea {
+        width: calc(100% - var(--spacing-sm));
+    }
+    
+}

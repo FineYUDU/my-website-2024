@@ -8,7 +8,15 @@
     },
     "button":{
         "cv":"Descargar CV",
-        "contact":"Contáctame"
+        "contact":"Contáctame",   
+        "send":"Enviar"
+    },
+    "input":{
+        "full-name":"Nombre completo",
+        "email":"Correo electrónico",
+        "email-example":"ejemplo@ejemplo.com",
+        "subject":"Asunto",
+        "subject-example":"Busco información sobre..."
     },
     "version":{
         "current":"Actualmente"
@@ -64,5 +72,21 @@
         },
         "title-2":"Educación",
         "title-3":"Herramientas"
+    },
+    "contact": {
+        "title":"Contacto",
+        "subtitle":"Vamos a platicar",
+        "card-form":{
+            "title":"Envíame un correo",
+            "subtitle":""
+        },
+        "card-smash":{
+            "title":"Juega conmigo",
+            "subtitle":"Clave de amigo: "
+        },
+        "card-steam":{
+            "title":"O tal vez'",
+            "subtitle":"Nombre de usuario: "
+        }
     }
 }

@@ -60,4 +60,18 @@
     --fd-btn-outline-active-outline-color                                           :#{$grey-300};
     // * ---------------------------------- Focus ------------------------------------------------
     --fd-btn-outline-focus-outline                                                  :#{$grey-200};
+    //  
+    // ?                                    Input Default
+    //  
+    // * ---------------------------------- Button / Default -------------------------------------
+    --fd-input-bg                                                                   :#{$grey-50};
+    --fd-input-border                                                               :#{$grey-200};
+    --fd-input-txt                                                                  :#{$grey-600};
+    --fd-input-placeholder                                                          :#{$grey-300};
+    // * ---------------------------------- Hover ------------------------------------------------
+    --fd-input-bg-hover                                                             :#{$grey-50};
+    --fd-input-border-hover                                                         :#{$grey-300};
+    --fd-input-txt-hover                                                            :#{$grey-600};
+    // * ---------------------------------- Focus-visble -----------------------------------------
+    --fd-input-border-focus                                                         :#{$grey-400};
 }

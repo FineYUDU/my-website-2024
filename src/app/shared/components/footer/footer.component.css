@@ -22,6 +22,8 @@
     .section__social-media {
         gap: var(--spacing-sm);
     }
+}.section__social-media {
+    gap: var(--spacing-md);
 }
 ul {
     display: flex;

@@ -17,6 +17,7 @@ section {
 @media screen and (max-width:480px) {
     main {
         height:100%;
+        padding: var(--spacing-sm) 0;
     }
 }
 /* * Responsive MD */

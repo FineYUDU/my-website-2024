@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="block--title">
+    <div>
         <p class="
             font__size--h5 
             font__color--primary 
@@ -18,29 +18,149 @@
 
     </div>
     
-    <div class="block--contact">
-
-    </div>
-</div>
-<!-- <div class="main-cont">
-    <section>
-    </section>
-    <section>
+    <div class="contact">
         <form action="">
-            <input-field
-            [legendName]="'input.full-name' | translate:translateService.GetLang"
-            [showIcon]="true"
-            [icon]="'icon-full-name'"
-            />
-            <input-field
-            [legendName]="'input.email' | translate:translateService.GetLang"
-            [showIcon]="true"
-            [icon]="'icon-email'"
-            />
-            <button class="btn_primary">
+            <p class="
+                font__size--b1 
+                font__color--item 
+                font__weight--semibold"
+                >
+                {{ 'contact.card-form.title' | translate:translateService.GetLang }}
+            </p>
+            <div class="row--1">
+                <input-field
+                [legendName]="'input.full-name' | translate:translateService.GetLang"
+                [placeholder]="'input.full-name' | translate:translateService.GetLang"
+                [showIcon]="true"
+                [iconName]="'icon-full-name'"
+                />
+                <input-field
+                [legendName]="'input.email' | translate:translateService.GetLang"
+                [placeholder]="'input.email-example' | translate:translateService.GetLang"
+                [showIcon]="true"
+                [iconName]="'icon-email'"
+                />
+            </div>
+            <div class="row--2">
+                <input-field
+                [legendName]="'input.subject' | translate:translateService.GetLang"
+                [placeholder]="'input.subject-example' | translate:translateService.GetLang"
+                [showIcon]="true"
+                [iconName]="'icon-subject'"
+                />
+            </div>
+            <div class="row--3">
+                <textarea-field
+                />
+            </div>
+            <button class="btn">
                 {{ 'button.send' | translate:translateService.GetLang }}
             </button>
         </form>
 
-    </section>
-</div> -->
+        <div class="contact__games">
+
+            <div class="game__card game__card--console nintendo">
+                <p class="
+                    font__size--b1 
+                    font__color--item 
+                    font__weight--semibold"
+                    >
+                    {{ 'contact.card-smash.title' | translate:translateService.GetLang }}
+                </p>
+    
+                <div class="txt__block">
+                    <div class="txt__block--title">
+                        <p class="
+                            font__size--b2 
+                            font__color--brand-primary 
+                            font__weight--semibold"
+                            >
+                            Nintendo Switch
+                        </p>
+                        <div>
+                            <p class="
+                                font__size--b2 
+                                font__color--quaternary 
+                                font__weight--medium"
+                                >
+                                {{ 'contact.card-smash.subtitle' | translate:translateService.GetLang }}
+                            </p>
+                            <p class="
+                                font__size--c1 
+                                font__color--quaternary 
+                                font__weight--regular"
+                                >
+                                SW-1002-6334-8928
+                            </p>
+    
+                        </div>
+    
+                    </div>
+                </div>
+                <img 
+                    class="game__card--img"
+                    fill
+                    [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/main-7.svg'" 
+                    alt=""
+                >
+    
+    
+    
+            </div>
+
+            <div class="game__card game__card--console">
+                <p class="
+                    font__size--b1 
+                    font__color--item 
+                    font__weight--semibold"
+                    >
+                    {{ 'contact.card-steam.title' | translate:translateService.GetLang }}
+                </p>
+    
+                <div class="txt__block">
+                    <div class="txt__block--title">
+                        <p class="
+                            font__size--b2 
+                            font__color--brand-primary 
+                            font__weight--semibold"
+                            >
+                            PC Steam
+                        </p>
+                        <div>
+                            <p class="
+                                font__size--b2 
+                                font__color--quaternary 
+                                font__weight--medium"
+                                >
+                                {{ 'contact.card-steam.subtitle' | translate:translateService.GetLang }}
+                            </p>
+                            <p class="
+                                font__size--c1 
+                                font__color--quaternary 
+                                font__weight--regular"
+                                >
+                                FineYUDU
+                            </p>
+    
+                        </div>
+    
+                    </div>
+                </div>
+                <img 
+                    class="game__card--img"
+                    width="300"
+                    height="300"
+                    [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/img-fall-guy.svg'" 
+                    alt=""
+                >
+    
+    
+    
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
