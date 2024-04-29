@@ -2,7 +2,6 @@
 import { Component, ElementRef, inject } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 // @pipes
-import { TranslatePipe } from '@shared/pipes/translate.pipe';
 // @components
 import { ChipComponent } from '@shared/components/chip/chip.component';
 import { EducationComponent } from '../../components/home-components/education/education.component';
@@ -12,6 +11,7 @@ import { UserCardComponent } from '../../components/home-components/user-card/us
 import { TranslateService } from '@services/translate.service';
 import { LocalStorageService } from '@services/localstorage.service';
 import { Education, Logos } from '@models/index.interfaces';
+import { TranslatePipe } from '@shared/pipes/translate.pipe';
 
 @Component({
   selector: 'about',
@@ -136,8 +136,8 @@ export default class AboutComponent {
       txt:'npm',
     },
     {
-      img:'graphql',
-      txt:'graph ql',
+      img:'android-studio',
+      txt:'android studio',
     },
     {
       img:'jasmine',
