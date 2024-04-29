@@ -18,7 +18,8 @@ export const routes: Routes = [
                 title:'Contact',
                 loadComponent: () => import('./website/pages/contact/contact.component')
             },
-            { path:'', redirectTo:'about', pathMatch:'full' }
+            { path:'', redirectTo:'about', pathMatch:'full' },
+            { path:'**', redirectTo:'/404', pathMatch:'full' }
         ]
     },
     { path:'404', component: Page404Component },
