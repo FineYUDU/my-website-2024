@@ -22,9 +22,9 @@ export const routes: Routes = [
             { path:'**', redirectTo:'/404', pathMatch:'full' }
         ]
     },
-    { path:'404', component: Page404Component },
+    // { path:'404', component: Page404Component },
     { path:'', redirectTo:'/fine-dev', pathMatch:'full' },
-    { path:'**', redirectTo:'/404', pathMatch:'full' }
+    { path:'**', redirectTo:'/fine-dev', pathMatch:'full' }
 ];
 const routerOptions : ExtraOptions = {
     scrollPositionRestoration:'enabled',
