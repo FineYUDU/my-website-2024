@@ -19,7 +19,11 @@
     </div>
     
     <div class="contact">
-        <form action="">
+        <form 
+            [formGroup]="myForm"
+            autocomplete="off"
+            (ngSubmit)="onSubmit()"
+            >
             <p class="
                 font__size--b1 
                 font__color--item 
@@ -33,12 +37,24 @@
                 [placeholder]="'input.full-name' | translate:translateService.GetLang"
                 [showIcon]="true"
                 [iconName]="'icon-full-name'"
+                formControlName="fullname"
+                [maxLength]="15"
+                [isRequired]="true"
+                [isDisabled]="isDisabled"
+                [isSubmitted]="formService.isInvalidField( myForm, 'fullname', isSubmitted )"
+                [errorMessage]="formService.errorMessage(myForm, 'fullname') | translate:translateService.GetLang"
                 />
                 <input-field
                 [legendName]="'input.email' | translate:translateService.GetLang"
                 [placeholder]="'input.email-example' | translate:translateService.GetLang"
                 [showIcon]="true"
                 [iconName]="'icon-email'"
+                formControlName="email"
+                [maxLength]="50"
+                [isRequired]="true"
+                [isDisabled]="isDisabled"
+                [isSubmitted]="formService.isInvalidField( myForm, 'email', isSubmitted )"
+                [errorMessage]="formService.errorMessage(myForm, 'email') | translate:translateService.GetLang"
                 />
             </div>
             <div class="row--2">
@@ -47,15 +63,33 @@
                 [placeholder]="'input.subject-example' | translate:translateService.GetLang"
                 [showIcon]="true"
                 [iconName]="'icon-subject'"
+                formControlName="subject"
+                [maxLength]="50"
+                [isRequired]="true"
+                [isDisabled]="isDisabled"
+                [isSubmitted]="formService.isInvalidField( myForm, 'subject', isSubmitted )"
+                [errorMessage]="formService.errorMessage(myForm, 'subject') | translate:translateService.GetLang"
                 />
             </div>
             <div class="row--3">
                 <textarea-field
                 />
             </div>
-            <button class="btn">
-                {{ 'button.send' | translate:translateService.GetLang }}
-            </button>
+            <div class="form__footer">
+                <button class="btn">
+                    {{ 'button.send' | translate:translateService.GetLang }}
+                </button>
+                @if (this.isCompleted) {
+                    <p class="                            
+                        font__size--c1 
+                        font__color--success 
+                        font__weight--medium"
+                        >
+                        {{ 'input.success' | translate:translateService.GetLang }}
+                    </p>
+                }
+
+            </div>
         </form>
 
         <div class="contact__games">

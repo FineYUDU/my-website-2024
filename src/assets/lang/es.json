@@ -16,7 +16,13 @@
         "email":"Correo electrónico",
         "email-example":"ejemplo@ejemplo.com",
         "subject":"Asunto",
-        "subject-example":"Busco información sobre..."
+        "subject-example":"Busco información sobre...",
+        "success":"Thank you for reaching out me! "
+    },
+    "msn-error":{
+        "required":"Este campo es obligatorio",
+        "pattern":"Formato no valido",
+        "minLength":"Mínimo 3 caracteres"
     },
     "version":{
         "current":"Actualmente"
@@ -32,9 +38,10 @@
         "light":"claro",
         "dark":"oscuro"
     },
-    "home":{
+    "about":{
         "title":"¡Bienvenido!",
         "subtitle":"Desarrollado con",
+        "since":"Desde",
         "education":{
             "block-1":{
                 "title":"Autodidacta - Desarrollador Web",

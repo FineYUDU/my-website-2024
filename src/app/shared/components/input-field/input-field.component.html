@@ -3,6 +3,11 @@
         @if( legendName ) {
             <legend class="field__legend"> 
                 {{  legendName  }} 
+                @if( isRequired ) {
+                    <span class="font__color--danger">
+                        * 
+                    </span>
+                }
             </legend>
         }
         <input  
@@ -32,7 +37,7 @@
         <span class="
                 font__size--c1 
                 font__weight--regular 
-                input_error_msn
+                input--error_msn
             "> 
             {{errorMessage}} 
         </span>

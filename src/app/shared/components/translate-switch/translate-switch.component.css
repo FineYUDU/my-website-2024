@@ -1,5 +1,4 @@
-/* ? MAIN CONTAINER */
-section {
+.dropdown {
     position: relative;
     display: flex;
     gap: var(--spacing-xs);
@@ -7,19 +6,15 @@ section {
     padding: var(--spacing-xs) 0 var(--spacing-xs) var(--spacing-md);
     border-radius: var(--radius-full);
 }
-/* ICON */
-/* * ROTATE OPEN */
 .rotate-open {
     transform: rotate(180deg);
     transition:transform .3s ease-in-out;
 }
-/* * ROTATE CLOSE */
 .rotate-close {
     transform: rotate(0deg);
     transition:transform .3s ease-in-out;
 }
-/* ? DROPDOWN */
-.dropdown {
+.dropdown__list {
     position: absolute;
     left: 0;
     right: 0;
@@ -29,33 +24,31 @@ section {
     border-radius: var(--radius-minimal);
     border:.0625rem solid var(--fd-color-secondary);
     z-index: 99;
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    ul li {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        border-radius: var(--radius-minimal);
+    }
+    ul li:hover {
+        background-color: var(--fd-color-bg-primary);
+    }
+    .selected {
+        background-color: var(--fd-color-primary);
+        color: var(--fd-color-lang-selected-txt);
+    }
+    ul .selected:hover {
+        background-color: var(--fd-color-primary);
+        color: var(--fd-color-lang-selected-txt);
+    }
 }
-/* * DROPDOWN OPEN */
 .dropdown-open {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     transition: clip-path .3s ease-in-out;
 }
-/* * DROPDOWN CLOSE */
 .dropdown-close {
     clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
-}
-.dropdown ul {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xs);
-}
-.dropdown ul li {
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--radius-minimal);
-}
-.dropdown ul li:hover {
-    background-color: var(--fd-color-bg-primary);
-}
-.selected {
-    background-color: var(--fd-color-primary);
-    color: var(--fd-color-lang-selected-txt);
-}
-.dropdown ul .selected:hover {
-    background-color: var(--fd-color-primary);
-    color: var(--fd-color-lang-selected-txt);
 }

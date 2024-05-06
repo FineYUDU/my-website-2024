@@ -26,6 +26,7 @@ import { LocalStorageService } from '@services/localstorage.service';
 export class InputFieldComponent implements ControlValueAccessor {
   // @inputs
   @Input() errorMessage?:string; 
+  @Input() isRequired?:boolean; 
   @Input() iconName:string= 'icon-email';
   @Input() inputType:string = 'text';
   @Input() isDisabled:boolean = false;

@@ -4,10 +4,10 @@ import { NgOptimizedImage } from '@angular/common';
 // @pipes
 // @components
 import { ChipComponent } from '@shared/components/chip/chip.component';
-import { EducationComponent } from '../../components/home-components/education/education.component';
-import { ExperienceComponent } from '../../components/home-components/experience/experience.component';
+import { EducationComponent } from '../../components/about-components/education/education.component';
+import { ExperienceComponent } from '../../components/about-components/experience/experience.component';
 import { PieGridComponent } from '@shared/components/pie-grid/pie-grid.component';
-import { UserCardComponent } from '../../components/home-components/user-card/user-card.component';
+import { UserCardComponent } from '../../components/about-components/user-card/user-card.component';
 import { TranslateService } from '@services/translate.service';
 import { LocalStorageService } from '@services/localstorage.service';
 import { Education, Logos } from '@models/index.interfaces';
@@ -36,19 +36,19 @@ export default class AboutComponent {
 
   education:Education[] = [
     {
-      title:'home.education.block-2.title',
-      date:'home.education.block-2.date',
-      txt:'home.education.block-2.txt',
+      title:'about.education.block-2.title',
+      date:'about.education.block-2.date',
+      txt:'about.education.block-2.txt',
     },
     {
-      title:'home.education.block-1.title',
-      date:'home.education.block-1.date',
-      txt:'home.education.block-1.txt',
+      title:'about.education.block-1.title',
+      date:'about.education.block-1.date',
+      txt:'about.education.block-1.txt',
     },
     {
-      title:'home.education.block-3.title',
-      date:'home.education.block-3.date',
-      txt:'home.education.block-3.txt',
+      title:'about.education.block-3.title',
+      date:'about.education.block-3.date',
+      txt:'about.education.block-3.txt',
     },
   ]
   

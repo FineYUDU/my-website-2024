@@ -1,12 +1,17 @@
-// * Angular
-import { NgOptimizedImage } from '@angular/common';
+// @angular
 import { Component, inject } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { NgOptimizedImage } from '@angular/common';
+import { Router } from '@angular/router';
+// @services
 import { LocalStorageService } from '@services/localstorage.service';
 import { TranslateService } from '@services/translate.service';
-// * Components
+// @pipes
+import { TranslatePipe } from '@shared/pipes/translate.pipe';
+// @components
 import { InputFieldComponent } from '@shared/components/input-field/input-field.component';
 import { TextareaFieldComponent } from '@shared/components/textarea-field/textarea-field.component';
-import { TranslatePipe } from '@shared/pipes/translate.pipe';
+import { FormService } from '@services/form.service';
 
 @Component({
   selector: 'contact',
@@ -14,6 +19,7 @@ import { TranslatePipe } from '@shared/pipes/translate.pipe';
   imports: [
     InputFieldComponent,
     NgOptimizedImage,
+    ReactiveFormsModule,
     TextareaFieldComponent,
     TranslatePipe,
   ],
@@ -21,8 +27,41 @@ import { TranslatePipe } from '@shared/pipes/translate.pipe';
   styleUrl: './contact.component.css'
 })
 export default class ContactComponent {
-  // * @Injections
-  public translateService = inject( TranslateService );
+  // @injections
+  public fb = inject( FormBuilder );
+  public formService = inject( FormService );
   public localStorageService = inject( LocalStorageService );
+  public router = inject( Router );
+  public translateService = inject( TranslateService );
+  // @params
+  isSubmitted:boolean = false;
+  isDisabled:boolean = false;
+  isCompleted:boolean = false;
+
+  public myForm:FormGroup = this.fb.group({
+    fullname    : ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]],      
+    email       : ['', [Validators.required, Validators.pattern(this.formService.emailPattern)] ],  
+    subject     : ['', [Validators.required, Validators.minLength(3)]],    
+    message     : ['', []],    
+  });
+
+  onSubmit(){
+
+    this.isSubmitted = true;
+
+    if( this.myForm.valid ) {
+      this.isSubmitted = false;
+      this.myForm.reset();
+      this.isCompleted = true;
+      setTimeout(()=>{
+        this.isCompleted = false;
+      },3000)
+      // TODO: implement page thanks
+      // this.router.navigateByUrl('fine-dev/contact-submit');
+    } else {
+      console.log('Form Invalidated');
+    }
+
+  };
 
 }

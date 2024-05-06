@@ -47,6 +47,15 @@
     .font__color--brand-secondary {
         color: var(--fd-color-brand-secondary);
     }
+    .font__color--link {
+        color: var(--fd-color-brand-primary);
+    }
+    .font__color--danger {
+        color: var(--fd-input-txt-danger);
+    }
+    .font__color--success {
+        color: var(--fd-input-txt-success);
+    }
     //                                       
     // ?                                    Classes 
     //
@@ -169,11 +178,11 @@
         width: fit-content;
         min-width: 5.1875rem;
         gap: .5rem;
-        font-size: var(--font__size--c1);
+        font-size: var(--font__size--b2);
         padding:var(--spacing-xs) 1rem;
         border-radius: var(--radius-minimal);
         cursor: pointer;
-        font-weight: 400;
+        font-weight: 500;
         border:none;
         background-color: var(--fd-btn-bg-color);
         color: var(--fd-btn-color);

@@ -18,6 +18,11 @@ export const routes: Routes = [
                 title:'Contact',
                 loadComponent: () => import('./website/pages/contact/contact.component')
             },
+            {
+                path:'contact-submit',
+                title:'Contact success',
+                loadComponent: () => import('./website/pages/contact-submited/contact-submited.component')
+            },
             { path:'', redirectTo:'about', pathMatch:'full' },
             { path:'**', redirectTo:'/404', pathMatch:'full' }
         ]

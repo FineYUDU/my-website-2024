@@ -23,10 +23,13 @@ export class FormService {
         if(!field) return '';
         // @params
         const formControl = formGroup.get(field);
-
+        const minLengthError = formControl?.getError('minlength');
+        
         if(!formControl) return '';
 
 		if(formControl.getError('required')) return 'msn-error.required';
+
+        if(minLengthError) return `msn-error.minLength`;
 
         if (formControl.getError('pattern')) return 'msn-error.pattern';
 

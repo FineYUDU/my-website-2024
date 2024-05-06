@@ -16,7 +16,13 @@
         "email":"Email",
         "email-example":"example@example.com",
         "subject":"Your subject",
-        "subject-example":"I look for info about..."
+        "subject-example":"I look for info about...",
+        "success":"¡Gracias por contactarme! "
+    },
+    "msn-error":{
+        "required":"This field is required",
+        "pattern":"Invalid format",
+        "minLength":"Minimum of 3 characters."
     },
     "version":{
         "current":"Currently"
@@ -32,9 +38,10 @@
         "light":"light",
         "dark":"dark"
     },
-    "home":{
+    "about":{
         "title":"Welcome!",
         "subtitle":"Dev with",
+        "since":"Since",
         "education":{
             "block-1":{
                 "title":"Autodidact - Web Developer",

@@ -6,7 +6,6 @@ import { Menu } from '@models/index.interfaces';
 // * Components
 import { FooterComponent } from '../shared/components/footer/footer.component';
 import { NavbarComponent } from '../shared/components/navbar/navbar.component';
-import { SidebarComponent } from '../shared/components/sidebar/sidebar.component';
 
 @Component({
   selector: 'app-website',
@@ -15,7 +14,6 @@ import { SidebarComponent } from '../shared/components/sidebar/sidebar.component
     RouterModule,
     NavbarComponent,
     FooterComponent,
-    SidebarComponent,
   ],
   templateUrl: './website.component.html',
   styleUrl: './website.component.css'

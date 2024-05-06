@@ -17,12 +17,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './translate-switch.component.html',
   styleUrl: './translate-switch.component.css'
 })
-export class TranslateSwitchComponent {
-  // * @Injections
+export class TranslateSwitchComponent  {
+  // @injections
   public translateService = inject( TranslateService );
   public localStorageService = inject( LocalStorageService );
   public el = inject( ElementRef );
-  // * @Params
+  // @params
   isDropdownOpen:boolean = false;
 
   @HostListener('document:click', ['$event'])
