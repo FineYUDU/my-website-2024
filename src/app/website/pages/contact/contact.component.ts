@@ -42,7 +42,6 @@ export default class ContactComponent {
     fullname    : ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]],      
     email       : ['', [Validators.required, Validators.pattern(this.formService.emailPattern)] ],  
     subject     : ['', [Validators.required, Validators.minLength(3)]],    
-    message     : ['', []],    
   });
 
   onSubmit(){
