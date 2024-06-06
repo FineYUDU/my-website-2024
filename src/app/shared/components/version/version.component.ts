@@ -1,4 +1,4 @@
-// * Angular
+// @angular
 import { Component } from '@angular/core';
 
 @Component({
@@ -16,6 +16,6 @@ import { Component } from '@angular/core';
   `
 })
 export class VersionComponent {
-  // * @params
-  version:string = 'v1.0.0'
+  //  @params
+  version:string = 'v1.0.5'
 }

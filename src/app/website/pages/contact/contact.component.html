@@ -72,16 +72,24 @@
                 />
             </div>
             <div class="row--3">
-                <textarea-field
-                />
+                <textarea-field/>
             </div>
             <div class="form__footer">
-                <button class="btn">
+                <button class="btn" type="submit">
                     {{ 'button.send' | translate:translateService.GetLang }}
                 </button>
+                @if (this.loading) {
+                    <p class="                            
+                        font__size--b2 
+                        font__color--primary 
+                        font__weight--regular"
+                            >
+                        {{ 'input.loading' | translate:translateService.GetLang }}
+                    </p>
+                }
                 @if (this.isCompleted) {
                     <p class="                            
-                        font__size--c1 
+                        font__size--b2 
                         font__color--success 
                         font__weight--medium"
                         >

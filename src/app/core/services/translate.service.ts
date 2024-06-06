@@ -13,9 +13,7 @@ export class TranslateService {
         this.lang =  localStorage.getItem('lang') || 'es';    
         const lang = localStorage.getItem('lang');
 
-        if(!lang) {
-            localStorage.setItem('lang','es');
-        }
+        if(!lang) localStorage.setItem('lang','es');
     }
 
     get GetLang(): string { return localStorage.getItem('lang') === 'es' ? 'es' : 'en' }
@@ -31,9 +29,7 @@ export class TranslateService {
 
 
     toggleLang(lang: string) {
-        if (lang === 'es' || lang === 'en') {
-          localStorage.setItem('lang', lang);
-        }
+        if (lang === 'es' || lang === 'en') localStorage.setItem('lang', lang);
     }
     
 }

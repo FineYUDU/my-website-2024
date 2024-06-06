@@ -34,9 +34,10 @@ export default class ContactComponent {
   public router = inject( Router );
   public translateService = inject( TranslateService );
   // @params
-  isSubmitted:boolean = false;
-  isDisabled:boolean = false;
   isCompleted:boolean = false;
+  isDisabled:boolean = false;
+  isSubmitted:boolean = false;
+  loading:boolean = false;
 
   public myForm:FormGroup = this.fb.group({
     fullname    : ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]],      
@@ -46,17 +47,23 @@ export default class ContactComponent {
 
   onSubmit(){
 
+    console.log(this.myForm.value);
     this.isSubmitted = true;
-
+    
     if( this.myForm.valid ) {
-      this.isSubmitted = false;
-      this.myForm.reset();
-      this.isCompleted = true;
+      console.log(this.myForm.valid);
+      this.loading = true;
       setTimeout(()=>{
-        this.isCompleted = false;
-      },3000)
+        this.loading = false;
+        this.isSubmitted = false;
+        this.isCompleted = true;
+        setTimeout(()=>{
+          this.myForm.reset();
+          this.isCompleted = false;
+          this.router.navigateByUrl('fine-dev/contact-submit');
+        },1500)
+      },2500)
       // TODO: implement page thanks
-      // this.router.navigateByUrl('fine-dev/contact-submit');
     } else {
       console.log('Form Invalidated');
     }

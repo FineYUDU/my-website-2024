@@ -1,10 +1,11 @@
-// * Angular
+// @angular
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-// * Services
+// @services
 import { ThemeService } from './core/services/theme.service';
 import { TranslateService } from './core/services/translate.service';
+import { UpdateCheckService } from '@services/update-check.service';
 
 @Component({
   selector: 'app-root',
@@ -18,9 +19,11 @@ import { TranslateService } from './core/services/translate.service';
 })
 export class AppComponent {
   // @injections
+  private themeService = inject(ThemeService);
   private translateService = inject (TranslateService); 
-  private themeService = inject(ThemeService)
-
-
+  private updateCheckServuce = inject ( UpdateCheckService ); 
+  constructor(){
+    this.updateCheckServuce.checkForUpdate();
+  }
 
 }

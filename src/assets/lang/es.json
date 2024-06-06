@@ -9,7 +9,8 @@
     "button":{
         "cv":"Descargar CV",
         "contact":"Contáctame",   
-        "send":"Enviar"
+        "send":"Enviar",
+        "back":"Volver al home"
     },
     "input":{
         "full-name":"Nombre completo",
@@ -17,7 +18,10 @@
         "email-example":"ejemplo@ejemplo.com",
         "subject":"Asunto",
         "subject-example":"Busco información sobre...",
-        "success":"Thank you for reaching out me! "
+        "success":"¡Datos recibidos!",
+        "loading":"enviando datos",
+        "thanks":"Gracias por comunicarte conmigo",
+        "thanks2":"Respondere en la brevedad posible"
     },
     "msn-error":{
         "required":"Este campo es obligatorio",
