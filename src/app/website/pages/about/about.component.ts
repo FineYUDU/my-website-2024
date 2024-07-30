@@ -62,16 +62,16 @@ export default class AboutComponent {
       txt:'NET',
     },
     {
-      img:'flutter',
-      txt:'flutter',
+      img:'node',
+      txt:'node',
+    },
+    {
+      img:'nest',
+      txt:'nest',
     },
     {
       img:'bootstrap',
       txt:'bootstrap',
-    },
-    {
-      img:'prime-ng',
-      txt:'primeng',
     },
     {
       img:'angular-material',
@@ -112,10 +112,6 @@ export default class AboutComponent {
       txt:'visual studio',
     },
     {
-      img:'figma',
-      txt:'figma',
-    },
-    {
       img:'git',
       txt:'git',
     },
@@ -124,32 +120,36 @@ export default class AboutComponent {
       txt:'postman',
     },
     {
-      img:'jira',
-      txt:'jira',
-    },
-    {
-      img:'notion',
-      txt:'notion',
-    },
-    {
       img:'npm',
       txt:'npm',
     },
     {
-      img:'android-studio',
-      txt:'android studio',
+      img:'docker',
+      txt:'docker',
+    },
+    {
+      img:'postgresql',
+      txt:'postgresql',
+    },
+    {
+      img:'sql-server',
+      txt:'sql server',
     },
     {
       img:'jasmine',
       txt:'jasmine',
     },
     {
-      img:'slack',
-      txt:'slack',
+      img:'figma',
+      txt:'figma',
     },
     {
-      img:'sql-server',
-      txt:'sql server',
+      img:'jira',
+      txt:'jira',
+    },
+    {
+      img:'slack',
+      txt:'slack',
     },
   ];
 

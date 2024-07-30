@@ -1,9 +1,7 @@
-/* ? EDUCATION CONTAINER  */
 .section {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: var(--spacing-blocks);
-    /* CONTAINER */
     .section__container {
         background-color: var(--fd-color-bg-secondary);
         padding: var(--spacing-sm) var(--spacing-md);
@@ -15,9 +13,9 @@
     }
 
 }
+
 /* * Responsive SM */
 @media screen and (max-width:480px) {
-    /* ? EDUCATION CONTAINER  */
     .section {
         display: flex;
         flex-direction: column;
@@ -27,7 +25,6 @@
 
 /* * Responsive MD */
 @media screen and (min-width:481px) and (max-width:1024px) {
-    /* ? EDUCATION CONTAINER  */
     .section {
         display: flex;
         flex-direction: column;

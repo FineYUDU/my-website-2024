@@ -1,15 +1,14 @@
-// * Angular
 import { Component, Input, inject } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
-// * Services
+
 import { LocalStorageService } from '../../../core/services/localstorage.service';
 import { TranslateService } from '../../../core/services/translate.service';
-// * Pipe
+
 import { TranslatePipe } from '../../pipes/translate.pipe';
-// * Interfaces
+
 import { Menu } from '@models/index.interfaces';
-// * Components
+
 import { MenuMovileComponent } from '../menu-movile/menu-movile.component';
 import { ToggleThemeComponent } from '../toggle-theme/toggle-theme.component';
 import { TranslateSwitchComponent } from '../translate-switch/translate-switch.component';
@@ -28,13 +27,12 @@ import { TranslateSwitchComponent } from '../translate-switch/translate-switch.c
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  // * @Inputs
   @Input() menuNavigation:Menu[] = [];
-  // * @injections
+
   public translateService = inject( TranslateService );
   public localStorageService = inject( LocalStorageService );
   public router = inject( Router );
-  // * @params
+
   isOpenMenu:boolean = false;
 
   closeMenu() {

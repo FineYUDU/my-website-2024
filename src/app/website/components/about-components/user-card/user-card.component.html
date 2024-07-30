@@ -1,82 +1,95 @@
-<!-- ? MAIN CONTAINER -->
-<div class="main-cont">
-    <!-- ? PROFILE CONTAINER -->
-    <section class="profile-cont">
-        <!-- COVER -->
+<section class="section">
 
-    </section>
+    <section class="section__header"></section>
     
-    <!-- ? PROFILE IMG -->
-    <div class="profile-img">
-        <!-- AVATAR -->
-        <img class="avatar" [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/profile.webp'" alt="avatar logo" fill priority>
+    <div class="profile--img">
+        <img 
+            priority
+            [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/profile.webp'" 
+            alt="avatar logo" 
+            fill 
+        >
         
     </div>
     
-    <!-- STATUS -->
-    <div class="status"></div>
+    <div class="status--online"></div>
 
-    <section>
-        <!-- TITLE CONTAINER -->
-        <div class="title-cont">
-            <!-- TITLE -->
-            <p class="font__size--h4 font__weight--bold font__color--brand-primary">
+    <section class="section__body">
+        <div>
+            <p class="
+                font__size--h4 
+                font__weight--bold 
+                font__color--brand-primary
+                ">
                 Erick Alcocer
             </p>
-            <!-- TXT -->
-            <p class="font__size--b1 font__weight--medium font__color--tertiary">
+            <p class="
+                font__size--b1 
+                font__weight--medium 
+                font__color--tertiary
+                ">
                 {{ 'about.section-1.ocupation' | translate:translateService.GetLang }}
             </p>
         
         </div>
         
-        <!-- ? FOOTER -->
-        <div class="footer">
-            
-            <!-- TEXT CONTAINER -->
-            <div class="txt-cont">
-                <!-- SOCIAL MEDIA -->
+        <div class="section__footer">
+            <div class="section__footer--body">
                 <div class="social-media">
-                    <!-- Linkedin -->
                     <a href="https://www.linkedin.com/in/erick-alcocer-06ba2b149/" target="_blank">
-                        <!-- ICON -->
-                        <img [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-linkedin.svg'" alt="Linkedin logo" width="37" height="37">
+                        <img 
+                            [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-linkedin.svg'" 
+                            alt="Linkedin logo" 
+                            width="37" 
+                            height="37"
+                        >
                     </a>
                     
-                    <!-- GitHub -->
                     <a href="https://github.com/FineYUDU" target="_blank">
-                        <!-- ICON -->
-                        <img [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-github.svg'" alt="Github logo" width="37" height="37">
+                        <img 
+                            [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-github.svg'" 
+                            alt="Github logo" 
+                            width="37" 
+                            height="37"
+                        >
                     </a>
                     
-                    <!-- X -->
                     <a href="https://twitter.com/FineYUDU" target="_blank">
-                        <!-- ICON -->
-                        <img [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-x.svg'" alt="x logo" width="37" height="37">
+                        <img 
+                            [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-x.svg'" 
+                            alt="x logo" 
+                            width="37" 
+                            height="37"
+                        >
                     </a>
     
                 </div> 
-                <p class="font__color--secondary font__size--c1 font__weight--regular"> {{ 'about.section-1.upgrade' | translate:translateService.GetLang }} {{'04/26/2024'}} </p>
+                <p class="font__color--secondary font__size--c1 font__weight--regular"> 
+                    {{ 'about.section-1.upgrade' | translate:translateService.GetLang }} {{'06/29/2024'}} 
+                </p>
             </div>    
 
-            <!-- ? BUTTONS CONTAINER -->
-            <div class="btns-cont">
-                <!-- BUTTON -->
+            <div class="block--btns">
                 <a 
                     href="../../../../../assets/pdf/Erick_Eduardo.pdf" 
                     class="btn"
                     target="_blank">
                     {{ 'button.cv' | translate:translateService.GetLang }}
-                    <!-- ICON -->
-                    <img class="icon_sm" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-file-download.svg'" alt="Download file">
+                    <img 
+                        class="icon_sm" 
+                        [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-file-download.svg'" 
+                        alt="Download file"
+                    >
 
                 </a>
     
-                <!-- BUTTON -->
                 <button type="button" class="btn btn--outline" routerLink="../contact">
                     {{ 'button.contact' | translate:translateService.GetLang }}
-                    <!-- ICON -->
-                    <img class="icon_sm" [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-paper-plane.svg'" alt="Download file">
+                    <img 
+                        class="icon_sm" 
+                        [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/icon/icon-paper-plane.svg'" 
+                        alt="Download file"
+                    >
             
                 </button>
 
@@ -86,4 +99,4 @@
 
     </section>
 
-</div>
+</section>

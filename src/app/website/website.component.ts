@@ -1,9 +1,8 @@
-// * Angular
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-// * Interfaces
+
 import { Menu } from '@models/index.interfaces';
-// * Components
+
 import { FooterComponent } from '../shared/components/footer/footer.component';
 import { NavbarComponent } from '../shared/components/navbar/navbar.component';
 

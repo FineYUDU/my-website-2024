@@ -1,5 +1,6 @@
 // @angular
 import { Component, inject } from '@angular/core';
+import { RouterModule } from '@angular/router';
 // @services
 import { LocalStorageService } from '@services/localstorage.service';
 import { TranslateService } from '@services/translate.service';
@@ -11,6 +12,7 @@ import { TranslatePipe } from '@shared/pipes/translate.pipe';
   standalone: true,
   imports: [
     TranslatePipe,
+    RouterModule,
   ],
   templateUrl: './contact-submited.component.html',
   styleUrl: './contact-submited.component.css'

@@ -1,18 +1,15 @@
-
-/* ? MAIN CONTAINER  */
-.main-cont {
+.section {
     display: grid;
     grid-template-rows: 6.25rem 1fr;
     height: 100%;
     position: relative;
 }
-/* ? PROFILE CONTAINER */
-.profile-cont {
+
+.section__header {
     overflow: hidden;
     background-color: var(--fd-color-brand-primary);
 }
-/* ? PROFILE IMG */
-.profile-img {
+.profile--img {
     top: 0.25rem;
     right: 1rem;
     position: absolute;
@@ -22,11 +19,7 @@
     height: 7.375rem;
     overflow: hidden;
 }
-/* AVATAR */
-.avatar {
-    width: -webkit-fill-available;
-}
-.status {
+.status--online {
     top: 6.9rem;
     right: 2.3rem;
     position: absolute;
@@ -37,61 +30,66 @@
     background-color: rgb(15, 136, 15);
     border: .29rem solid var(--fd-color-main-card);
 }
-/* ? SECTION | SOCIAL MEDIA */
-.social-media {
+.section__footer {
     display: flex;
-    gap: var(--spacing-md);
+    align-items: flex-end;
+    justify-content: space-between;
+    .section__footer--body {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        .social-media {
+            display: flex;
+            gap: var(--spacing-md);
+            img {
+                width: 2.25rem;
+                height: auto;
+            }
+        }
+    }
 }
-.social-media img {
-    width: 2.25rem;
-    height: auto;
-}
-section:nth-of-type(2) {
+.section__body {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
     justify-content: space-between;
     padding: var(--spacing-sm) var(--spacing-md);
 }
-/* ? FOOTER */
-.footer {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-}
-.txt-cont {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-}
-/* ? BUTTONS CONTAINER */
-.btns-cont {
+.block--btns {
     display: flex;
     gap: var(--spacing-sm);
 }
+
 /* * Responsive SM */
 @media screen and (max-width:480px) {
-    .footer {
+    .section__footer {
         flex-direction: column;
         gap: var(--spacing-sm);
         align-items: flex-start;
     }
-    /* ? PROFILE IMG */
-    .profile-img {
+
+    .profile--img {
         top: 2.5rem;
         width: 6.375rem;
         height: 6.375rem;
     }
-    .status {
+
+    .status--online {
         top: 8.3rem;
         right: 2.3rem;
         width: .7rem;
         height: .7rem;
         border: .2rem solid var(--fd-color-main-card);
     }
-    /* ? BUTTONS CONTAINER */
-    .btns-cont {
+
+    .block--btns {
         flex-direction: column;
         width: 100%;
+        a {
+            width: auto;
+        }
+        button {
+            width: auto;
+        }
     }
 }

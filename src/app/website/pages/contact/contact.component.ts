@@ -60,7 +60,7 @@ export default class ContactComponent {
         setTimeout(()=>{
           this.myForm.reset();
           this.isCompleted = false;
-          this.router.navigateByUrl('fine-dev/contact-submit');
+          this.router.navigateByUrl('contact-submit');
         },1500)
       },2500)
       // TODO: implement page thanks

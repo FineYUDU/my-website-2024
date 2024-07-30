@@ -19,9 +19,9 @@ export class UpdateCheckService {
         everySixHourOnceAppIsStable$.subscribe(async () => {
             try {
                 const updateFound = await this.updateService.checkForUpdate();
-                console.log(updateFound ? 'A new version is available' : 'Already on the last version.');
+                // console.log(updateFound ? 'A new version is available' : 'Already on the last version.');
             } catch(err) {
-                console.log('Failed to check updates:', err);
+                // console.log('Failed to check updates:', err);
             }
         });
     }

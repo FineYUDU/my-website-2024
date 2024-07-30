@@ -20,7 +20,7 @@ export class FormService {
     }
 
 	errorMessage(formGroup:FormGroup, field:string):any {
-        if(!field) return '';
+        if(!field) return 'msn-error.required';
         // @params
         const formControl = formGroup.get(field);
         const minLengthError = formControl?.getError('minlength');

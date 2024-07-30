@@ -19,29 +19,38 @@ note:
 
 export class TranslatePipe implements PipeTransform {
 
-
-  constructor( private ts : TranslateService ) {}
-
     
   transform(translateKey: string, lang: string): string {
 
-    const currentLang = lang || localStorage.getItem('lang') || 'es';
-
-    const translations = require(`../../../assets/lang/${currentLang}.json`);
-
-    const keys = translateKey.split('.');
-
-    let translation = translations;
-    for (const key of keys) {
-        if (translation.hasOwnProperty(key)) {
-            translation = translation[key];
-        } else {
-            translation = translateKey;
-            break;
-        }
+    if (!translateKey) {
+      // Return a default value or handle the error gracefully
+      return '';
     }
 
-    return translation;
-  }
+    const currentLang = lang || localStorage.getItem('lang') || 'es';
+
+    try {
+      const translations = require(`../../../assets/lang/${currentLang}.json`);
+
+      const keys = translateKey.split('.');
+
+      let translation = translations;
+      for (const key of keys) {
+          if (translation.hasOwnProperty(key)) {
+              translation = translation[key];
+          } else {
+              translation = translateKey;
+              break;
+          }
+      }
+
+      return translation;
+
+      } catch (error) {
+        console.error('Error loading translations:', error);
+        // Return the key itself if translation fails
+        return translateKey;
+      }
+    }
   
 }
